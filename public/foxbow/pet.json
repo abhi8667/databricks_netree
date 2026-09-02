@@ -1,0 +1,7 @@
+{
+  "id": "foxbow",
+  "displayName": "Foxbow",
+  "description": "A fox ranger in a green hood carrying a bow.",
+  "spritesheetPath": "spritesheet.webp",
+  "category": "western"
+}

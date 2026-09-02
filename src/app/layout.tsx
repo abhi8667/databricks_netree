@@ -3,6 +3,7 @@ import { Archivo, Newsreader, JetBrains_Mono } from "next/font/google";
 import { TooltipProvider } from "@/components/ui/overlays";
 import { ThemeProvider } from "@/components/theme-provider";
 import MagnetLines from "@/components/react-bits/magnet-lines";
+import { FoxbowPet } from "@/components/pet/foxbow-pet";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -59,7 +60,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             />
           </div>
           <div className="relative z-10 min-h-dvh">
-            <TooltipProvider>{children}</TooltipProvider>
+            <TooltipProvider>
+              {children}
+              <FoxbowPet />
+            </TooltipProvider>
           </div>
         </ThemeProvider>
       </body>

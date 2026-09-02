@@ -58,6 +58,16 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
           <p className="mt-1 text-[13px] text-mute dark:text-dark-mute">
             Live hackathons and Bengaluru tech ecosystem events ranked against your research interests.
           </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-50/80 px-2.5 py-0.5 font-mono text-[11px] font-medium text-purple-700 dark:border-purple-500/40 dark:bg-purple-950/40 dark:text-purple-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
+              Powered by HackCulture
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50/80 px-2.5 py-0.5 font-mono text-[11px] font-medium text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-950/40 dark:text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Powered by Bengaluru Tech Week
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -197,13 +207,13 @@ function EventCard({ event }: { event: EventMatch }) {
   });
 
   return (
-    <article className="group flex flex-col justify-between rounded-lg border border-rule bg-white p-5 transition-all hover:border-ink hover:shadow-sm">
+    <article className="group flex flex-col justify-between rounded-2xl border border-rule/80 bg-white/95 p-5 shadow-sm backdrop-blur-xl transition-all hover:border-emerald-500/40 hover:shadow-md dark:border-dark-border/80 dark:bg-dark-card/95">
       <div>
         {/* Match Header */}
-        <div className="flex items-center justify-between gap-2 border-b border-rule/60 pb-3">
-          <div className="flex items-center gap-1.5 text-xs text-mute">
-            <Sparkles className="h-3.5 w-3.5 shrink-0 text-ink" />
-            <span className="line-clamp-1 font-medium text-ink">{event.match_reason}</span>
+        <div className="flex items-center justify-between gap-2 border-b border-rule/60 pb-3 dark:border-dark-border/60">
+          <div className="flex items-center gap-1.5 text-xs text-mute dark:text-dark-mute">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+            <span className="line-clamp-1 font-medium text-ink dark:text-dark-ink">{event.match_reason}</span>
           </div>
           <Badge tone={event.mode === "online" ? "muted" : "default"}>
             {event.mode}
@@ -212,11 +222,21 @@ function EventCard({ event }: { event: EventMatch }) {
 
         {/* Title & Timing */}
         <div className="mt-3.5">
-          <div className="flex items-baseline justify-between gap-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-faint">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-faint dark:text-dark-faint">
               {event.organizer_name} · {event.track}
             </span>
-            <Ident>{event.source === "hackculture" ? "HackCulture" : "BTW"}</Ident>
+            {event.source === "hackculture" ? (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-50/90 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-purple-700 shadow-xs dark:border-purple-500/40 dark:bg-purple-950/60 dark:text-purple-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-purple-500 shadow-[0_0_6px_rgba(168,85,247,0.8)]" />
+                Powered by HackCulture
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50/90 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-700 shadow-xs dark:border-emerald-500/40 dark:bg-emerald-950/60 dark:text-emerald-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+                Powered by Bengaluru Tech Week
+              </span>
+            )}
           </div>
 
           <h3 className="mt-1 font-read text-lg font-medium leading-snug text-ink group-hover:underline decoration-rule underline-offset-4">

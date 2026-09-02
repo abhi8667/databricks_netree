@@ -24,47 +24,9 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { signOut } from "@/app/actions/auth";
 import { cn } from "@/lib/utils";
 
+import { DEFAULT_NOTIFICATIONS, type NotificationItem } from "@/lib/notifications";
+
 export type NavItem = { href: string; label: string; count?: number };
-
-interface NotificationItem {
-  id: string;
-  title: string;
-  description: string;
-  time: string;
-  href: string;
-  read: boolean;
-  type: "reply" | "event" | "position";
-}
-
-const INITIAL_NOTIFICATIONS: NotificationItem[] = [
-  {
-    id: "notif-1",
-    title: "Faculty Feedback Received",
-    description: "Dr. Ramesh (CSE Systems Lab) reviewed your Cloud NLP thesis pitch.",
-    time: "10m ago",
-    href: "/student/requests",
-    read: false,
-    type: "reply",
-  },
-  {
-    id: "notif-2",
-    title: "New Matching Hackathon",
-    description: "HackCulture Bengaluru '26 registered 100% overlap with your topic tags.",
-    time: "1h ago",
-    href: "/student/events",
-    read: false,
-    type: "event",
-  },
-  {
-    id: "notif-3",
-    title: "New Research Assistantship",
-    description: "High-throughput Distributed Storage opening in Networks Dept.",
-    time: "3h ago",
-    href: "/student/opportunities",
-    read: true,
-    type: "position",
-  },
-];
 
 export function AppShell({
   nav,
@@ -80,7 +42,7 @@ export function AppShell({
   const pathname = usePathname();
   const [showNotifications, setShowNotifications] = React.useState(false);
   const [showHamburger, setShowHamburger] = React.useState(false);
-  const [notifications, setNotifications] = React.useState(INITIAL_NOTIFICATIONS);
+  const [notifications, setNotifications] = React.useState<NotificationItem[]>(DEFAULT_NOTIFICATIONS);
 
   const notifRef = React.useRef<HTMLDivElement>(null);
 

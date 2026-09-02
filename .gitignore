@@ -15,5 +15,5 @@ next-env.d.ts
 Data/works_cache.jsonl
 /.netree-local/*
 !/.netree-local/.gitkeep
-foxbow/
-loading_video/
+/foxbow/
+/loading_video/

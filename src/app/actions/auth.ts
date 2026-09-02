@@ -107,5 +107,5 @@ export async function completeOnboarding(_prev: SignInState, form: FormData): Pr
   };
 
   await saveUser(updated);
-  redirect(homeFor(updated));
+  redirect("/onboarding/confirmed");
 }
