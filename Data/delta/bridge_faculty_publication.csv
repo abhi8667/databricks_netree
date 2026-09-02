@@ -1,0 +1,708 @@
+faculty_id,faculty_name,publication_id,verification_status,match_method,source_name
+RVCE-CSE-002,Ashok Kumar A R,W4403124150,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4403060511,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4400124355,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4402674134,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4403124327,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4402511208,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4403124725,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4389372254,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4382769995,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4383876054,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4389400770,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W4396715076,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W3026268822,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W2943873397,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-002,Ashok Kumar A R,W2766473441,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4415333048,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4409327319,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4407968963,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4417508881,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4416798172,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4411584769,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4407897849,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4406754905,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4399314302,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4399314292,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4399314297,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4408400523,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4407362492,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4404784097,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4405087924,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4365807592,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4382052614,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4376602805,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4292423521,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4294030861,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4226266853,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4210713370,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4248340201,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3203521410,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3160465657,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4210768117,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4210271893,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3110235189,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3004843085,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3041561950,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2990537023,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3011177264,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2911027195,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3012096032,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3011774547,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2981523391,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2975810828,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2838545756,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4230692903,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2804628018,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2894712380,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2898579252,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W3016117401,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2807673485,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2587221876,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2734762718,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2770936656,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2586562227,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4240936300,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2889832251,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2507148701,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2587555177,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2608119749,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4242873026,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2560373091,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2608540862,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2501533651,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2542940211,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2410585028,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2047962472,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2407081545,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2006929731,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2056500623,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W105947204,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W27982601,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W44033174,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2080132759,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2109406379,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W1997666988,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W1978475559,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2601000203,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2099950721,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2001775285,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W2156581201,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-004,B Sathish Babu,W4231943115,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W7167611887,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W7125832392,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W7127929145,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W7134984738,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4416533329,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4413367738,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4399372477,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4405975060,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4404929689,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4405974421,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4388761219,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4383503144,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4387427097,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4390874330,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4293093055,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3173633118,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W4200372362,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3212034843,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3120761804,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2999075004,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3012515523,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3012134415,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3012186473,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2889728351,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2888690835,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W3089268165,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W1635339576,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W1551473290,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W33206012,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W72538140,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2122927345,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2108909082,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-008,Deepamala N,W2532474891,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-010,Girish Rao Salanke N S,W4383876054,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-010,Girish Rao Salanke N S,W4396715076,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-010,Girish Rao Salanke N S,W2811093508,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-011,Hemavathy R,W4389428810,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-011,Hemavathy R,W4394911093,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-011,Hemavathy R,W4389981618,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-011,Hemavathy R,W4281482106,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-011,Hemavathy R,W4318693492,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-012,Jyothi Shetty,W7130427088,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-012,Jyothi Shetty,W4220797122,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-012,Jyothi Shetty,W4200267691,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-013,Lalitha V P,W3010707882,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-013,Lalitha V P,W2810962693,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-013,Lalitha V P,W2183579508,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4417509600,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4417510120,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4411516795,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4404777427,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4405974603,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4321461653,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4387607860,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4390031544,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W3172099751,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W3211603242,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W3196072762,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W4252180901,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W2796057380,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W2767942463,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-014,M S Srividya,W2186904486,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W4405974487,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W4408862849,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W4404029874,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W4214775109,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W3008706263,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W2737650314,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-016,Manonmani S,W4213256427,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7160940050,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7138220045,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7126414230,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7163925522,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7155355928,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7154109932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7160615856,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7160726357,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7154608546,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4414231660,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4408039495,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4415728593,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4412404562,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4417169006,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4410297343,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4414956553,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7127649611,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4413177912,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7127629172,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W7117685523,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403124150,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403060511,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4390738646,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4406521376,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4401673375,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4394006216,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403124327,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4404030095,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4392949630,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4405975453,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4399397350,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403060549,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4391440125,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403688032,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4402511208,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4403124725,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4392959110,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4405974435,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4399685920,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4389372254,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4376117279,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4390176987,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4390874330,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4389400770,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4392153479,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4281553728,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4296709879,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4319261491,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4316659385,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4289209325,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3179566224,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4200372362,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3212034843,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3179813899,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4210802831,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3174616345,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4210343364,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3173610786,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3188167278,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3137915135,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4287262419,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3164050387,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3017739553,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3135506653,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W4241789948,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3008752438,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3013796159,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3003740214,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2967809275,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2944596969,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3005709360,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3008753193,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2907087878,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W3007234197,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2898688690,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2889723176,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2892156223,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2989599983,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2990692206,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2889278386,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2589436695,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2776184359,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2889342104,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2520253485,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2564506425,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W1956489633,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2276178200,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2253461202,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2329878870,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W206754752,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W161595201,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2317845565,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-017,Minal Moharir,W2580942726,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W7164203885,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W7172387074,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4408400033,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W7151263464,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4413978890,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4408018128,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W7151623127,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4410295089,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4412803261,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4409102536,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4414647322,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4412482256,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4412352775,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4412803588,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4410729570,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W7125531693,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4406137954,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4409103019,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403124150,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403060511,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4407198520,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403124553,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4393079479,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4406521376,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403124327,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4404030095,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4405975453,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4399397350,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4404031527,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403060712,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4405975035,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4405974548,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4402511208,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4403124725,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4405974435,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4407214019,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4391265935,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4377969686,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4390485424,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4389372254,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4390482039,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4322731552,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4388937569,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4394911597,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4389400770,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4360994545,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4394910771,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4379874935,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4324137425,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4391265950,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4362612662,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4223645190,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4308574780,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4221099141,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4316658750,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4316658453,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4319430367,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4309639928,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4226082341,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4220709586,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4309696407,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4309639874,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4308732931,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4229459771,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4316659400,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3210962254,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3216511633,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3209251344,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3213694496,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3201829457,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3215444452,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3202523180,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3216431790,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3211148265,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W4247162958,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3170832604,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3215162869,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3041286073,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3081509497,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3081253081,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3092226193,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3082992501,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3081433187,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3041381162,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3047611261,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3092269081,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2970352464,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2999135937,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3012416419,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3010721578,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2991251028,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2919310237,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2954322502,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3010398094,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2946877378,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2901758161,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2901734672,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2956485530,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2908939556,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2918365817,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3009184094,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2782886432,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2783373370,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W3116372758,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2734712894,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2783628335,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2757129631,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2569292362,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2732471988,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2758527172,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2575830442,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2747127736,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2753099785,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2241208923,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2181913649,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W1525969044,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2241134592,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2181860697,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2155003627,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2072802512,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-018,Mohana,W2222819603,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4411584101,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4407363803,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4414796409,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4412361521,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4411094550,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4412561138,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4412893416,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4417508789,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4407520417,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4417508954,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4417508819,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4415543637,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4392893114,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4405975147,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4405975059,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4404767291,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4400118813,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4411359847,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4402748333,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4376508165,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4389456170,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4380484941,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4389428827,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4386064649,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4375867868,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4313567967,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4389429013,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4321764975,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4389428956,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4375867805,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4389429067,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4312254720,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4310735967,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4319262506,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4210379819,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3176507155,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3185713278,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3151641969,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3133672848,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3156372457,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3200631437,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3185044994,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3176919784,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3165981393,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4210406298,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3209490779,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4200199551,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3208045423,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3090377232,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3090452365,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3090160977,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3045661315,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3174088676,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3005754995,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2944881939,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4240306515,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3011767787,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3015310903,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2975433753,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2979023162,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2915188972,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2946575766,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2979158557,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W3205267291,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2941195303,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2897321052,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2886948814,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2889051043,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2786578437,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2889542417,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2786149989,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2603994503,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2889378069,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2760946694,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2783937662,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2769131353,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2780357604,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2888831019,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2563121256,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2566554990,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2559058875,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2567057570,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W4252355533,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1607592979,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2184728330,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1504443015,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2552780046,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2220381025,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2311633783,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2186597155,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1588371071,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1553307762,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2740525850,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2099051702,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2306287803,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2545304771,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2737300331,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2041081282,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1483599532,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1495337566,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1501248018,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W65374645,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1569007738,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1592678998,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2540311278,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1590367335,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1986265284,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2093288954,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2214024182,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1488589107,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2080558225,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2694091155,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W2072548741,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1980340380,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-019,Nagaraja G S,W1040293692,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-020,Pavithra H,W7154109932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W7125832392,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W4410758439,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W4415418418,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W4413367738,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W3111948422,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W3011959017,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-022,Prapulla S B,W2795104381,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-023,Pratiba D,W4402170891,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-023,Pratiba D,W2756304691,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-023,Pratiba D,W4246236388,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-024,Praveena T,W7154109932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W4417509059,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W4417508910,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W4391098258,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W4285505561,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W4200309884,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W2802357108,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-025,Priyanka R,W1515862416,OpenAlex author match; name score 0.91,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7125983886,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7154890702,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7129549965,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7119904401,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7160317241,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W7171975788,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4413637747,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4414051581,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4417509085,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4400911133,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4401387006,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4389428832,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4225948849,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4226158922,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4285266369,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W3185342645,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W3209422027,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4236001135,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4234078524,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W3080241881,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4241789948,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W4235630789,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W3010779850,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2921475371,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2943873397,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2895921197,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2803551548,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2914003743,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2899439579,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W3115269373,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2620498484,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2591561250,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2888910509,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2743114338,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2564035955,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2561454478,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2416699615,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2344384003,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2305454765,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W1561704778,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W1552200170,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2534343844,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2078161297,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2626773847,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W1979768461,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2152711758,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2184016349,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2042073935,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2185374180,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2314060426,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2321244041,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2108472590,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2735249251,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2160495355,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2144159587,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-026,Rajashree Shettar,W2149700961,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W7155878151,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W7168021822,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W7154109932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4408400033,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4412404562,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4408442628,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4409103019,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4407198520,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4405975282,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4405975446,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4407214019,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4383502124,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4286447586,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3174638733,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3199256727,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4200372362,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3197012122,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3172152015,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W4231196958,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3204838254,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3120626109,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3023839894,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W2912749559,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W3113173283,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W1914828211,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W2100412846,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W2343527443,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W2332020398,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-027,Ramakanth Kumar P,W2186226549,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-030,Sharvani G S,W4361731931,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-030,Sharvani G S,W4285792874,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4405975683,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4405975060,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4408862849,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4362571209,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4316659952,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4283076307,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W4312275684,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W3120761804,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-031,Shobha G,W2056833049,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W7169783759,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4412366510,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4412366606,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4405974968,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4391521733,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4404031527,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4405975210,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4389428932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W4283076307,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W3176271327,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W3177176479,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W3170901243,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W3091636565,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W2068987698,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W2912902396,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-034,Suma B,W2067757920,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W7203607371,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W7168021822,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W7162077295,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4408442628,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4405975446,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4401011932,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4362591399,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4364295265,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4362571021,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4308477293,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W3145437516,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W3172138632,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W4210439236,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W3176225210,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W3012369826,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W2916078889,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-036,Veena Gadad,W2895744038,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4411447096,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4411094550,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4405975599,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4405975064,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4405974466,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4392945403,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4387485725,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4392942052,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4361731923,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W3045269665,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W4288092263,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W2999964196,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W2888791173,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W2606165697,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W2475117594,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-038,Vishalakshi Prabhu H,W2132537084,OpenAlex author match; name score 1.00,openalex_name_match,OpenAlex
+RVCE-CSE-001,Anitha Sandeep,W4389428940,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-001,Anitha Sandeep,W4327782968,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-001,Anitha Sandeep,W4389429038,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-003,Azra Nasreen,W3173550072,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-003,Azra Nasreen,W4393956480,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-003,Azra Nasreen,W4400999537,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-003,Azra Nasreen,W7167787686,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-003,Azra Nasreen,W4405975529,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-005,Badarinath K B,W4376606252,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-005,Badarinath K B,W4405975035,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-005,Badarinath K B,W4417509577,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-005,Badarinath K B,W4417508814,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-007,Chethana Murthy,W4417509831,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-007,Chethana Murthy,W4417509020,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-009,Ganashree K C,W7162452855,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-009,Ganashree K C,W4417509040,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-021,Poonam Ghuli,W2534343844,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-028,Revathi S A,W4406754905,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-028,Revathi S A,W4408400523,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W3110830836,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W4289174138,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W7118388948,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W4412624359,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W4214775109,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W7171825889,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-029,Shanta Rangaswamy,W4400771727,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-032,Soumya A,W4414693226,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-032,Soumya A,W4417508832,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4417508798,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4405975446,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W3115820477,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4362496905,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4293690755,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4400911225,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4417508832,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W2540896671,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4415934554,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4362591399,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W2916078889,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4240846654,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4233183068,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W3145437516,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W2921518315,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W3127761135,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4398150842,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4408442628,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4385840312,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-033,Sowmyarani C N,W4417509864,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4389428881,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4405975012,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4389429039,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4389456134,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4417509039,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W2889292198,crossref; author affiliation RVCE; name score 0.67,crossref_affiliation_anchored,Crossref
+RVCE-CSE-037,Vinay Hegde,W4417509899,crossref; author affiliation RVCE; name score 1.00,crossref_affiliation_anchored,Crossref

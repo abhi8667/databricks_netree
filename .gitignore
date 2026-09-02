@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.DS_Store
+.tmp_rvce_scrape/
+Data/works_cache.jsonl
+/.netree-local/*
+!/.netree-local/.gitkeep

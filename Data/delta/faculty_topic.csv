@@ -1,0 +1,1126 @@
+faculty_id,topic,n_papers,first_year,latest_year,citations,field,domain,is_active_topic
+RVCE-CSE-001,Advanced Battery Technologies Research,1,2023,2023,5,Engineering,Physical Sciences,True
+RVCE-CSE-001,Advanced Data Storage Technologies,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-001,Advanced Database Systems and Queries,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-001,Context-Aware Activity Recognition Systems,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-001,Data Management and Algorithms,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-001,Electric Vehicles and Infrastructure,1,2023,2023,5,Engineering,Physical Sciences,True
+RVCE-CSE-001,Energy Harvesting in Wireless Networks,1,2023,2023,5,Engineering,Physical Sciences,True
+RVCE-CSE-001,IoT and Edge/Fog Computing,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-001,IoT-based Smart Home Systems,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-002,Network Security and Intrusion Detection,4,2023,2024,15,Computer Science,Physical Sciences,True
+RVCE-CSE-002,IoT and Edge/Fog Computing,3,2020,2024,23,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Advanced Malware Detection Techniques,2,2023,2024,5,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Anomaly Detection Techniques and Applications,2,2023,2024,10,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Blockchain Technology Applications and Security,2,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-002,IoT-based Smart Home Systems,2,2019,2024,7,Engineering,Physical Sciences,True
+RVCE-CSE-002,Artificial Intelligence in Healthcare,1,2024,2024,22,Health Professions,Health Sciences,True
+RVCE-CSE-002,Botanical Research and Applications,1,2017,2017,0,Medicine,Health Sciences,False
+RVCE-CSE-002,Brain Tumor Detection and Classification,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-002,Business Process Modeling and Analysis,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-002,Caching and Content Delivery,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Cloud Computing and Resource Management,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-002,Cloud Data Security Solutions,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Corporate Governance and Management,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-002,Dementia and Cognitive Impairment Research,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-002,Food Science and Nutritional Studies,1,2017,2017,0,Medicine,Health Sciences,False
+RVCE-CSE-002,Information and Cyber Security,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Innovation and Knowledge Management,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-002,Internet Traffic Analysis and Secure E-voting,1,2023,2023,9,Computer Science,Physical Sciences,True
+RVCE-CSE-002,IoT and GPS-based Vehicle Safety Systems,1,2024,2024,7,Engineering,Physical Sciences,True
+RVCE-CSE-002,Machine Learning in Healthcare,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-002,Phytochemicals and Antioxidant Activities,1,2017,2017,0,Medicine,Health Sciences,False
+RVCE-CSE-002,Smart Systems and Machine Learning,1,2024,2024,22,Health Professions,Health Sciences,True
+RVCE-CSE-002,Software System Performance and Reliability,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-002,Software-Defined Networks and 5G,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-002,Spam and Phishing Detection,1,2024,2024,5,Computer Science,Physical Sciences,True
+RVCE-CSE-003,Network Security and Intrusion Detection,2,2021,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-003,Software Reliability and Analysis Research,2,2021,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-003,Advanced Image and Video Retrieval Techniques,1,2024,2024,8,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-003,Advanced Malware Detection Techniques,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-003,Anomaly Detection Techniques and Applications,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-003,Identification and Quantification in Food,1,2024,2024,8,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-003,Infrastructure Maintenance and Monitoring,1,2024,2024,0,Engineering,Physical Sciences,True
+RVCE-CSE-003,Mineral Processing and Grinding,1,2024,2024,0,Engineering,Physical Sciences,True
+RVCE-CSE-003,Safety Systems Engineering in Autonomy,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-003,Software System Performance and Reliability,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-003,Systems Engineering Methodologies and Applications,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-003,Video Surveillance and Tracking Methods,1,2024,2024,8,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-004,Cloud Computing and Resource Management,11,2016,2022,48,Computer Science,Physical Sciences,False
+RVCE-CSE-004,IoT and Edge/Fog Computing,11,2017,2023,48,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Mobile Ad Hoc Networks,7,2014,2018,16,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Opportunistic and Delay-Tolerant Networks,7,2012,2018,18,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Multi-Agent Systems and Negotiation,5,2007,2013,55,Computer Science,Physical Sciences,False
+RVCE-CSE-004,User Authentication and Security Systems,5,2007,2019,59,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Access Control and Trust,4,2011,2018,7,Social Sciences,Social Sciences,False
+RVCE-CSE-004,Context-Aware Activity Recognition Systems,4,2012,2017,15,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Cooperative Communication and Network Coding,4,2017,2017,12,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Cryptography and Data Security,4,2009,2019,10,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Mobile Agent-Based Network Management,4,2007,2013,46,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Blockchain Technology Applications and Security,3,2015,2021,28,Decision Sciences,Social Sciences,False
+RVCE-CSE-004,Cloud Data Security Solutions,3,2012,2020,9,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Distributed systems and fault tolerance,3,2009,2018,7,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Handwritten Text Recognition Techniques,3,2019,2023,14,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Network Security and Intrusion Detection,3,2007,2016,37,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Privacy-Preserving Technologies in Data,3,2011,2013,8,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Quantum Computing Algorithms and Architecture,3,2020,2024,6,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Security in Wireless Sensor Networks,3,2011,2019,8,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Spam and Phishing Detection,3,2007,2008,27,Computer Science,Physical Sciences,False
+RVCE-CSE-004,AI and HR Technologies,2,2024,2025,5,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-004,Advanced Text Analysis Techniques,2,2016,2018,1,Social Sciences,Social Sciences,False
+RVCE-CSE-004,Big Data and Business Intelligence,2,2018,2022,6,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-004,Brain Tumor Detection and Classification,2,2024,2024,4,Neuroscience,Life Sciences,True
+RVCE-CSE-004,Customer churn and segmentation,2,2016,2024,7,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-004,Data Stream Mining Techniques,2,2018,2018,10,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Digital Imaging for Blood Diseases,2,2023,2024,7,Neuroscience,Life Sciences,True
+RVCE-CSE-004,Digital Marketing and Social Media,2,2018,2024,3,Psychology,Social Sciences,True
+RVCE-CSE-004,Distributed and Parallel Computing Systems,2,2016,2016,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Energy Efficient Wireless Sensor Networks,2,2012,2018,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Image Processing and 3D Reconstruction,2,2019,2023,9,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Image Retrieval and Classification Techniques,2,2019,2021,8,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Medical Imaging and Analysis,2,2024,2024,4,Neuroscience,Life Sciences,True
+RVCE-CSE-004,Parallel Computing and Optimization Techniques,2,2016,2016,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Personal Information Management and User Behavior,2,2007,2008,15,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Quantum Information and Cryptography,2,2020,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Quantum-Dot Cellular Automata,2,2020,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Recommender Systems and Techniques,2,2016,2016,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Advanced Control Systems Optimization,1,2021,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Advanced Image Fusion Techniques,1,2021,2021,2,Engineering,Physical Sciences,False
+RVCE-CSE-004,Advanced Neural Network Applications,1,2019,2019,0,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Advanced Vision and Imaging,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-004,Age of Information Optimization,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Analytical Chemistry and Chromatography,1,1982,1982,1,Chemistry,Physical Sciences,False
+RVCE-CSE-004,Analytical chemistry methods development,1,1982,1982,1,Chemistry,Physical Sciences,False
+RVCE-CSE-004,Anomaly Detection Techniques and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Artificial Intelligence in Games,1,2008,2008,1,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Artificial Intelligence in Healthcare and Education,1,2025,2025,1,Psychology,Social Sciences,True
+RVCE-CSE-004,Augmented Reality Applications,1,2024,2024,2,Psychology,Social Sciences,True
+RVCE-CSE-004,Autonomous Vehicle Technology and Safety,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-004,Biometric Identification and Security,1,2019,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Chaos-based Image/Signal Encryption,1,2019,2019,2,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Child Therapy and Development,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-004,Chromium effects and bioremediation,1,1982,1982,1,Chemistry,Physical Sciences,False
+RVCE-CSE-004,Cognitive Functions and Memory,1,2018,2018,3,Social Sciences,Social Sciences,False
+RVCE-CSE-004,Cryptographic Implementations and Security,1,2009,2009,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Data Mining Algorithms and Applications,1,2007,2007,7,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Educational Games and Gamification,1,2024,2024,2,Psychology,Social Sciences,True
+RVCE-CSE-004,Embedded Systems Design Techniques,1,2014,2014,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Emotion and Mood Recognition,1,2025,2025,1,Psychology,Social Sciences,True
+RVCE-CSE-004,Employment and Welfare Studies,1,2024,2024,1,Health Professions,Health Sciences,True
+RVCE-CSE-004,Explainable Artificial Intelligence (XAI),1,2025,2025,3,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Extraction and Separation Processes,1,2021,2021,11,Environmental Science,Physical Sciences,False
+RVCE-CSE-004,Financial Markets and Investment Strategies,1,2021,2021,13,Decision Sciences,Social Sciences,False
+RVCE-CSE-004,Formal Methods in Verification,1,2014,2014,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Gaze Tracking and Assistive Technology,1,2019,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Geochemistry and Geologic Mapping,1,2021,2021,2,Engineering,Physical Sciences,False
+RVCE-CSE-004,Human Mobility and Location-Based Analysis,1,2016,2016,2,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-004,"IPv6, Mobility, Handover, Networks, Security",1,2014,2014,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Imbalanced Data Classification Techniques,1,2016,2016,29,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Impact of AI and Big Data on Business and Society,1,2024,2024,5,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-004,Information and Cyber Security,1,2015,2015,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Internet Traffic Analysis and Secure E-voting,1,2016,2016,29,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Job Satisfaction and Organizational Behavior,1,2024,2024,1,Health Professions,Health Sciences,True
+RVCE-CSE-004,Leaf Properties and Growth Measurement,1,2020,2020,3,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-004,"Logic, Reasoning, and Knowledge",1,2008,2008,1,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Machine Learning and Data Classification,1,2018,2018,6,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Machine Learning in Healthcare,1,2025,2025,3,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Manufacturing Process and Optimization,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-004,Media Influence and Politics,1,2024,2024,1,Social Sciences,Social Sciences,True
+RVCE-CSE-004,Medical Image Segmentation Techniques,1,2024,2024,2,Engineering,Physical Sciences,True
+RVCE-CSE-004,Mental Health via Writing,1,2025,2025,1,Psychology,Social Sciences,True
+RVCE-CSE-004,Metaheuristic Optimization Algorithms Research,1,2020,2020,15,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Mindfulness and Compassion Interventions,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-004,Molecular Communication and Nanonetworks,1,2018,2018,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Multi-Criteria Decision Making,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Municipal Solid Waste Management,1,2021,2021,11,Environmental Science,Physical Sciences,False
+RVCE-CSE-004,Natural Language Processing Techniques,1,2023,2023,6,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Neural Networks and Applications,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Optimization and Search Problems,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Osteoarthritis Treatment and Mechanisms,1,2023,2023,5,Medicine,Health Sciences,True
+RVCE-CSE-004,Peer-to-Peer Network Technologies,1,2007,2007,3,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Physical Unclonable Functions (PUFs) and Hardware Security,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-004,"Privacy, Security, and Data Protection",1,2011,2011,2,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Psychological Well-being and Life Satisfaction,1,2024,2024,1,Health Professions,Health Sciences,True
+RVCE-CSE-004,RFID technology advancements,1,2011,2011,2,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Radiation Effects in Electronics,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-004,Recycling and Waste Management Techniques,1,2021,2021,11,Environmental Science,Physical Sciences,False
+RVCE-CSE-004,Reinforcement Learning in Robotics,1,2021,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Remote-Sensing Image Classification,1,2021,2021,2,Engineering,Physical Sciences,False
+RVCE-CSE-004,Robotic Path Planning Algorithms,1,2021,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Robotics and Sensor-Based Localization,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-004,Scientific and Engineering Research Topics,1,2023,2023,5,Medicine,Health Sciences,True
+RVCE-CSE-004,Sentiment Analysis and Opinion Mining,1,2018,2018,1,Social Sciences,Social Sciences,False
+RVCE-CSE-004,Smart Agriculture and AI,1,2020,2020,3,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-004,Smart Grid Security and Resilience,1,2015,2015,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Software System Performance and Reliability,1,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Spectroscopy and Chemometric Analyses,1,2020,2020,3,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-004,Stochastic Gradient Optimization Techniques,1,2017,2017,1,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Stock Market Forecasting Methods,1,2021,2021,13,Decision Sciences,Social Sciences,False
+RVCE-CSE-004,Text and Document Classification Technologies,1,2016,2016,0,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Topic Modeling,1,2016,2016,0,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Vehicle License Plate Recognition,1,2021,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Wireless Body Area Networks,1,2018,2018,1,Engineering,Physical Sciences,False
+RVCE-CSE-004,Wireless Networks and Protocols,1,2017,2017,1,Computer Science,Physical Sciences,False
+RVCE-CSE-004,Workplace Spirituality and Leadership,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-005,Advanced Aircraft Design and Technologies,1,2023,2023,3,Environmental Science,Physical Sciences,True
+RVCE-CSE-005,Advanced Data Storage Technologies,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-005,Aerospace and Aviation Technology,1,2023,2023,3,Environmental Science,Physical Sciences,True
+RVCE-CSE-005,Air Traffic Management and Optimization,1,2023,2023,3,Environmental Science,Physical Sciences,True
+RVCE-CSE-005,Cloud Computing and Resource Management,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-005,Fire Detection and Safety Systems,1,2024,2024,2,Engineering,Physical Sciences,True
+RVCE-CSE-005,Network Time Synchronization Technologies,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-005,Robotics and Automated Systems,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-005,Software System Performance and Reliability,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-005,Teleoperation and Haptic Systems,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-007,Air Quality Monitoring and Forecasting,1,2025,2025,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-007,Air Quality and Health Impacts,1,2025,2025,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-007,Digital Mental Health Interventions,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-007,Mental Health via Writing,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-007,Organizational and Employee Performance,1,2025,2025,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-007,Personality Traits and Psychology,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-008,Natural Language Processing Techniques,7,2012,2024,50,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Topic Modeling,6,2012,2024,35,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-008,Internet Traffic Analysis and Secure E-voting,4,2021,2026,18,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Network Security and Intrusion Detection,4,2010,2023,19,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Advanced Text Analysis Techniques,3,2015,2024,29,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Data Quality and Management,3,2019,2026,8,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Semantic Web and Ontologies,3,2019,2022,11,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Advanced Database Systems and Queries,2,2019,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Advanced Malware Detection Techniques,2,2021,2021,17,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Cloud Computing and Resource Management,2,2021,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Data Mining Algorithms and Applications,2,2019,2020,19,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Handwritten Text Recognition Techniques,2,2023,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,ICT in Developing Communities,2,2023,2025,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Security in Wireless Sensor Networks,2,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Service-Oriented Architecture and Web Services,2,2019,2022,11,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Spam and Phishing Detection,2,2013,2015,16,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Text and Document Classification Technologies,2,2013,2014,17,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Web Data Mining and Analysis,2,2013,2020,16,Computer Science,Physical Sciences,False
+RVCE-CSE-008,AI in Service Interactions,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Advanced Computational Techniques and Applications,1,2014,2014,9,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Advanced Data Storage Technologies,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Artificial Intelligence Applications,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Artificial Intelligence and Decision Support Systems,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Artificial Intelligence in Healthcare,1,2016,2016,0,Health Professions,Health Sciences,False
+RVCE-CSE-008,Augmented Reality Applications,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-008,Authorship Attribution and Profiling,1,2012,2012,6,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Biomedical Text Mining and Ontologies,1,2024,2024,1,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-008,Blockchain Technology Applications and Security,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Cloud Data Security Solutions,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Complex Systems and Time Series Analysis,1,2019,2019,11,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Education and Technology Integration,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Educational Games and Gamification,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-008,Energy Efficient Wireless Sensor Networks,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Engineering Education and Curriculum Development,1,2018,2018,20,Social Sciences,Social Sciences,False
+RVCE-CSE-008,Experimental Learning in Engineering,1,2018,2018,20,Social Sciences,Social Sciences,False
+RVCE-CSE-008,Explainable Artificial Intelligence (XAI),1,2026,2026,0,Social Sciences,Social Sciences,True
+RVCE-CSE-008,Historical Linguistics and Language Studies,1,2018,2018,1,Arts and Humanities,Social Sciences,False
+RVCE-CSE-008,Image Processing and 3D Reconstruction,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,IoT and Edge/Fog Computing,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-008,"Language, Linguistics, Cultural Analysis",1,2018,2018,1,Arts and Humanities,Social Sciences,False
+RVCE-CSE-008,Misinformation and Its Impacts,1,2026,2026,0,Social Sciences,Social Sciences,True
+RVCE-CSE-008,Mobile Ad Hoc Networks,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Mobile Learning in Education,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Multimodal Machine Learning Applications,1,2026,2026,0,Social Sciences,Social Sciences,True
+RVCE-CSE-008,Network Packet Processing and Optimization,1,2010,2010,1,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Neural Networks and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Parallel Computing and Optimization Techniques,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-008,"Privacy, Security, and Data Protection",1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Problem and Project Based Learning,1,2018,2018,20,Social Sciences,Social Sciences,False
+RVCE-CSE-008,Rough Sets and Fuzzy Logic,1,2020,2020,8,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Scientific Computing and Data Management,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Sentiment Analysis and Opinion Mining,1,2015,2015,8,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Smart Grid Security and Resilience,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Software System Performance and Reliability,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-008,Software-Defined Networks and 5G,1,2010,2010,1,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Stock Market Forecasting Methods,1,2019,2019,11,Computer Science,Physical Sciences,False
+RVCE-CSE-008,"Swearing, Euphemism, Multilingualism",1,2012,2012,6,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Teaching and Learning Programming,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-008,Text Readability and Simplification,1,2012,2012,6,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Time Series Analysis and Forecasting,1,2019,2019,11,Computer Science,Physical Sciences,False
+RVCE-CSE-008,Vehicle License Plate Recognition,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-009,Animal Vocal Communication and Behavior,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-009,Autonomous Vehicle Technology and Safety,1,2025,2025,3,Engineering,Physical Sciences,True
+RVCE-CSE-009,Marine animal studies overview,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-009,Robotic Path Planning Algorithms,1,2025,2025,3,Engineering,Physical Sciences,True
+RVCE-CSE-009,Robotics and Sensor-Based Localization,1,2025,2025,3,Engineering,Physical Sciences,True
+RVCE-CSE-009,Underwater Acoustics Research,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-010,Business Process Modeling and Analysis,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-010,Corporate Governance and Management,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-010,Innovation and Knowledge Management,1,2023,2023,0,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-010,IoT and Edge/Fog Computing,1,2022,2022,21,Computer Science,Physical Sciences,False
+RVCE-CSE-010,Robotic Locomotion and Control,1,2018,2018,3,Engineering,Physical Sciences,False
+RVCE-CSE-010,Robotic Path Planning Algorithms,1,2018,2018,3,Engineering,Physical Sciences,False
+RVCE-CSE-010,Robotics and Automated Systems,1,2018,2018,3,Engineering,Physical Sciences,False
+RVCE-CSE-011,Advanced Queuing Theory Analysis,1,2022,2022,9,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-011,Anomaly Detection Techniques and Applications,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-011,Biometric Identification and Security,1,2022,2022,4,Computer Science,Physical Sciences,False
+RVCE-CSE-011,Face and Expression Recognition,1,2022,2022,4,Computer Science,Physical Sciences,False
+RVCE-CSE-011,Face recognition and analysis,1,2022,2022,4,Computer Science,Physical Sciences,False
+RVCE-CSE-011,Intravenous Infusion Technology and Safety,1,2023,2023,3,Medicine,Health Sciences,True
+RVCE-CSE-011,IoT and Edge/Fog Computing,1,2023,2023,6,Computer Science,Physical Sciences,True
+RVCE-CSE-011,Pharmaceutical Quality and Counterfeiting,1,2023,2023,3,Medicine,Health Sciences,True
+RVCE-CSE-011,Reliability and Maintenance Optimization,1,2022,2022,9,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-011,Software-Defined Networks and 5G,1,2023,2023,6,Computer Science,Physical Sciences,True
+RVCE-CSE-011,Supply Chain and Inventory Management,1,2022,2022,9,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-012,Cloud Computing and Resource Management,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-012,Graph Theory and Algorithms,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-012,Impact of Light on Environment and Health,1,2021,2021,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-012,IoT and Edge/Fog Computing,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-012,Land Use and Ecosystem Services,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-012,Remote-Sensing Image Classification,1,2021,2021,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-012,Urban Green Space and Health,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-012,Urban Heat Island Mitigation,1,2026,2026,0,Environmental Science,Physical Sciences,True
+RVCE-CSE-013,Advanced Image Fusion Techniques,1,2018,2018,5,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Advanced Image Processing Techniques,1,2018,2018,5,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Blockchain Technology Applications and Security,1,2017,2017,11,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Cloud Data Security Solutions,1,2017,2017,11,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Cryptography and Data Security,1,2017,2017,11,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Ethnobotanical and Medicinal Plants Studies,1,2011,2011,6,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-013,Image Enhancement Techniques,1,2018,2018,5,Computer Science,Physical Sciences,False
+RVCE-CSE-013,Natural Antidiabetic Agents Studies,1,2011,2011,6,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-013,Phytochemistry and Biological Activities,1,2011,2011,6,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-014,Human Pose and Action Recognition,4,2020,2023,9,Engineering,Physical Sciences,True
+RVCE-CSE-014,Emotion and Mood Recognition,2,2020,2025,6,Psychology,Social Sciences,True
+RVCE-CSE-014,Face and Expression Recognition,2,2020,2023,4,Computer Science,Physical Sciences,True
+RVCE-CSE-014,Gait Recognition and Analysis,2,2021,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-014,Hand Gesture Recognition Systems,2,2020,2020,9,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Robotics and Automated Systems,2,2020,2020,9,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Spam and Phishing Detection,2,2014,2017,5,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Text and Document Classification Technologies,2,2014,2017,5,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Web Data Mining and Analysis,2,2014,2017,5,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Advanced Text Analysis Techniques,1,2025,2025,5,Psychology,Social Sciences,True
+RVCE-CSE-014,Anomaly Detection Techniques and Applications,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Artificial Intelligence in Healthcare,1,2018,2018,266,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Astro and Planetary Science,1,2024,2024,1,Physics and Astronomy,Physical Sciences,True
+RVCE-CSE-014,Consumer Attitudes and Food Labeling,1,2025,2025,0,Medicine,Health Sciences,True
+RVCE-CSE-014,Data Stream Mining Techniques,1,2018,2018,266,Computer Science,Physical Sciences,False
+RVCE-CSE-014,EEG and Brain-Computer Interfaces,1,2020,2020,1,Psychology,Social Sciences,False
+RVCE-CSE-014,Elder Abuse and Neglect,1,2023,2023,2,Engineering,Physical Sciences,True
+RVCE-CSE-014,Face recognition and analysis,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-014,Gamma-ray bursts and supernovae,1,2024,2024,1,Physics and Astronomy,Physical Sciences,True
+RVCE-CSE-014,Gaze Tracking and Assistive Technology,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-014,Machine Learning and Data Classification,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-014,Machine Learning in Healthcare,1,2018,2018,266,Computer Science,Physical Sciences,False
+RVCE-CSE-014,"Nutrition, Genetics, and Disease",1,2025,2025,0,Medicine,Health Sciences,True
+RVCE-CSE-014,Nutritional Studies and Diet,1,2025,2025,0,Medicine,Health Sciences,True
+RVCE-CSE-014,Plant Disease Management Techniques,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-014,Plant Virus Research Studies,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-014,Sentiment Analysis and Opinion Mining,1,2025,2025,5,Psychology,Social Sciences,True
+RVCE-CSE-014,Smart Agriculture and AI,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-014,Space Satellite Systems and Control,1,2024,2024,1,Physics and Astronomy,Physical Sciences,True
+RVCE-CSE-014,Technology and Data Analysis,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-014,Traffic and Road Safety,1,2023,2023,2,Engineering,Physical Sciences,True
+RVCE-CSE-016,Advanced Image Processing Techniques,2,2017,2017,0,Computer Science,Physical Sciences,False
+RVCE-CSE-016,Image Enhancement Techniques,2,2017,2017,0,Computer Science,Physical Sciences,False
+RVCE-CSE-016,Image and Signal Denoising Methods,2,2017,2017,0,Computer Science,Physical Sciences,False
+RVCE-CSE-016,Advanced Neural Network Applications,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-016,Brain Tumor Detection and Classification,1,2024,2024,1,Neuroscience,Life Sciences,True
+RVCE-CSE-016,Customer churn and segmentation,1,2024,2024,1,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-016,Data Mining Algorithms and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-016,Hand Gesture Recognition Systems,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-016,Land Use and Ecosystem Services,1,2018,2018,3,Environmental Science,Physical Sciences,False
+RVCE-CSE-016,Neural Networks and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-016,Online Learning and Analytics,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-016,Remote Sensing in Agriculture,1,2018,2018,3,Environmental Science,Physical Sciences,False
+RVCE-CSE-016,Sports Analytics and Performance,1,2024,2024,1,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-016,Urban Green Space and Health,1,2018,2018,3,Environmental Science,Physical Sciences,False
+RVCE-CSE-016,Water Quality Monitoring Technologies,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-017,Network Security and Intrusion Detection,16,2021,2026,58,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Internet Traffic Analysis and Secure E-voting,10,2021,2025,40,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Interconnection Networks and Systems,9,2018,2024,41,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Memory and Neural Computing,8,2018,2024,20,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Malware Detection Techniques,7,2021,2026,24,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Chaos-based Image/Signal Encryption,6,2010,2013,4,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Spam and Phishing Detection,6,2023,2026,8,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Anomaly Detection Techniques and Applications,5,2023,2026,10,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Artificial Intelligence in Law,5,2018,2024,16,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Cryptographic Implementations and Security,5,2010,2012,4,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Software System Performance and Reliability,5,2020,2026,19,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Data Storage Technologies,4,2011,2013,4,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Parallel Computing and Optimization Techniques,4,2019,2024,18,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Topic Modeling,4,2024,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Adversarial Robustness in Machine Learning,3,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Artificial Intelligence in Healthcare,3,2024,2025,92,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-017,Brain Tumor Detection and Classification,3,2023,2025,0,Health Professions,Health Sciences,True
+RVCE-CSE-017,Embedded Systems Design Techniques,3,2018,2021,13,Computer Science,Physical Sciences,False
+RVCE-CSE-017,"IPv6, Mobility, Handover, Networks, Security",3,2017,2022,26,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Image and Object Detection Techniques,3,2015,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,IoT and GPS-based Vehicle Safety Systems,3,2017,2024,50,Engineering,Physical Sciences,True
+RVCE-CSE-017,Misinformation and Its Impacts,3,2023,2026,0,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Natural Language Processing Techniques,3,2018,2025,3,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Quantum Computing Algorithms and Architecture,3,2020,2021,14,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Software-Defined Networks and 5G,3,2016,2025,14,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Vehicle License Plate Recognition,3,2019,2025,13,Engineering,Physical Sciences,True
+RVCE-CSE-017,3D Shape Modeling and Analysis,2,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Graph Neural Networks,2,2024,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Big Data and Business Intelligence,2,2021,2021,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-017,Cloud Computing and Resource Management,2,2020,2020,10,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Cloud Data Security Solutions,2,2013,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Computational Physics and Python Applications,2,2018,2021,94,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Cryptography and Residue Arithmetic,2,2010,2010,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,"Diabetes, Cardiovascular Risks, and Lipoproteins",2,2018,2019,16,Medicine,Health Sciences,False
+RVCE-CSE-017,Imbalanced Data Classification Techniques,2,2024,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Infant Health and Development,2,2017,2017,29,Health Professions,Health Sciences,False
+RVCE-CSE-017,Information and Cyber Security,2,2024,2024,4,Computer Science,Physical Sciences,True
+RVCE-CSE-017,IoT and Edge/Fog Computing,2,2018,2021,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-017,"Law, Economics, and Judicial Systems",2,2021,2024,11,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Mobile Agent-Based Network Management,2,2017,2025,14,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Neonatal and fetal brain pathology,2,2017,2017,29,Health Professions,Health Sciences,False
+RVCE-CSE-017,Network Traffic and Congestion Control,2,2016,2017,20,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Quantum Information and Cryptography,2,2021,2021,2,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Quantum-Dot Cellular Automata,2,2020,2023,13,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Sentiment Analysis and Opinion Mining,2,2021,2025,8,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Smart Parking Systems Research,2,2019,2019,12,Engineering,Physical Sciences,False
+RVCE-CSE-017,User Authentication and Security Systems,2,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,AI in Service Interactions,1,2021,2021,6,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Advanced Authentication Protocols Security,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Advanced Data Processing Techniques,1,2024,2024,7,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Image Fusion Techniques,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,Advanced Image and Video Retrieval Techniques,1,2016,2016,13,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Advanced Neural Network Applications,1,2016,2016,13,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Advanced Optical Network Technologies,1,2016,2016,6,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Advanced Text Analysis Techniques,1,2025,2025,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Advanced Theoretical and Applied Studies in Material Sciences and Geometry,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Algorithms and Data Compression,1,2018,2018,93,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Authorship Attribution and Profiling,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Big Data and Digital Economy,1,2026,2026,0,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Bioinformatics and Genomic Networks,1,2020,2020,0,"Biochemistry, Genetics and Molecular Biology",Life Sciences,False
+RVCE-CSE-017,Biomedical Text Mining and Ontologies,1,2020,2020,0,"Biochemistry, Genetics and Molecular Biology",Life Sciences,False
+RVCE-CSE-017,Blockchain Technology Applications and Security,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Blood donation and transfusion practices,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,COVID-19 diagnosis using AI,1,2021,2021,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Cardiovascular and exercise physiology,1,2019,2019,7,Medicine,Health Sciences,False
+RVCE-CSE-017,Cognitive Computing and Networks,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Color Science and Applications,1,2024,2024,3,Engineering,Physical Sciences,True
+RVCE-CSE-017,Computer Graphics and Visualization Techniques,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Context-Aware Activity Recognition Systems,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Cryptography and Data Security,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Customer churn and segmentation,1,2021,2021,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-017,Cybercrime and Law Enforcement Studies,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Dementia and Cognitive Impairment Research,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-017,Diabetes Management and Education,1,2018,2018,9,Medicine,Health Sciences,False
+RVCE-CSE-017,Digital Marketing and Social Media,1,2025,2025,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Digital Radiography and Breast Imaging,1,2015,2015,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Digital and Cyber Forensics,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Distributed and Parallel Computing Systems,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,ECG Monitoring and Analysis,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,Embedded Systems and FPGA Design,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Embodied and Extended Cognition,1,2019,2019,2,Neuroscience,Life Sciences,False
+RVCE-CSE-017,Emotion and Mood Recognition,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Ethics and Social Impacts of AI,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Exercise and Physiological Responses,1,2019,2019,7,Medicine,Health Sciences,False
+RVCE-CSE-017,Face recognition and analysis,1,2021,2021,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Formal Methods in Verification,1,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-017,"Genetics, Bioinformatics, and Biomedical Research",1,2020,2020,0,"Biochemistry, Genetics and Molecular Biology",Life Sciences,False
+RVCE-CSE-017,Heart Rate Variability and Autonomic Control,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,ICT in Developing Communities,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Image Enhancement Techniques,1,2024,2024,3,Engineering,Physical Sciences,True
+RVCE-CSE-017,Image Processing Techniques and Applications,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Image Retrieval and Classification Techniques,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Industrial Vision Systems and Defect Detection,1,2024,2024,3,Engineering,Physical Sciences,True
+RVCE-CSE-017,Infrared Target Detection Methodologies,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,IoT Networks and Protocols,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,IoT-based Smart Home Systems,1,2024,2024,7,Engineering,Physical Sciences,True
+RVCE-CSE-017,Legal Education and Practice Innovations,1,2021,2021,9,Social Sciences,Social Sciences,False
+RVCE-CSE-017,"Logic, programming, and type systems",1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Machine Learning and Data Classification,1,2016,2016,13,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Machine Learning and ELM,1,2024,2024,0,Neuroscience,Life Sciences,True
+RVCE-CSE-017,Machine Learning in Healthcare,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-017,Medical Image Segmentation Techniques,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Medical Imaging and Analysis,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-017,Mineral Processing and Grinding,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,"Modeling, Simulation, and Optimization",1,2024,2024,0,Social Sciences,Social Sciences,True
+RVCE-CSE-017,Multi-Agent Systems and Negotiation,1,2018,2018,3,Social Sciences,Social Sciences,False
+RVCE-CSE-017,Multimodal Machine Learning Applications,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Network Packet Processing and Optimization,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Non-Invasive Vital Sign Monitoring,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,"Nutrition, Genetics, and Disease",1,2025,2025,70,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-017,Nutritional Studies and Diet,1,2025,2025,70,"Biochemistry, Genetics and Molecular Biology",Life Sciences,True
+RVCE-CSE-017,Optical Wireless Communication Technologies,1,2019,2019,9,Engineering,Physical Sciences,False
+RVCE-CSE-017,Organizational and Employee Performance,1,2021,2021,6,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Physical Activity and Health,1,2018,2018,9,Medicine,Health Sciences,False
+RVCE-CSE-017,"Privacy, Security, and Data Protection",1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Quantum and electron transport phenomena,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-017,RFID technology advancements,1,2020,2020,30,Engineering,Physical Sciences,False
+RVCE-CSE-017,Radiation Dose and Imaging,1,2015,2015,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Radiation Effects in Electronics,1,2022,2022,4,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Radiology practices and education,1,2015,2015,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Real-Time Systems Scheduling,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Remote-Sensing Image Classification,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-017,Robotic Path Planning Algorithms,1,2019,2019,3,Engineering,Physical Sciences,False
+RVCE-CSE-017,Service-Oriented Architecture and Web Services,1,2020,2020,3,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Smart Grid Security and Resilience,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Smart Systems and Machine Learning,1,2024,2024,22,Health Professions,Health Sciences,True
+RVCE-CSE-017,Software Engineering Research,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Software Reliability and Analysis Research,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-017,Software Testing and Debugging Techniques,1,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Speech Recognition and Synthesis,1,2017,2017,16,Health Professions,Health Sciences,False
+RVCE-CSE-017,Supercapacitor Materials and Fabrication,1,2022,2022,2,Computer Science,Physical Sciences,False
+RVCE-CSE-017,VLSI and Analog Circuit Testing,1,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-017,Vehicular Ad Hoc Networks (VANETs),1,2020,2020,30,Engineering,Physical Sciences,False
+RVCE-CSE-017,Video Surveillance and Tracking Methods,1,2021,2021,0,Medicine,Health Sciences,False
+RVCE-CSE-017,Web Application Security Vulnerabilities,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-017,semigroups and automata theory,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Video Surveillance and Tracking Methods,33,2015,2025,1587,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Neural Network Applications,18,2018,2025,1431,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Network Security and Intrusion Detection,14,2020,2025,253,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Anomaly Detection Techniques and Applications,13,2018,2024,679,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Malware Detection Techniques,8,2023,2025,68,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Fire Detection and Safety Systems,8,2015,2025,313,Engineering,Physical Sciences,True
+RVCE-CSE-018,IoT-based Smart Home Systems,7,2015,2024,174,Engineering,Physical Sciences,True
+RVCE-CSE-018,Advanced Image and Video Retrieval Techniques,6,2016,2023,253,Engineering,Physical Sciences,True
+RVCE-CSE-018,Currency Recognition and Detection,6,2018,2024,582,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Digital Media Forensic Detection,6,2020,2025,167,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Traffic Prediction and Management Techniques,6,2021,2026,96,Engineering,Physical Sciences,True
+RVCE-CSE-018,Vehicle License Plate Recognition,6,2020,2025,166,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Blockchain Technology Applications and Security,5,2021,2024,117,Computer Science,Physical Sciences,True
+RVCE-CSE-018,IoT and Edge/Fog Computing,5,2013,2022,93,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Autonomous Vehicle Technology and Safety,4,2015,2023,60,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Brain Tumor Detection and Classification,4,2018,2025,288,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Generative Adversarial Networks and Image Synthesis,4,2021,2025,43,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Information and Cyber Security,4,2023,2025,10,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Spam and Phishing Detection,4,2023,2024,76,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Text Analysis Techniques,3,2022,2025,7,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Digital and Cyber Forensics,3,2023,2023,24,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Face recognition and analysis,3,2022,2025,15,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Human Pose and Action Recognition,3,2018,2025,85,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Image Enhancement Techniques,3,2016,2023,60,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Industrial Vision Systems and Defect Detection,3,2024,2025,7,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Internet Traffic Analysis and Secure E-voting,3,2020,2024,83,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Recommender Systems and Techniques,3,2020,2025,30,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Robotics and Sensor-Based Localization,3,2015,2021,90,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Smart Agriculture and AI,3,2022,2025,18,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-018,Advanced Graph Neural Networks,2,2021,2023,92,Social Sciences,Social Sciences,True
+RVCE-CSE-018,Advanced Vision and Imaging,2,2016,2016,54,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Advancements in PLL and VCO Technologies,2,2016,2017,25,Engineering,Physical Sciences,False
+RVCE-CSE-018,Adversarial Robustness in Machine Learning,2,2024,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Big Data and Business Intelligence,2,2018,2022,38,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,COVID-19 diagnosis using AI,2,2022,2022,12,Medicine,Health Sciences,False
+RVCE-CSE-018,Cloud Computing and Resource Management,2,2013,2024,10,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Data Stream Mining Techniques,2,2018,2022,62,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Digital Filter Design and Implementation,2,2016,2017,21,Computer Science,Physical Sciences,False
+RVCE-CSE-018,ECG Monitoring and Analysis,2,2015,2026,11,Engineering,Physical Sciences,True
+RVCE-CSE-018,Human Mobility and Location-Based Analysis,2,2023,2026,7,Engineering,Physical Sciences,True
+RVCE-CSE-018,"IPv6, Mobility, Handover, Networks, Security",2,2015,2021,9,Engineering,Physical Sciences,False
+RVCE-CSE-018,Imbalanced Data Classification Techniques,2,2022,2024,15,Computer Science,Physical Sciences,True
+RVCE-CSE-018,IoT and GPS-based Vehicle Safety Systems,2,2022,2024,36,Engineering,Physical Sciences,True
+RVCE-CSE-018,Legal and Regulatory Analysis,2,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,"Linguistic, Cultural, and Literary Studies",2,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,Machine Learning and Data Classification,2,2018,2022,62,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Machine Learning in Healthcare,2,2022,2023,7,Neuroscience,Life Sciences,True
+RVCE-CSE-018,Military Technology and Strategies,2,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,Misinformation and Its Impacts,2,2023,2023,30,Social Sciences,Social Sciences,True
+RVCE-CSE-018,Non-Invasive Vital Sign Monitoring,2,2015,2026,11,Engineering,Physical Sciences,True
+RVCE-CSE-018,Numerical Methods and Algorithms,2,2017,2017,20,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Security in Wireless Sensor Networks,2,2025,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Sentiment Analysis and Opinion Mining,2,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Smart Systems and Machine Learning,2,2022,2024,27,Health Professions,Health Sciences,True
+RVCE-CSE-018,Software System Performance and Reliability,2,2013,2024,16,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Video Analysis and Summarization,2,2019,2025,51,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Wireless Body Area Networks,2,2017,2026,1,Engineering,Physical Sciences,True
+RVCE-CSE-018,Wireless Communication Networks Research,2,2015,2016,4,Engineering,Physical Sciences,False
+RVCE-CSE-018,3D Surveying and Cultural Heritage,1,2018,2018,4,Engineering,Physical Sciences,False
+RVCE-CSE-018,AI in Service Interactions,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Computational Techniques and Applications,1,2022,2022,2,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,Advanced Data Compression Techniques,1,2017,2017,16,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Advanced Data Processing Techniques,1,2024,2024,7,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Data and IoT Technologies,1,2023,2023,16,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Advanced Database Systems and Queries,1,2022,2022,2,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,Advanced Frequency and Time Standards,1,2015,2015,4,Physics and Astronomy,Physical Sciences,False
+RVCE-CSE-018,Advanced Image Processing Techniques,1,2021,2021,16,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Advanced Measurement and Detection Methods,1,2018,2018,57,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Advanced Wireless Communication Techniques,1,2016,2016,1,Engineering,Physical Sciences,False
+RVCE-CSE-018,Advanced Wireless Network Optimization,1,2015,2015,3,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Analog and Mixed-Signal Circuit Design,1,2016,2016,5,Engineering,Physical Sciences,False
+RVCE-CSE-018,Antenna Design and Analysis,1,2017,2017,1,Engineering,Physical Sciences,False
+RVCE-CSE-018,Artificial Intelligence in Healthcare,1,2024,2024,22,Health Professions,Health Sciences,True
+RVCE-CSE-018,Artificial Intelligence in Healthcare and Education,1,2022,2022,7,Medicine,Health Sciences,False
+RVCE-CSE-018,Autism Spectrum Disorder Research,1,2019,2019,1,Neuroscience,Life Sciences,False
+RVCE-CSE-018,Big Data Technologies and Applications,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Big Data and Digital Economy,1,2023,2023,7,Social Sciences,Social Sciences,True
+RVCE-CSE-018,Blockchain Technology in Education and Learning,1,2022,2022,38,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,Consumer Market Behavior and Pricing,1,2020,2020,14,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Cryptographic Implementations and Security,1,2017,2017,0,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Customer churn and segmentation,1,2020,2020,14,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Data Mining Algorithms and Applications,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Data Visualization and Analytics,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Dementia and Cognitive Impairment Research,1,2023,2023,0,Neuroscience,Life Sciences,True
+RVCE-CSE-018,Digital Transformation in Industry,1,2020,2020,9,Engineering,Physical Sciences,False
+RVCE-CSE-018,EEG and Brain-Computer Interfaces,1,2015,2015,11,Neuroscience,Life Sciences,False
+RVCE-CSE-018,Electricity Theft Detection Techniques,1,2022,2022,13,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Embedded Systems Design Techniques,1,2017,2017,0,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Embedded Systems and FPGA Applications,1,2017,2017,20,Engineering,Physical Sciences,False
+RVCE-CSE-018,Emotion and Mood Recognition,1,2019,2019,1,Neuroscience,Life Sciences,False
+RVCE-CSE-018,Face and Expression Recognition,1,2025,2025,8,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Fire dynamics and safety research,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-018,GNSS positioning and interference,1,2015,2015,4,Physics and Astronomy,Physical Sciences,False
+RVCE-CSE-018,Geochemistry and Geologic Mapping,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-018,Hate Speech and Cyberbullying Detection,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Human Health and Disease,1,2021,2021,0,Medicine,Health Sciences,False
+RVCE-CSE-018,Image Retrieval and Classification Techniques,1,2016,2016,29,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Image and Signal Denoising Methods,1,2017,2017,16,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Image and Video Quality Assessment,1,2023,2023,16,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Industrial Automation and Control Systems,1,2020,2020,9,Engineering,Physical Sciences,False
+RVCE-CSE-018,Infant Health and Development,1,2019,2019,1,Neuroscience,Life Sciences,False
+RVCE-CSE-018,Infrastructure Maintenance and Monitoring,1,2018,2018,4,Engineering,Physical Sciences,False
+RVCE-CSE-018,Microwave Engineering and Waveguides,1,2017,2017,1,Engineering,Physical Sciences,False
+RVCE-CSE-018,Mobile Agent-Based Network Management,1,2021,2021,6,Engineering,Physical Sciences,False
+RVCE-CSE-018,Multimedia Communication and Technology,1,2021,2021,6,Engineering,Physical Sciences,False
+RVCE-CSE-018,Multimodal Machine Learning Applications,1,2021,2021,85,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Music and Audio Processing,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Neural Networks and Applications,1,2018,2018,529,Computer Science,Physical Sciences,False
+RVCE-CSE-018,PAPR reduction in OFDM,1,2016,2016,1,Engineering,Physical Sciences,False
+RVCE-CSE-018,Plant Growth and Agriculture Techniques,1,1987,1987,0,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-018,Privacy-Preserving Technologies in Data,1,2023,2023,10,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Quantum Computing Algorithms and Architecture,1,2021,2021,70,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Radio Astronomy Observations and Technology,1,2015,2015,4,Physics and Astronomy,Physical Sciences,False
+RVCE-CSE-018,Remote-Sensing Image Classification,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-018,Robotics and Automated Systems,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-018,Scientific Computing and Data Management,1,2022,2022,2,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,Security and Verification in Computing,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Seismic Performance and Analysis,1,2014,2014,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,Semantic Web and Ontologies,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Software Engineering Research,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Software Reliability and Analysis Research,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-018,Stochastic Gradient Optimization Techniques,1,2021,2021,70,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Structural Behavior of Reinforced Concrete,1,2014,2014,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,Structural Health Monitoring Techniques,1,2018,2018,4,Engineering,Physical Sciences,False
+RVCE-CSE-018,Structural Response to Dynamic Loads,1,2014,2014,0,Engineering,Physical Sciences,False
+RVCE-CSE-018,Technology Adoption and User Behaviour,1,2022,2022,38,Decision Sciences,Social Sciences,False
+RVCE-CSE-018,Topic Modeling,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-018,Traffic control and management,1,2022,2022,5,Engineering,Physical Sciences,False
+RVCE-CSE-018,Transportation Planning and Optimization,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-018,User Authentication and Security Systems,1,2023,2023,10,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Parallel Computing and Optimization Techniques,11,2014,2021,42,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Wireless Network Optimization,10,2016,2023,20,Engineering,Physical Sciences,True
+RVCE-CSE-019,Machine Learning and Algorithms,8,1987,2004,100,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Smart Agriculture and AI,8,2017,2025,120,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Advanced MIMO Systems Optimization,7,2016,2023,11,Engineering,Physical Sciences,True
+RVCE-CSE-019,Energy Efficient Wireless Sensor Networks,7,2017,2023,41,Engineering,Physical Sciences,True
+RVCE-CSE-019,IoT and Edge/Fog Computing,7,2019,2023,23,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Mobile Ad Hoc Networks,7,2017,2019,33,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Malware Detection Techniques,6,2021,2025,5,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Algorithms and Data Compression,6,1987,2004,94,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Cloud Computing and Resource Management,6,2016,2025,19,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Distributed and Parallel Computing Systems,6,2016,2021,29,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Network Security and Intrusion Detection,6,2009,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Wireless Networks and Protocols,6,2017,2020,14,Engineering,Physical Sciences,False
+RVCE-CSE-019,Internet of Things and AI,5,2016,2025,85,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Security in Wireless Sensor Networks,5,2015,2019,35,Computer Science,Physical Sciences,False
+RVCE-CSE-019,semigroups and automata theory,5,1987,2003,65,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Image and Video Retrieval Techniques,4,2015,2017,9,Engineering,Physical Sciences,False
+RVCE-CSE-019,Artificial Intelligence in Healthcare,4,2017,2025,19,Health Professions,Health Sciences,True
+RVCE-CSE-019,Chaos-based Image/Signal Encryption,4,2015,2024,11,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Embedded Systems Design Techniques,4,2016,2021,12,Computer Science,Physical Sciences,False
+RVCE-CSE-019,"IPv6, Mobility, Handover, Networks, Security",4,2009,2019,2,Engineering,Physical Sciences,False
+RVCE-CSE-019,Image Retrieval and Classification Techniques,4,2014,2015,8,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Internet Traffic Analysis and Secure E-voting,4,2009,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Wireless Communication Networks Research,4,2017,2023,5,Engineering,Physical Sciences,True
+RVCE-CSE-019,Cooperative Communication and Network Coding,3,2016,2021,8,Engineering,Physical Sciences,False
+RVCE-CSE-019,Data Mining Algorithms and Applications,3,1996,2015,10,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Face and Expression Recognition,3,2005,2021,18,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Formal Methods in Verification,3,2002,2016,8,Computer Science,Physical Sciences,False
+RVCE-CSE-019,IoT-based Smart Home Systems,3,2019,2023,92,Engineering,Physical Sciences,True
+RVCE-CSE-019,Medical Image Segmentation Techniques,3,2015,2021,31,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Mobile Agent-Based Network Management,3,2013,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Neural Networks and Applications,3,2004,2005,15,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Traffic Prediction and Management Techniques,3,2018,2023,27,Engineering,Physical Sciences,True
+RVCE-CSE-019,Video Analysis and Summarization,3,2015,2016,9,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Optimization Algorithms Research,2,1974,1974,13,Mathematics,Physical Sciences,False
+RVCE-CSE-019,Air Quality Monitoring and Forecasting,2,2019,2020,3,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,Anomaly Detection Techniques and Applications,2,2021,2022,6,Neuroscience,Life Sciences,False
+RVCE-CSE-019,Big Data and Digital Economy,2,2016,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-019,COVID-19 diagnosis using AI,2,2021,2021,12,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Cognitive Computing and Networks,2,2015,2024,5,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Cryptographic Implementations and Security,2,2021,2024,5,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Emotion and Mood Recognition,2,2023,2025,11,Psychology,Social Sciences,True
+RVCE-CSE-019,"Logic, programming, and type systems",2,2002,2002,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Mobile and Web Applications,2,2019,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Natural Language Processing Techniques,2,2004,2025,3,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Optimization and Variational Analysis,2,1974,1974,13,Mathematics,Physical Sciences,False
+RVCE-CSE-019,Remote Sensing in Agriculture,2,2021,2022,5,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,Rough Sets and Fuzzy Logic,2,1996,1998,10,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Semantic Web and Ontologies,2,1996,1998,10,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Smart Grid Security and Resilience,2,1988,2015,5,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Smart Systems and Machine Learning,2,2021,2023,8,Psychology,Social Sciences,True
+RVCE-CSE-019,Software System Performance and Reliability,2,2017,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Software Testing and Debugging Techniques,2,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Software-Defined Networks and 5G,2,2023,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Video Surveillance and Tracking Methods,2,2016,2021,6,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Water Quality Monitoring Technologies,2,2017,2023,13,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Wireless Body Area Networks,2,2023,2023,12,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,AI in cancer detection,1,2021,2021,7,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Data Compression Techniques,1,2019,2019,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Data Storage Technologies,1,2014,2014,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Database Systems and Queries,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Image Fusion Techniques,1,2019,2019,24,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Memory and Neural Computing,1,2004,2004,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Advanced Optical Network Technologies,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Advanced Photonic Communication Systems,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Advanced Research in Systems and Signal Processing,1,2011,2011,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,"Aging, Elder Care, and Social Issues",1,2014,2014,1,Arts and Humanities,Social Sciences,False
+RVCE-CSE-019,Agricultural Economics and Practices,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Agricultural Systems and Practices,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Artificial Intelligence in Healthcare and Education,1,2024,2024,0,Health Professions,Health Sciences,True
+RVCE-CSE-019,Big Data and Business Intelligence,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Brain Tumor Detection and Classification,1,2022,2022,1,Neuroscience,Life Sciences,False
+RVCE-CSE-019,Business Process Modeling and Analysis,1,2021,2021,21,Engineering,Physical Sciences,False
+RVCE-CSE-019,Cellular Automata and Applications,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Cloud Data Security Solutions,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Consumer Retail Behavior Studies,1,2017,2017,3,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-019,Context-Aware Activity Recognition Systems,1,2019,2019,8,Engineering,Physical Sciences,False
+RVCE-CSE-019,Control Systems and Identification,1,2005,2005,9,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Customer Service Quality and Loyalty,1,2017,2017,3,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-019,Customer churn and segmentation,1,2017,2017,3,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-019,DNA and Biological Computing,1,2002,2002,4,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Data Management and Algorithms,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Digital and Cyber Forensics,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Distributed systems and fault tolerance,1,2014,2014,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,ECG Monitoring and Analysis,1,2024,2024,0,Medicine,Health Sciences,True
+RVCE-CSE-019,Economic and Technological Systems Analysis,1,2011,2011,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Embedded Systems and FPGA Design,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Experimental Learning in Engineering,1,2014,2014,20,Social Sciences,Social Sciences,False
+RVCE-CSE-019,Food Supply Chain Traceability,1,2023,2023,2,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Geophysical Methods and Applications,1,2014,2014,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Green IT and Sustainability,1,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,"Health, Medicine and Society",1,2014,2014,1,Arts and Humanities,Social Sciences,False
+RVCE-CSE-019,Hermeneutics and Narrative Identity,1,2014,2014,1,Arts and Humanities,Social Sciences,False
+RVCE-CSE-019,Human Mobility and Location-Based Analysis,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Image and Object Detection Techniques,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Image and Signal Denoising Methods,1,2019,2019,24,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Impact of Light on Environment and Health,1,2019,2019,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,Indoor and Outdoor Localization Technologies,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Information Systems and Technology Applications,1,2011,2011,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Information and Cyber Security,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Innovation in Digital Healthcare Systems,1,2023,2023,1,Health Professions,Health Sciences,True
+RVCE-CSE-019,Interconnection Networks and Systems,1,2020,2020,5,Computer Science,Physical Sciences,False
+RVCE-CSE-019,IoT Networks and Protocols,1,2019,2019,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,IoT and GPS-based Vehicle Safety Systems,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Irrigation Practices and Water Management,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Knowledge Management and Technology,1,2024,2024,0,Health Professions,Health Sciences,True
+RVCE-CSE-019,Livestock Management and Performance Improvement,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,"Logic, Reasoning, and Knowledge",1,2002,2002,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Machine Learning and Data Classification,1,1988,1988,30,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Machine Learning and ELM,1,2005,2005,6,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Matrix Theory and Algorithms,1,1974,1974,3,Mathematics,Physical Sciences,False
+RVCE-CSE-019,Mental Health via Writing,1,2023,2023,8,Psychology,Social Sciences,True
+RVCE-CSE-019,Microwave Imaging and Scattering Analysis,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Misinformation and Its Impacts,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-019,Molecular Communication and Nanonetworks,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Network Packet Processing and Optimization,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Neural dynamics and brain function,1,2004,2004,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Numerical Methods and Algorithms,1,2002,2002,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Online Learning and Analytics,1,2014,2014,20,Social Sciences,Social Sciences,False
+RVCE-CSE-019,Online and Blended Learning,1,2014,2014,20,Social Sciences,Social Sciences,False
+RVCE-CSE-019,Optimal Power Flow Distribution,1,1988,1988,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Personality Traits and Psychology,1,2025,2025,3,Psychology,Social Sciences,True
+RVCE-CSE-019,Physical Unclonable Functions (PUFs) and Hardware Security,1,2021,2021,2,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-019,Plant Pathogens and Fungal Diseases,1,2025,2025,5,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Plant Physiology and Cultivation Studies,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Plant and soil sciences,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Power System Optimization and Stability,1,1988,1988,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,RFID technology advancements,1,2021,2021,2,Agricultural and Biological Sciences,Life Sciences,False
+RVCE-CSE-019,Radiation Effects in Electronics,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Real-Time Systems Scheduling,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Remote Sensing and Land Use,1,2022,2022,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,Remote-Sensing Image Classification,1,2022,2022,1,Environmental Science,Physical Sciences,False
+RVCE-CSE-019,Robotic Path Planning Algorithms,1,2017,2017,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Robotic Process Automation Applications,1,2021,2021,21,Engineering,Physical Sciences,False
+RVCE-CSE-019,Robotics and Sensor-Based Localization,1,2017,2017,0,Engineering,Physical Sciences,False
+RVCE-CSE-019,Satellite Communication Systems,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Seed and Plant Biochemistry,1,2024,2024,1,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-019,Service-Oriented Architecture and Web Services,1,2021,2021,21,Engineering,Physical Sciences,False
+RVCE-CSE-019,Software Engineering Research,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Software Engineering and Design Patterns,1,2015,2015,4,Social Sciences,Social Sciences,False
+RVCE-CSE-019,Spam and Phishing Detection,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-019,Sparse and Compressive Sensing Techniques,1,1974,1974,10,Mathematics,Physical Sciences,False
+RVCE-CSE-019,Speech Recognition and Synthesis,1,2019,2019,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Speech and Audio Processing,1,2019,2019,1,Computer Science,Physical Sciences,False
+RVCE-CSE-019,Speech and dialogue systems,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Technology and Data Analysis,1,2023,2023,1,Health Professions,Health Sciences,True
+RVCE-CSE-019,Time Series Analysis and Forecasting,1,2023,2023,0,Engineering,Physical Sciences,True
+RVCE-CSE-019,Topic Modeling,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-019,Traffic control and management,1,2018,2018,25,Engineering,Physical Sciences,False
+RVCE-CSE-019,Transportation Planning and Optimization,1,2018,2018,25,Engineering,Physical Sciences,False
+RVCE-CSE-019,Vehicle emissions and performance,1,2020,2020,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-020,Cloud Data Security Solutions,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-020,Network Security and Intrusion Detection,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-020,Software System Performance and Reliability,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-021,Caching and Content Delivery,1,2014,2014,19,Computer Science,Physical Sciences,False
+RVCE-CSE-021,Image and Video Quality Assessment,1,2014,2014,19,Computer Science,Physical Sciences,False
+RVCE-CSE-021,Recommender Systems and Techniques,1,2014,2014,19,Computer Science,Physical Sciences,False
+RVCE-CSE-022,Mobile Ad Hoc Networks,2,2018,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-022,Augmented Reality Applications,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-022,Biomedical and Engineering Education,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-022,EEG and Brain-Computer Interfaces,1,2019,2019,2,Neuroscience,Life Sciences,False
+RVCE-CSE-022,Educational Games and Gamification,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-022,Educational Systems and Policies,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-022,Educational Technology and Assessment,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-022,Energy Efficient Wireless Sensor Networks,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-022,Engineering Education and Curriculum Development,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-022,Gaze Tracking and Assistive Technology,1,2019,2019,2,Neuroscience,Life Sciences,False
+RVCE-CSE-022,Higher Education and Teaching Methods,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-022,"IPv6, Mobility, Handover, Networks, Security",1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-022,Mobile Learning in Education,1,2020,2020,2,Computer Science,Physical Sciences,False
+RVCE-CSE-022,Neuroscience and Neural Engineering,1,2019,2019,2,Neuroscience,Life Sciences,False
+RVCE-CSE-022,Problem and Project Based Learning,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-022,Security in Wireless Sensor Networks,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-022,Teaching and Learning Programming,1,2025,2025,0,Psychology,Social Sciences,True
+RVCE-CSE-022,Wireless Networks and Protocols,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-023,Artificial Intelligence in Healthcare,1,2015,2015,11,Computer Science,Physical Sciences,False
+RVCE-CSE-023,Brain Tumor Detection and Classification,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-023,Cloud Computing and Resource Management,1,2015,2015,11,Computer Science,Physical Sciences,False
+RVCE-CSE-023,Cloud Data Security Solutions,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-023,Internet of Things and AI,1,2015,2015,11,Computer Science,Physical Sciences,False
+RVCE-CSE-023,Legal and Regulatory Analysis,1,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-023,"Linguistic, Cultural, and Literary Studies",1,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-023,Military Technology and Strategies,1,2016,2016,0,Engineering,Physical Sciences,False
+RVCE-CSE-023,Privacy-Preserving Technologies in Data,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-024,Cloud Data Security Solutions,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-024,Network Security and Intrusion Detection,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-024,Software System Performance and Reliability,1,2026,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-025,Analog and Mixed-Signal Circuit Design,4,2015,2025,14,Engineering,Physical Sciences,True
+RVCE-CSE-025,Low-power high-performance VLSI design,4,2018,2025,5,Engineering,Physical Sciences,True
+RVCE-CSE-025,Advancements in PLL and VCO Technologies,2,2015,2025,9,Engineering,Physical Sciences,True
+RVCE-CSE-025,Numerical Methods and Algorithms,2,2018,2024,5,Engineering,Physical Sciences,True
+RVCE-CSE-025,Advanced Memory and Neural Computing,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-025,Air Quality and Health Impacts,1,2022,2022,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-025,Climate Change and Health Impacts,1,2022,2022,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-025,Digital Filter Design and Implementation,1,2024,2024,0,Engineering,Physical Sciences,True
+RVCE-CSE-025,ECG Monitoring and Analysis,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-025,Quantum and electron transport phenomena,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-025,Quantum-Dot Cellular Automata,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-025,Semiconductor Lasers and Optical Devices,1,2015,2015,9,Engineering,Physical Sciences,False
+RVCE-CSE-025,Zoonotic diseases and public health,1,2022,2022,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-026,Cloud Computing and Resource Management,5,2014,2021,10,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Mobile Ad Hoc Networks,5,2014,2018,17,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Web Data Mining and Analysis,5,2011,2024,4,Decision Sciences,Social Sciences,True
+RVCE-CSE-026,Data Management and Algorithms,4,2007,2013,8,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Data Mining Algorithms and Applications,4,2007,2019,16,Health Professions,Health Sciences,False
+RVCE-CSE-026,Energy Efficient Wireless Sensor Networks,4,2015,2018,14,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Network Security and Intrusion Detection,4,2015,2026,14,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Peer-to-Peer Network Technologies,4,2014,2021,2,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Traffic Prediction and Management Techniques,4,2017,2019,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Traffic control and management,4,2017,2019,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Advanced Clustering Algorithms Research,3,2015,2017,12,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Image and Video Retrieval Techniques,3,2012,2013,2,Computer Science,Physical Sciences,False
+RVCE-CSE-026,COVID-19 diagnosis using AI,3,2022,2024,14,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Cooperative Communication and Network Coding,3,2014,2018,8,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Data Stream Mining Techniques,3,2007,2015,18,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Distributed and Parallel Computing Systems,3,2014,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Music and Audio Processing,3,2012,2018,8,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Neural Networks and Applications,3,2017,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Opportunistic and Delay-Tolerant Networks,3,2014,2016,12,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Transportation Planning and Optimization,3,2017,2019,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Video Analysis and Summarization,3,2012,2013,8,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Database Systems and Queries,2,2011,2013,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Malware Detection Techniques,2,2015,2016,14,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Neural Network Applications,2,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,COVID-19 epidemiological studies,2,2022,2022,0,Mathematics,Physical Sciences,False
+RVCE-CSE-026,Caching and Content Delivery,2,2014,2014,21,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Internet of Things and AI,2,2019,2022,14,Computer Science,Physical Sciences,False
+RVCE-CSE-026,IoT and Edge/Fog Computing,2,2017,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Machine Learning in Healthcare,2,2024,2026,14,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Network Packet Processing and Optimization,2,2015,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Sentiment Analysis and Opinion Mining,2,2011,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Software System Performance and Reliability,2,2017,2020,3,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Spam and Phishing Detection,2,2021,2025,4,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Topic Modeling,2,2024,2026,14,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Vehicle License Plate Recognition,2,2013,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Video Surveillance and Tracking Methods,2,2013,2013,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Data Compression Techniques,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Advanced Data Storage Technologies,1,2014,2014,7,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Graph Neural Networks,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Advanced Steganography and Watermarking Techniques,1,2008,2008,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Advanced Text Analysis Techniques,1,2011,2011,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Algorithms and Data Compression,1,2021,2021,4,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Artificial Intelligence in Healthcare,1,2019,2019,3,Health Professions,Health Sciences,False
+RVCE-CSE-026,Autism Spectrum Disorder Research,1,2025,2025,1,Neuroscience,Life Sciences,True
+RVCE-CSE-026,Biomedical Text Mining and Ontologies,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,COVID-19 Pandemic Impacts,1,2022,2022,0,Mathematics,Physical Sciences,False
+RVCE-CSE-026,Chaos-based Image/Signal Encryption,1,2008,2008,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Consumer Retail Behavior Studies,1,2020,2020,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-026,Context-Aware Activity Recognition Systems,1,2019,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Currency Recognition and Detection,1,2022,2022,11,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Customer Service Quality and Loyalty,1,2020,2020,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-026,Customer churn and segmentation,1,2020,2020,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-026,Data Quality and Management,1,2024,2024,0,Decision Sciences,Social Sciences,True
+RVCE-CSE-026,Dementia and Cognitive Impairment Research,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Digital Media Forensic Detection,1,2008,2008,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Domain Adaptation and Few-Shot Learning,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Face and Expression Recognition,1,2015,2015,6,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Generative Adversarial Networks and Image Synthesis,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Graph Theory and Algorithms,1,2014,2014,7,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Hand Gesture Recognition Systems,1,2023,2023,19,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Hate Speech and Cyberbullying Detection,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Hearing Impairment and Communication,1,2023,2023,19,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Human Pose and Action Recognition,1,2023,2023,19,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Image and Video Quality Assessment,1,2014,2014,19,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Imbalanced Data Classification Techniques,1,2020,2020,12,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Industrial Vision Systems and Defect Detection,1,2021,2021,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Internet Traffic Analysis and Secure E-voting,1,2015,2015,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,IoT-based Smart Home Systems,1,2019,2019,0,Engineering,Physical Sciences,False
+RVCE-CSE-026,Land Use and Ecosystem Services,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-026,Machine Learning and Data Classification,1,2020,2020,12,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Mobile Agent-Based Network Management,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Natural Language Processing Techniques,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-026,Recommender Systems and Techniques,1,2014,2014,19,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Remote Sensing in Agriculture,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-026,Remote-Sensing Image Classification,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-026,Rough Sets and Fuzzy Logic,1,2012,2012,1,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Scientific Computing and Data Management,1,2014,2014,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Security and Verification in Computing,1,2016,2016,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Semantic Web and Ontologies,1,2024,2024,0,Decision Sciences,Social Sciences,True
+RVCE-CSE-026,Service-Oriented Architecture and Web Services,1,2020,2020,3,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Speech Recognition and Synthesis,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Speech and Audio Processing,1,2018,2018,0,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Statistical and Computational Modeling,1,2020,2020,12,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Text and Document Classification Technologies,1,2021,2021,4,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Video Coding and Compression Technologies,1,2013,2013,6,Computer Science,Physical Sciences,False
+RVCE-CSE-026,Web Application Security Vulnerabilities,1,2015,2015,14,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Advanced Malware Detection Techniques,4,2019,2024,15,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Natural Language Processing Techniques,4,2011,2025,46,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Advanced Neural Network Applications,3,2024,2025,7,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Industrial Vision Systems and Defect Detection,3,2024,2025,2,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Internet Traffic Analysis and Secure E-voting,3,2018,2023,20,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Network Security and Intrusion Detection,3,2018,2026,20,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Topic Modeling,3,2011,2025,37,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Advanced Steganography and Watermarking Techniques,2,2012,2021,5,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Autonomous Vehicle Technology and Safety,2,2024,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,Cloud Data Security Solutions,2,2024,2026,2,Computer Science,Physical Sciences,True
+RVCE-CSE-027,"Privacy, Security, and Data Protection",2,2018,2024,8,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Robotics and Sensor-Based Localization,2,2013,2020,2,Engineering,Physical Sciences,False
+RVCE-CSE-027,Software System Performance and Reliability,2,2021,2026,3,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Software Testing and Debugging Techniques,2,2019,2021,4,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Traffic Prediction and Management Techniques,2,2023,2024,2,Engineering,Physical Sciences,True
+RVCE-CSE-027,Vehicle License Plate Recognition,2,2024,2025,6,Computer Science,Physical Sciences,True
+RVCE-CSE-027,3D Shape Modeling and Analysis,1,2020,2020,0,Engineering,Physical Sciences,False
+RVCE-CSE-027,Access Control and Trust,1,2020,2020,1,Engineering,Physical Sciences,False
+RVCE-CSE-027,Advanced Authentication Protocols Security,1,2012,2012,3,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Advanced Graph Neural Networks,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Advanced Image Processing Techniques,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Advanced Image and Video Retrieval Techniques,1,2013,2013,2,Engineering,Physical Sciences,False
+RVCE-CSE-027,Advanced Vision and Imaging,1,2013,2013,2,Engineering,Physical Sciences,False
+RVCE-CSE-027,Adversarial Robustness in Machine Learning,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Algorithms and Data Compression,1,2012,2012,9,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Biometric Identification and Security,1,2021,2021,2,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Brain Tumor Detection and Classification,1,2025,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Caching and Content Delivery,1,2020,2020,1,Engineering,Physical Sciences,False
+RVCE-CSE-027,Computer Graphics and Visualization Techniques,1,2020,2020,0,Engineering,Physical Sciences,False
+RVCE-CSE-027,Digital Media Forensic Detection,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Digital Rights Management and Security,1,2012,2012,3,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Educational Assessment and Pedagogy,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,Energy Load and Power Forecasting,1,2021,2021,4,Decision Sciences,Social Sciences,False
+RVCE-CSE-027,Engineering Education and Curriculum Development,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,Flow Measurement and Analysis,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,Forecasting Techniques and Applications,1,2021,2021,4,Decision Sciences,Social Sciences,False
+RVCE-CSE-027,Graph Labeling and Dimension Problems,1,2015,2015,1,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Handwritten Text Recognition Techniques,1,2011,2011,26,Computer Science,Physical Sciences,False
+RVCE-CSE-027,"IPv6, Mobility, Handover, Networks, Security",1,2020,2020,1,Engineering,Physical Sciences,False
+RVCE-CSE-027,Image Enhancement Techniques,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Image and Signal Denoising Methods,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Innovative Teaching Methods,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Intravenous Infusion Technology and Safety,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,Multimodal Machine Learning Applications,1,2012,2012,11,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Online Learning and Analytics,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Online and Blended Learning,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Privacy-Preserving Technologies in Data,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Security and Verification in Computing,1,2019,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Sleep and Work-Related Fatigue,1,2020,2020,1,Psychology,Social Sciences,False
+RVCE-CSE-027,Smart Agriculture and AI,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-027,Software-Defined Networks and 5G,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-027,Stock Market Forecasting Methods,1,2021,2021,4,Decision Sciences,Social Sciences,False
+RVCE-CSE-027,Teaching and Learning Programming,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-027,User Authentication and Security Systems,1,2021,2021,2,Computer Science,Physical Sciences,False
+RVCE-CSE-027,Video Surveillance and Tracking Methods,1,2024,2024,5,Engineering,Physical Sciences,True
+RVCE-CSE-027,semigroups and automata theory,1,2012,2012,9,Computer Science,Physical Sciences,False
+RVCE-CSE-028,Anomaly Detection Techniques and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-028,Brain Tumor Detection and Classification,1,2024,2024,2,Neuroscience,Life Sciences,True
+RVCE-CSE-028,Digital Imaging for Blood Diseases,1,2024,2024,2,Neuroscience,Life Sciences,True
+RVCE-CSE-028,Medical Imaging and Analysis,1,2024,2024,2,Neuroscience,Life Sciences,True
+RVCE-CSE-029,Traffic Prediction and Management Techniques,2,2020,2022,10,Social Sciences,Social Sciences,False
+RVCE-CSE-029,Traffic control and management,2,2020,2022,10,Social Sciences,Social Sciences,False
+RVCE-CSE-029,Transportation Planning and Optimization,2,2020,2022,10,Social Sciences,Social Sciences,False
+RVCE-CSE-029,Advanced Neural Network Applications,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-029,Advanced SAR Imaging Techniques,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Concrete and Cement Materials Research,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Hand Gesture Recognition Systems,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-029,Innovative concrete reinforcement materials,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Masonry and Concrete Structural Analysis,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Planetary Science and Exploration,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Space Satellite Systems and Control,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Spacecraft Dynamics and Control,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-029,Vehicle License Plate Recognition,1,2024,2024,2,Engineering,Physical Sciences,True
+RVCE-CSE-029,Water Quality Monitoring Technologies,1,2021,2021,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-030,Advanced Steganography and Watermarking Techniques,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-030,Blockchain Technology Applications and Security,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-030,Computer Science and Engineering,1,2022,2022,7,Computer Science,Physical Sciences,False
+RVCE-CSE-030,Handwritten Text Recognition Techniques,1,2022,2022,7,Computer Science,Physical Sciences,False
+RVCE-CSE-030,IoT and Edge/Fog Computing,1,2022,2022,3,Computer Science,Physical Sciences,False
+RVCE-CSE-030,Vehicle License Plate Recognition,1,2022,2022,7,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Artificial Intelligence in Healthcare,2,2022,2024,1,Health Professions,Health Sciences,True
+RVCE-CSE-031,Blockchain Technology Applications and Security,2,2023,2024,5,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Data Mining Algorithms and Applications,2,2020,2024,8,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Web Data Mining and Analysis,2,2010,2020,10,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Advanced Data Storage Technologies,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-031,COVID-19 diagnosis using AI,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Caching and Content Delivery,1,2010,2010,2,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Cloud Data Security Solutions,1,2024,2024,2,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Cryptography and Data Security,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Currency Recognition and Detection,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Data Stream Mining Techniques,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Digital Imaging for Blood Diseases,1,2022,2022,1,Computer Science,Physical Sciences,False
+RVCE-CSE-031,GNSS positioning and interference,1,2022,2022,0,Engineering,Physical Sciences,False
+RVCE-CSE-031,Imbalanced Data Classification Techniques,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Indoor and Outdoor Localization Technologies,1,2022,2022,0,Engineering,Physical Sciences,False
+RVCE-CSE-031,Neural Networks and Applications,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Online Learning and Analytics,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-031,Privacy-Preserving Technologies in Data,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Rough Sets and Fuzzy Logic,1,2020,2020,8,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Spam and Phishing Detection,1,2010,2010,2,Computer Science,Physical Sciences,False
+RVCE-CSE-031,Ultra-Wideband Communications Technology,1,2022,2022,0,Engineering,Physical Sciences,False
+RVCE-CSE-032,AI in cancer detection,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-032,Child Development and Digital Technology,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-032,Digital Mental Health Interventions,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-032,Impact of Technology on Adolescents,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-032,Medical Imaging and Analysis,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-032,Radiomics and Machine Learning in Medical Imaging,1,2025,2025,1,Engineering,Physical Sciences,True
+RVCE-CSE-033,Privacy-Preserving Technologies in Data,8,2019,2024,24,Computer Science,Physical Sciences,True
+RVCE-CSE-033,"Privacy, Security, and Data Protection",7,2019,2024,24,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Cryptography and Data Security,6,2019,2024,21,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Advanced Database Systems and Queries,2,2016,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-033,Advanced Malware Detection Techniques,2,2020,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Data Management and Algorithms,2,2016,2019,3,Computer Science,Physical Sciences,False
+RVCE-CSE-033,Network Security and Intrusion Detection,2,2020,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Adaptive Dynamic Programming Control,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-033,Artificial Intelligence in Healthcare,1,2021,2021,2,Medicine,Health Sciences,False
+RVCE-CSE-033,Big Data Technologies and Applications,1,2019,2019,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-033,Big Data and Business Intelligence,1,2019,2019,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-033,Brain Tumor Detection and Classification,1,2023,2023,26,Neuroscience,Life Sciences,True
+RVCE-CSE-033,Child Development and Digital Technology,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-033,Cloud Data Security Solutions,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Data Analysis with R,1,2019,2019,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-033,Data Quality and Management,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Dementia and Cognitive Impairment Research,1,2023,2023,26,Neuroscience,Life Sciences,True
+RVCE-CSE-033,Digital Imaging for Blood Diseases,1,2021,2021,2,Medicine,Health Sciences,False
+RVCE-CSE-033,Digital Mental Health Interventions,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-033,Face and Expression Recognition,1,2024,2024,8,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Functional Brain Connectivity Studies,1,2023,2023,26,Neuroscience,Life Sciences,True
+RVCE-CSE-033,Guidance and Control Systems,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-033,Impact of Technology on Adolescents,1,2025,2025,0,Social Sciences,Social Sciences,True
+RVCE-CSE-033,Internet Traffic Analysis and Secure E-voting,1,2020,2020,1,Computer Science,Physical Sciences,False
+RVCE-CSE-033,Retinal Imaging and Analysis,1,2021,2021,2,Medicine,Health Sciences,False
+RVCE-CSE-033,Rocket and propulsion systems research,1,2025,2025,0,Engineering,Physical Sciences,True
+RVCE-CSE-033,Semantic Web and Ontologies,1,2019,2019,0,Computer Science,Physical Sciences,False
+RVCE-CSE-033,Smart Agriculture and AI,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-033,Software Engineering Research,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Software Engineering Techniques and Practices,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Software Reliability and Analysis Research,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Spam and Phishing Detection,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Vehicular Ad Hoc Networks (VANETs),1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-033,Web Data Mining and Analysis,1,2016,2016,3,Computer Science,Physical Sciences,False
+RVCE-CSE-034,EEG and Brain-Computer Interfaces,2,2025,2025,0,Neuroscience,Life Sciences,True
+RVCE-CSE-034,Pacific and Southeast Asian Studies,2,2002,2002,5,Social Sciences,Social Sciences,False
+RVCE-CSE-034,Service-Oriented Architecture and Web Services,2,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Advanced Malware Detection Techniques,1,2023,2023,14,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Advanced Neural Network Applications,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Artificial Intelligence in Healthcare,1,2024,2024,3,Health Professions,Health Sciences,True
+RVCE-CSE-034,Big Data Technologies and Applications,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Big Data and Business Intelligence,1,2021,2021,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-034,Big Data and Digital Economy,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Cryptography and Data Security,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Data Mining Algorithms and Applications,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Data Visualization and Analytics,1,2024,2024,3,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Energy and Environmental Systems,1,2024,2024,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-034,Flood Risk Assessment and Management,1,2015,2015,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Green IT and Sustainability,1,2026,2026,0,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Groundwater and Watershed Analysis,1,2015,2015,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Hydrology and Watershed Management Studies,1,2015,2015,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Imbalanced Data Classification Techniques,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Internet Traffic Analysis and Secure E-voting,1,2023,2023,14,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Network Security and Intrusion Detection,1,2023,2023,14,Computer Science,Physical Sciences,True
+RVCE-CSE-034,Privacy-Preserving Technologies in Data,1,2022,2022,6,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Remote Sensing and Land Use,1,2020,2020,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Remote Sensing in Agriculture,1,2020,2020,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Remote-Sensing Image Classification,1,2020,2020,0,Environmental Science,Physical Sciences,False
+RVCE-CSE-034,Smart Agriculture and AI,1,2024,2024,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-034,Software Engineering Research,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Software System Performance and Reliability,1,2021,2021,0,Computer Science,Physical Sciences,False
+RVCE-CSE-034,Traditional Chinese Medicine Studies,1,2024,2024,0,Medicine,Health Sciences,True
+RVCE-CSE-034,Wireless Sensor Networks and IoT,1,2024,2024,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-036,Privacy-Preserving Technologies in Data,10,2018,2024,12,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Cryptography and Data Security,7,2018,2024,11,Computer Science,Physical Sciences,True
+RVCE-CSE-036,"Privacy, Security, and Data Protection",5,2019,2024,10,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Cloud Data Security Solutions,3,2018,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Big Data and Business Intelligence,2,2019,2020,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-036,Data Quality and Management,2,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-036,AI-based Problem Solving and Planning,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-036,Advanced Manufacturing and Logistics Optimization,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-036,Big Data Technologies and Applications,1,2019,2019,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-036,COVID-19 diagnosis using AI,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-036,Data Analysis with R,1,2019,2019,0,"Business, Management and Accounting",Social Sciences,False
+RVCE-CSE-036,Data Mining Algorithms and Applications,1,2023,2023,1,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Educational Assessment and Pedagogy,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-036,Engineering Education and Curriculum Development,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-036,IoT and Edge/Fog Computing,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Mobile and Web Applications,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-036,QR Code Applications and Technologies,1,2023,2023,3,Computer Science,Physical Sciences,True
+RVCE-CSE-036,Smart Agriculture and AI,1,2025,2025,0,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-036,Spam and Phishing Detection,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-036,Teaching and Learning Programming,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-036,Text and Document Classification Technologies,1,2021,2021,1,Computer Science,Physical Sciences,False
+RVCE-CSE-036,VLSI and FPGA Design Techniques,1,2026,2026,0,Engineering,Physical Sciences,True
+RVCE-CSE-037,Advanced Image and Video Retrieval Techniques,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Advanced Software Engineering Methodologies,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Advanced Steganography and Watermarking Techniques,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Advanced Vision and Imaging,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Big Data and Digital Economy,1,2025,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Chaos-based Image/Signal Encryption,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Cloud Computing and Resource Management,1,2025,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Energy and Environment Impacts,1,2017,2017,14,Engineering,Physical Sciences,False
+RVCE-CSE-037,Greenhouse Technology and Climate Control,1,2023,2023,8,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-037,Handwritten Text Recognition Techniques,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-037,IoT and Edge/Fog Computing,1,2025,2025,1,Computer Science,Physical Sciences,True
+RVCE-CSE-037,IoT-based Smart Home Systems,1,2017,2017,14,Engineering,Physical Sciences,False
+RVCE-CSE-037,"Mathematics, Computing, and Information Processing",1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Model-Driven Software Engineering Techniques,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Natural Language Processing Techniques,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Robotics and Sensor-Based Localization,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Smart Agriculture and AI,1,2023,2023,8,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-037,Smart Grid Energy Management,1,2017,2017,14,Engineering,Physical Sciences,False
+RVCE-CSE-037,Software Reliability and Analysis Research,1,2023,2023,2,Computer Science,Physical Sciences,True
+RVCE-CSE-037,Spectroscopy and Chemometric Analyses,1,2023,2023,8,Agricultural and Biological Sciences,Life Sciences,True
+RVCE-CSE-037,Vehicle License Plate Recognition,1,2024,2024,1,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Cloud Computing and Resource Management,2,2023,2023,5,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Data Stream Mining Techniques,2,2023,2023,5,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Acoustic Wave Resonator Technologies,1,2003,2003,9,Engineering,Physical Sciences,False
+RVCE-CSE-038,Advanced Malware Detection Techniques,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Artificial Intelligence in Healthcare,1,2025,2025,4,Health Professions,Health Sciences,True
+RVCE-CSE-038,Blockchain Technology Applications and Security,1,2023,2023,0,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Customer churn and segmentation,1,2024,2024,3,"Business, Management and Accounting",Social Sciences,True
+RVCE-CSE-038,Data Mining Algorithms and Applications,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Emotion and Mood Recognition,1,2017,2017,44,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Esophageal and GI Pathology,1,2020,2020,10,Environmental Science,Physical Sciences,False
+RVCE-CSE-038,Hand Gesture Recognition Systems,1,2019,2019,1,Engineering,Physical Sciences,False
+RVCE-CSE-038,Metaheuristic Optimization Algorithms Research,1,2003,2003,9,Engineering,Physical Sciences,False
+RVCE-CSE-038,Music and Audio Processing,1,2017,2017,44,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Organizational and Employee Performance,1,2023,2023,1,Engineering,Physical Sciences,True
+RVCE-CSE-038,Phosphorus and nutrient management,1,2020,2020,10,Environmental Science,Physical Sciences,False
+RVCE-CSE-038,Robotics and Automated Systems,1,2019,2019,1,Engineering,Physical Sciences,False
+RVCE-CSE-038,Security and Verification in Computing,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Sentiment Analysis and Opinion Mining,1,2024,2024,0,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Software Engineering Research,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Software Reliability and Analysis Research,1,2022,2022,0,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Software System Performance and Reliability,1,2023,2023,5,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Software Testing and Debugging Techniques,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Speech and Audio Processing,1,2017,2017,44,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Stochastic processes and financial applications,1,2024,2024,1,"Economics, Econometrics and Finance",Social Sciences,True
+RVCE-CSE-038,Stock Market Forecasting Methods,1,2024,2024,1,"Economics, Econometrics and Finance",Social Sciences,True
+RVCE-CSE-038,Topic Modeling,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Traffic Prediction and Management Techniques,1,2023,2023,1,Engineering,Physical Sciences,True
+RVCE-CSE-038,Transportation and Mobility Innovations,1,2023,2023,1,Engineering,Physical Sciences,True
+RVCE-CSE-038,Wastewater Treatment and Reuse,1,2016,2016,2,Environmental Science,Physical Sciences,False
+RVCE-CSE-038,Web Application Security Vulnerabilities,1,2017,2017,3,Computer Science,Physical Sciences,False
+RVCE-CSE-038,Web Data Mining and Analysis,1,2025,2025,0,Computer Science,Physical Sciences,True
+RVCE-CSE-038,Wireless Body Area Networks,1,2019,2019,0,Engineering,Physical Sciences,False
