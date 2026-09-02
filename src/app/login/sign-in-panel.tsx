@@ -66,19 +66,19 @@ export function SignInPanel() {
               onClick={() => setRole(option.role)}
               aria-pressed={active}
               className={cn(
-                "group flex w-full items-start gap-4 rounded-lg border p-4 text-left transition-all duration-200",
+                "group flex w-full items-start gap-4 rounded-xl border p-4 text-left transition-all duration-200",
                 active
-                  ? "border-ink bg-ink text-paper"
-                  : "border-rule bg-white text-ink hover:border-ink",
+                  ? "border-forest-600 bg-forest-950 text-white shadow-md shadow-forest-950/20"
+                  : "border-rule bg-white text-ink hover:border-forest-500/50 hover:bg-forest-50/40 hover:shadow-xs",
               )}
             >
-              <Icon className={cn("mt-0.5 h-5 w-5 shrink-0", active ? "text-paper" : "text-mute")} />
+              <Icon className={cn("mt-0.5 h-5 w-5 shrink-0 transition-colors", active ? "text-emerald-400" : "text-forest-700")} />
               <span className="min-w-0 flex-1">
                 <span className="block text-[15px] font-medium">{option.title}</span>
                 <span
                   className={cn(
                     "mt-1 block text-[13px] leading-relaxed",
-                    active ? "text-white/60" : "text-mute",
+                    active ? "text-white/70" : "text-mute",
                   )}
                 >
                   {option.blurb}
@@ -86,8 +86,8 @@ export function SignInPanel() {
               </span>
               <ArrowRight
                 className={cn(
-                  "mt-1 h-4 w-4 shrink-0 transition-transform",
-                  active ? "translate-x-0 text-paper" : "-translate-x-1 text-transparent",
+                  "mt-1 h-4 w-4 shrink-0 transition-all",
+                  active ? "translate-x-0 text-emerald-400" : "-translate-x-1 text-transparent",
                 )}
               />
             </button>

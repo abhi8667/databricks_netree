@@ -15,15 +15,15 @@ import { cn } from "@/lib/utils";
  * because emphasis in this system is carried by inversion, not by hue.
  * ---------------------------------------------------------------------- */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-40 [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-all disabled:pointer-events-none disabled:opacity-40 [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
   {
     variants: {
       variant: {
-        solid: "bg-ink text-paper hover:bg-black",
-        outline: "border border-ink bg-transparent text-ink hover:bg-ink hover:text-paper",
-        quiet: "border border-rule bg-white text-ink hover:border-ink",
+        solid: "bg-ink text-white hover:bg-forest-900 shadow-xs hover:shadow",
+        outline: "border border-forest-800/40 bg-transparent text-ink hover:bg-forest-50 hover:border-forest-700",
+        quiet: "border border-rule bg-white text-ink hover:border-forest-600 hover:bg-forest-50/50 shadow-xs",
         ghost: "text-mute hover:bg-fill hover:text-ink",
-        link: "text-ink underline underline-offset-4 decoration-rule hover:decoration-ink",
+        link: "text-forest-700 underline underline-offset-4 decoration-forest-300 hover:decoration-forest-700",
       },
       size: {
         sm: "h-8 px-3 text-[13px]",
@@ -57,7 +57,7 @@ export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttribute
     <input
       ref={ref}
       className={cn(
-        "h-10 w-full rounded-md border border-rule bg-white px-3 text-sm text-ink transition-colors placeholder:text-faint hover:border-faint focus:border-ink focus:outline-none focus-visible:outline-none disabled:opacity-50",
+        "h-10 w-full rounded-lg border border-rule bg-white px-3.5 text-sm text-ink transition-all placeholder:text-faint hover:border-forest-400 focus:border-forest-600 focus:outline-none focus-visible:outline-none shadow-xs",
         className,
       )}
       {...props}
@@ -73,7 +73,7 @@ export const Textarea = React.forwardRef<
   <textarea
     ref={ref}
     className={cn(
-      "w-full rounded-md border border-rule bg-white px-3 py-2.5 text-sm leading-relaxed text-ink transition-colors placeholder:text-faint hover:border-faint focus:border-ink focus:outline-none focus-visible:outline-none",
+      "w-full rounded-lg border border-rule bg-white px-3.5 py-2.5 text-sm leading-relaxed text-ink transition-all placeholder:text-faint hover:border-forest-400 focus:border-forest-600 focus:outline-none focus-visible:outline-none shadow-xs",
       className,
     )}
     {...props}
@@ -138,13 +138,13 @@ export function Separator({
 }
 
 const badgeVariants = cva(
-  "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-[0.1em]",
+  "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors",
   {
     variants: {
       tone: {
-        default: "border-rule bg-white text-mute",
-        solid: "border-ink bg-ink text-paper",
-        outline: "border-ink bg-transparent text-ink",
+        default: "border-emerald-200/80 bg-emerald-50/80 text-emerald-800 font-medium",
+        solid: "border-ink bg-ink text-white shadow-xs",
+        outline: "border-forest-600/50 bg-transparent text-forest-800",
         muted: "border-transparent bg-fill text-mute",
       },
     },
@@ -177,7 +177,7 @@ export function Avatar({ name, className }: { name: string; className?: string }
   return (
     <span
       className={cn(
-        "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink bg-white font-mono text-[11px] font-medium text-ink",
+        "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-forest-700/20 bg-forest-50 font-mono text-[11px] font-semibold text-forest-900 shadow-xs",
         className,
       )}
     >
@@ -195,12 +195,12 @@ export const Switch = React.forwardRef<
   <SwitchPrimitive.Root
     ref={ref}
     className={cn(
-      "peer inline-flex h-5 w-9 shrink-0 items-center rounded-full border border-ink transition-colors data-[state=checked]:bg-ink data-[state=unchecked]:bg-white",
+      "peer inline-flex h-5 w-9 shrink-0 items-center rounded-full border border-forest-800/30 transition-colors data-[state=checked]:bg-forest-600 data-[state=unchecked]:bg-white",
       className,
     )}
     {...props}
   >
-    <SwitchPrimitive.Thumb className="pointer-events-none block h-3.5 w-3.5 rounded-full bg-ink transition-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-paper data-[state=unchecked]:translate-x-0.5" />
+    <SwitchPrimitive.Thumb className="pointer-events-none block h-3.5 w-3.5 rounded-full bg-white shadow-xs transition-transform data-[state=checked]:translate-x-[18px] data-[state=unchecked]:bg-forest-700 data-[state=unchecked]:translate-x-0.5" />
   </SwitchPrimitive.Root>
 ));
 Switch.displayName = "Switch";
@@ -212,7 +212,7 @@ export const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "h-4 w-4 shrink-0 rounded-[4px] border border-ink data-[state=checked]:bg-ink data-[state=checked]:text-paper",
+      "h-4 w-4 shrink-0 rounded-[4px] border border-forest-800/40 data-[state=checked]:bg-forest-600 data-[state=checked]:border-forest-600 data-[state=checked]:text-white",
       className,
     )}
     {...props}
@@ -243,16 +243,16 @@ export function Meter({
 }) {
   const pct = max > 0 ? Math.min(100, Math.round((value / max) * 100)) : 0;
   return (
-    <div className={cn("space-y-1", className)}>
+    <div className={cn("space-y-1.5", className)}>
       {label ? (
         <div className="flex items-baseline justify-between">
           <span className="eyebrow">{label}</span>
-          <span className="font-mono text-[11px] text-ink">{value}</span>
+          <span className="font-mono text-[11px] text-forest-900 font-medium">{value}</span>
         </div>
       ) : null}
-      <div className="h-[3px] w-full bg-rule">
+      <div className="h-[4px] w-full bg-rule rounded-full overflow-hidden">
         <div
-          className="h-full origin-left bg-ink animate-sweep"
+          className="h-full origin-left bg-gradient-to-r from-forest-600 to-emerald-400 animate-sweep rounded-full"
           style={{ width: `${pct}%` }}
           role="presentation"
         />

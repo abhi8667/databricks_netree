@@ -84,26 +84,26 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
             type="button"
             onClick={() => setActiveTab("hackathons")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-all",
               activeTab === "hackathons"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-ink text-white shadow-xs font-medium"
+                : "border border-rule bg-white text-mute hover:border-forest-600 hover:text-ink",
             )}
           >
-            <Flame className="h-3.5 w-3.5" />
+            <Flame className={cn("h-3.5 w-3.5", activeTab === "hackathons" ? "text-emerald-400" : "text-forest-600")} />
             Hackathons ({feed.hackathons.length})
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("events")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-all",
               activeTab === "events"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-ink text-white shadow-xs font-medium"
+                : "border border-rule bg-white text-mute hover:border-forest-600 hover:text-ink",
             )}
           >
-            <Compass className="h-3.5 w-3.5" />
+            <Compass className={cn("h-3.5 w-3.5", activeTab === "events" ? "text-emerald-400" : "text-forest-600")} />
             Events & Talks ({feed.events.length})
           </button>
         </div>
@@ -116,19 +116,19 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Filter topics, venues..."
-              className="h-8 w-full rounded-md border border-rule bg-white pl-8 pr-3 text-xs text-ink placeholder:text-faint focus:border-ink focus:outline-none"
+              className="h-8 w-full rounded-lg border border-rule bg-white pl-8 pr-3 text-xs text-ink placeholder:text-faint focus:border-forest-600 focus:outline-none"
             />
           </div>
 
-          <div className="flex items-center gap-1 rounded-md border border-rule bg-white p-0.5 text-xs font-mono">
+          <div className="flex items-center gap-1 rounded-lg border border-rule bg-white p-0.5 text-xs font-mono">
             {(["all", "offline", "online", "hybrid"] as const).map((m) => (
               <button
                 key={m}
                 type="button"
                 onClick={() => setModeFilter(m)}
                 className={cn(
-                  "rounded px-2 py-1 uppercase text-[10px] transition-colors",
-                  modeFilter === m ? "bg-ink text-paper" : "text-mute hover:text-ink",
+                  "rounded-md px-2 py-1 uppercase text-[10px] transition-colors",
+                  modeFilter === m ? "bg-ink text-white font-medium" : "text-mute hover:text-ink",
                 )}
               >
                 {m}
@@ -194,13 +194,13 @@ function EventCard({ event }: { event: EventMatch }) {
   });
 
   return (
-    <article className="group flex flex-col justify-between rounded-lg border border-rule bg-white p-5 transition-all hover:border-ink hover:shadow-sm">
+    <article className="group flex flex-col justify-between rounded-xl border border-rule/80 bg-white p-5 sm:p-6 transition-all hover:border-forest-500/50 hover:shadow-md hover:shadow-forest-950/5">
       <div>
         {/* Match Header */}
         <div className="flex items-center justify-between gap-2 border-b border-rule/60 pb-3">
           <div className="flex items-center gap-1.5 text-xs text-mute">
-            <Sparkles className="h-3.5 w-3.5 shrink-0 text-ink" />
-            <span className="line-clamp-1 font-medium text-ink">{event.match_reason}</span>
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-forest-600" />
+            <span className="line-clamp-1 font-medium text-forest-900">{event.match_reason}</span>
           </div>
           <Badge tone={event.mode === "online" ? "muted" : "default"}>
             {event.mode}
@@ -208,7 +208,7 @@ function EventCard({ event }: { event: EventMatch }) {
         </div>
 
         {/* Title & Timing */}
-        <div className="mt-3.5">
+        <div className="mt-4">
           <div className="flex items-baseline justify-between gap-3">
             <span className="font-mono text-[11px] uppercase tracking-wider text-faint">
               {event.organizer_name} · {event.track}
@@ -216,17 +216,17 @@ function EventCard({ event }: { event: EventMatch }) {
             <Ident>{event.source === "hackculture" ? "HackCulture" : "BTW"}</Ident>
           </div>
 
-          <h3 className="mt-1 font-read text-lg font-medium leading-snug text-ink group-hover:underline decoration-rule underline-offset-4">
+          <h3 className="mt-1.5 font-read text-lg font-medium leading-snug text-ink group-hover:text-forest-800 transition-colors">
             {event.title}
           </h3>
 
           <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12px] text-mute">
             <span className="flex items-center gap-1">
-              <Calendar className="h-3.5 w-3.5 text-faint" />
+              <Calendar className="h-3.5 w-3.5 text-forest-600/70" />
               {dateFormatted} · {timeFormatted}
             </span>
             <span className="flex items-center gap-1">
-              <MapPin className="h-3.5 w-3.5 text-faint" />
+              <MapPin className="h-3.5 w-3.5 text-forest-600/70" />
               {event.area || event.venue}
             </span>
           </div>
@@ -240,16 +240,16 @@ function EventCard({ event }: { event: EventMatch }) {
 
         {/* Speakers / Faculty Network */}
         {event.speakers && event.speakers.length > 0 ? (
-          <div className="mt-3.5 flex flex-wrap items-center gap-1.5 pt-2">
+          <div className="mt-4 flex flex-wrap items-center gap-1.5 pt-2">
             <span className="text-[11px] font-mono text-faint uppercase">Speakers:</span>
             {event.speakers.slice(0, 3).map((sp) => (
               <span
                 key={sp.id}
-                className="inline-flex items-center gap-1 rounded border border-rule bg-fill px-2 py-0.5 text-[11px] text-ink"
+                className="inline-flex items-center gap-1 rounded-md border border-forest-200/70 bg-forest-50/70 px-2 py-0.5 text-[11px] text-forest-900"
               >
                 {sp.faculty_id ? (
                   <span title="RVCE Faculty" className="inline-flex">
-                    <GraduationCap className="h-3 w-3 text-ink" />
+                    <GraduationCap className="h-3 w-3 text-forest-700" />
                   </span>
                 ) : null}
                 {sp.display_name}
@@ -269,7 +269,7 @@ function EventCard({ event }: { event: EventMatch }) {
               <span
                 key={a.user_id}
                 title={a.label}
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-ink bg-ink text-[10px] font-mono text-paper"
+                className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-forest-800 bg-forest-900 text-[10px] font-mono text-white shadow-xs"
               >
                 {a.name.slice(0, 1)}
               </span>
@@ -278,7 +278,7 @@ function EventCard({ event }: { event: EventMatch }) {
               <span
                 key={a.user_id}
                 title={a.label}
-                className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-rule bg-fill text-[10px] font-mono text-ink"
+                className="inline-flex h-6 w-6 items-center justify-center rounded-full border border-forest-200 bg-forest-50 text-[10px] font-mono text-forest-900"
               >
                 🎓
               </span>
@@ -297,7 +297,7 @@ function EventCard({ event }: { event: EventMatch }) {
           <span className="font-mono text-[11px] text-mute">
             {attendeeCount > 0 ? (
               <>
-                <strong className="text-ink">{attendeeCount}</strong> in network
+                <strong className="text-forest-900">{attendeeCount}</strong> in network
               </>
             ) : (
               "Open registration"
@@ -313,11 +313,11 @@ function EventCard({ event }: { event: EventMatch }) {
             variant={isGoing ? "solid" : "quiet"}
             onClick={handleToggle}
             disabled={pending}
-            className="h-8 text-xs font-mono"
+            className={cn("h-8 text-xs font-mono", isGoing ? "bg-forest-600 hover:bg-forest-700" : "")}
           >
             {isGoing ? (
               <>
-                <Check className="h-3.5 w-3.5 text-paper" /> Going
+                <Check className="h-3.5 w-3.5 text-white" /> Going
               </>
             ) : (
               "+ I'm going"
@@ -325,7 +325,7 @@ function EventCard({ event }: { event: EventMatch }) {
           </Button>
 
           {event.registration_url ? (
-            <Button asChild size="sm" variant="ghost" className="h-8 px-2">
+            <Button asChild size="sm" variant="ghost" className="h-8 px-2 text-forest-700 hover:text-forest-900">
               <a
                 href={event.registration_url}
                 target="_blank"

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Netree connects students to the faculty and alumni whose published work actually overlaps their idea.",
 };
 
-export const viewport: Viewport = { themeColor: "#0B0B0C" };
+export const viewport: Viewport = { themeColor: "#0A241A" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -50,33 +50,33 @@ export function OverlapField({
             y={bandTop}
             width={W - PAD.l - PAD.r}
             height={H - PAD.b - bandTop}
-            fill="#0B0B0C"
-            opacity={0.045}
+            fill="#059669"
+            opacity={0.07}
           />
           <text
             x={PAD.l + 8}
             y={H - PAD.b - 7}
-            fill="#A3A39E"
-            style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
+            fill="#059669"
+            style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)", fontWeight: 600 }}
           >
             THIN OVERLAP
           </text>
 
           {/* Axes as hairlines only. */}
-          <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={H - PAD.b} stroke="#E3E3E1" />
-          <line x1={PAD.l} y1={H - PAD.b} x2={W - PAD.r} y2={H - PAD.b} stroke="#E3E3E1" />
+          <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={H - PAD.b} stroke="#E1ECE5" />
+          <line x1={PAD.l} y1={H - PAD.b} x2={W - PAD.r} y2={H - PAD.b} stroke="#E1ECE5" />
 
           <text
             x={PAD.l}
             y={H - 16}
-            fill="#73736F"
+            fill="#48685A"
             style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
           >
             CLOSENESS OF BEST PAPER
           </text>
           <text
             transform={`translate(18 ${H - PAD.b}) rotate(-90)`}
-            fill="#73736F"
+            fill="#48685A"
             style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
           >
             PAPERS MATCHING
@@ -89,27 +89,29 @@ export function OverlapField({
                 key={point.match.faculty_id}
                 onMouseEnter={() => onHover?.(point.match.faculty_id)}
                 onMouseLeave={() => onHover?.(null)}
+                className="cursor-pointer"
               >
                 {/* Elbow to the label column so crowded dots stay readable. */}
                 <path
                   d={`M ${point.cx + point.r + 3} ${point.cy} H ${W - PAD.r - 16} V ${point.ly} H ${W - PAD.r - 6}`}
                   fill="none"
-                  stroke={active ? "#0B0B0C" : "#E3E3E1"}
+                  stroke={active ? "#059669" : "#E1ECE5"}
+                  strokeWidth={active ? 1.5 : 1}
                   strokeDasharray={active ? undefined : "2 3"}
                 />
                 <circle
                   cx={point.cx}
                   cy={point.cy}
                   r={point.r}
-                  fill={active ? "#0B0B0C" : "#FBFBFA"}
-                  stroke="#0B0B0C"
-                  strokeWidth={1.3}
+                  fill={active ? "#059669" : "#FFFFFF"}
+                  stroke={active ? "#047857" : "#10B981"}
+                  strokeWidth={active ? 2 : 1.4}
                 />
                 <text
                   x={W - PAD.r + 2}
                   y={point.ly + 3.5}
-                  fill={active ? "#0B0B0C" : "#73736F"}
-                  style={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
+                  fill={active ? "#0A241A" : "#48685A"}
+                  style={{ fontSize: 10, fontFamily: "var(--font-mono)", fontWeight: active ? 600 : 400 }}
                 >
                   {shortName(point.match.faculty_name)}
                 </text>
@@ -118,7 +120,7 @@ export function OverlapField({
           })}
         </svg>
       </div>
-      <figcaption className="border-t border-rule px-4 py-2.5 font-mono text-[11px] leading-relaxed text-mute">
+      <figcaption className="border-t border-rule bg-forest-50/40 px-4 py-2.5 font-mono text-[11px] leading-relaxed text-forest-800">
         Ring size is how many distinct topics overlap. Up and to the right is a real match.
       </figcaption>
     </figure>

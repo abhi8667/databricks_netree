@@ -42,16 +42,18 @@ export function AppShell({
             href={item.href}
             onClick={() => setOpen(false)}
             className={cn(
-              "group flex items-center justify-between gap-3 rounded-md px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] transition-colors",
-              active ? "bg-ink text-paper" : "text-mute hover:bg-fill hover:text-ink",
+              "group flex items-center justify-between gap-3 rounded-lg px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] transition-all",
+              active
+                ? "bg-ink text-white shadow-xs font-medium"
+                : "text-mute hover:bg-forest-50/80 hover:text-ink",
             )}
           >
             <span className="truncate">{item.label}</span>
             {item.count ? (
               <span
                 className={cn(
-                  "rounded-full px-1.5 py-px text-[10px] tabular-nums",
-                  active ? "bg-white/20 text-paper" : "bg-ink text-paper",
+                  "rounded-full px-1.5 py-px text-[10px] tabular-nums font-medium",
+                  active ? "bg-forest-500/25 text-emerald-300" : "bg-forest-100 text-forest-800",
                 )}
               >
                 {item.count}
@@ -64,12 +66,15 @@ export function AppShell({
   );
 
   return (
-    <div className="min-h-dvh lg:grid lg:grid-cols-[232px_minmax(0,1fr)]">
+    <div className="min-h-dvh lg:grid lg:grid-cols-[236px_minmax(0,1fr)]">
       {/* Mobile bar */}
-      <header className="sticky top-0 z-40 flex items-center justify-between border-b border-rule bg-paper/90 px-4 py-3 backdrop-blur lg:hidden">
-        <Link href="/" className="text-[15px] font-semibold tracking-[-0.03em]">
-          Netree
-        </Link>
+      <header className="sticky top-0 z-40 flex items-center justify-between border-b border-rule bg-white/95 px-4 py-3 backdrop-blur lg:hidden">
+        <div className="flex items-center gap-2">
+          <span className="h-2 w-2 rounded-full bg-forest-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+          <Link href="/" className="text-[15px] font-semibold tracking-[-0.03em] text-ink">
+            Netree
+          </Link>
+        </div>
         <button
           onClick={() => setOpen((v) => !v)}
           className="text-mute hover:text-ink"
@@ -80,17 +85,20 @@ export function AppShell({
       </header>
 
       {open ? (
-        <div className="border-b border-rule bg-paper px-4 py-4 lg:hidden">
+        <div className="border-b border-rule bg-white px-4 py-4 lg:hidden">
           {links}
           <SignOut className="mt-4" />
         </div>
       ) : null}
 
       {/* Left Navigation Rail */}
-      <aside className="sticky top-0 hidden h-dvh flex-col border-r border-rule px-4 py-6 lg:flex">
-        <Link href="/" className="px-3 text-[17px] font-semibold tracking-[-0.03em]">
-          Netree
-        </Link>
+      <aside className="sticky top-0 hidden h-dvh flex-col border-r border-rule bg-white/70 backdrop-blur-xs px-4 py-6 lg:flex">
+        <div className="flex items-center gap-2 px-3">
+          <span className="h-2 w-2 rounded-full bg-forest-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+          <Link href="/" className="text-[17px] font-semibold tracking-[-0.03em] text-ink">
+            Netree
+          </Link>
+        </div>
         <p className="mt-1 px-3 font-mono text-[11px] uppercase tracking-[0.14em] text-faint">
           {roleLabel}
         </p>
@@ -101,7 +109,7 @@ export function AppShell({
           <div className="flex items-center gap-3 px-1">
             <Avatar name={user.full_name} className="h-8 w-8" />
             <div className="min-w-0">
-              <p className="truncate text-[13px] text-ink">{user.full_name}</p>
+              <p className="truncate text-[13px] font-medium text-ink">{user.full_name}</p>
               <p className="truncate font-mono text-[11px] text-faint">{user.college_id}</p>
             </div>
           </div>
@@ -120,7 +128,7 @@ function SignOut({ className }: { className?: string }) {
     <form action={signOut} className={className}>
       <button
         type="submit"
-        className="flex w-full items-center gap-2 rounded-md px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-mute transition-colors hover:bg-fill hover:text-ink"
+        className="flex w-full items-center gap-2 rounded-md px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-mute transition-colors hover:bg-forest-50/80 hover:text-ink"
       >
         <LogOut className="h-3.5 w-3.5" />
         Sign out

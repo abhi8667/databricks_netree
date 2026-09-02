@@ -75,21 +75,21 @@ export function Splash({ destination }: { destination: string }) {
             pathLength={1}
             d={curve(edge.from, edge.node)}
             fill="none"
-            stroke="#0B0B0C"
-            strokeWidth={i < BRANCH.length ? 1.4 : 0.9}
+            stroke={i < BRANCH.length ? "#0A241A" : "#059669"}
+            strokeWidth={i < BRANCH.length ? 1.6 : 1.1}
             style={{ animationDelay: `${(i < BRANCH.length ? 180 : 620) + i * 90}ms` }}
           />
         ))}
-        <circle cx={ROOT.x} cy={ROOT.y} r={ROOT.r} fill="#0B0B0C" className="nt-node" />
+        <circle cx={ROOT.x} cy={ROOT.y} r={ROOT.r} fill="#0A241A" className="nt-node" />
         {[...BRANCH, ...LEAF].map((edge, i) => (
           <circle
             key={`n${i}`}
             cx={edge.node.x}
             cy={edge.node.y}
             r={edge.node.r}
-            fill={i < BRANCH.length ? "#0B0B0C" : "#FBFBFA"}
-            stroke="#0B0B0C"
-            strokeWidth={1.1}
+            fill={i < BRANCH.length ? "#0A241A" : "#10B981"}
+            stroke={i < BRANCH.length ? "#051610" : "#059669"}
+            strokeWidth={1.2}
             className="nt-node"
             style={{ animationDelay: `${(i < BRANCH.length ? 760 : 1180) + i * 90}ms` }}
           />

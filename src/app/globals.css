@@ -14,8 +14,8 @@
     color: theme(colors.ink);
     font-feature-settings: "ss01", "cv05";
   }
-  ::selection { background: theme(colors.ink); color: theme(colors.paper); }
-  :focus-visible { outline: 2px solid theme(colors.ink); outline-offset: 2px; }
+  ::selection { background: #059669; color: #FFFFFF; }
+  :focus-visible { outline: 2px solid #059669; outline-offset: 2px; }
   input, textarea, select, button { font: inherit; }
 }
 
@@ -23,18 +23,23 @@
   /* The eyebrow is the one repeated typographic device: mono, tracked out,
      always naming a real field of the data model rather than a slogan. */
   .eyebrow {
-    @apply font-mono text-micro uppercase text-mute;
+    @apply font-mono text-micro uppercase tracking-[0.14em] text-mute;
   }
-  .rulebox { @apply border border-rule bg-white rounded-lg; }
+  .rulebox {
+    @apply border border-rule bg-white rounded-xl shadow-[0_1px_4px_0_rgba(10,36,26,0.03)] transition-all;
+  }
   .hairline { @apply h-px w-full bg-rule; }
 
-  /* Inversion is the accent. */
+  /* Inversion is the accent: smooth transition into rich evergreen */
   .invert-card {
-    @apply transition-[background-color,color,border-color] duration-200;
+    @apply transition-all duration-200 shadow-[0_1px_3px_0_rgba(10,36,26,0.03)] rounded-xl border border-rule bg-white;
   }
-  .invert-card:hover { @apply bg-ink text-paper border-ink; }
-  .invert-card:hover .eyebrow { @apply text-white/55; }
+  .invert-card:hover {
+    @apply bg-ink text-white border-ink shadow-lg shadow-emerald-950/10 -translate-y-0.5;
+  }
+  .invert-card:hover .eyebrow { @apply text-emerald-300/80; }
   .invert-card:hover .hairline { @apply bg-white/20; }
+  .invert-card:hover svg { @apply text-emerald-400; }
 }
 
 @layer utilities {
@@ -48,8 +53,8 @@
   .stagger > *:nth-child(7) { animation-delay: 330ms; }
   .stagger > *:nth-child(8) { animation-delay: 385ms; }
   .grain {
-    background-image: radial-gradient(circle at 1px 1px, rgba(11,11,12,0.035) 1px, transparent 0);
-    background-size: 4px 4px;
+    background-image: radial-gradient(circle at 1px 1px, rgba(10,36,26,0.03) 1px, transparent 0);
+    background-size: 5px 5px;
   }
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { scrollbar-width: none; }
