@@ -24,7 +24,7 @@ export type ScheduleEvent = {
   title: string;
   type: "meeting" | "event" | "office_hour" | "hackathon";
   status: "confirmed" | "proposed" | "upcoming";
-  date: string; // ISO date or parseable string
+  date: string; // ISO date string: YYYY-MM-DD
   time: string; // e.g., "4:00 PM - 4:45 PM"
   location: string;
   mode: "online" | "offline";
@@ -34,60 +34,68 @@ export type ScheduleEvent = {
   link?: string;
 };
 
-const SIMULATED_EVENTS: ScheduleEvent[] = [
-  {
-    id: "sim-1",
-    title: "Phishing Detection Browser Extension Discussion",
-    type: "meeting",
-    status: "confirmed",
-    date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 1).toISOString().split("T")[0]!,
-    time: "4:00 PM - 4:45 PM",
-    location: "Online (Google Meet)",
-    mode: "online",
-    participantName: "Dr. Minal Moharir",
-    participantRole: "Associate Professor, Network Security",
-    agenda: "Review prototype architecture and dataset feature extraction for real-time DNS classification.",
-  },
-  {
-    id: "sim-2",
-    title: "Drone Crowd Anomaly Surveillance Architecture",
-    type: "meeting",
-    status: "confirmed",
-    date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 3).toISOString().split("T")[0]!,
-    time: "11:30 AM - 12:15 PM",
-    location: "Vision & Deep Learning Lab, Room 304",
-    mode: "offline",
-    participantName: "Dr. Mohana",
-    participantRole: "Professor, Computer Vision",
-    agenda: "Evaluate spatial-temporal graph neural network approaches on campus surveillance feeds.",
-  },
-  {
-    id: "sim-3",
-    title: "Smart India Hackathon 2026 - Idea Submission Deadline",
-    type: "hackathon",
-    status: "upcoming",
-    date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 5).toISOString().split("T")[0]!,
-    time: "11:59 PM",
-    location: "National Portal",
-    mode: "online",
-    participantName: "Ministry of Education",
-    participantRole: "National Hackathon",
-    agenda: "Submit executive 3-page research proposal and architecture diagram.",
-  },
-  {
-    id: "sim-4",
-    title: "Privacy Preserving Medical Records Sync",
-    type: "meeting",
-    status: "proposed",
-    date: new Date(Date.now() + 1000 * 60 * 60 * 24 * 6).toISOString().split("T")[0]!,
-    time: "2:00 PM - 2:45 PM",
-    location: "CSE Faculty Wing, 2nd Floor",
-    mode: "offline",
-    participantName: "Dr. Veena Gadad",
-    participantRole: "Assistant Professor, Privacy & Data",
-    agenda: "Differential privacy parameters review for hospital federated learning setup.",
-  },
-];
+function getSimulatedEvents(): ScheduleEvent[] {
+  const now = new Date();
+  const makeDate = (daysAhead: number) => {
+    const d = new Date(now.getTime() + daysAhead * 24 * 60 * 60 * 1000);
+    return d.toISOString().split("T")[0]!;
+  };
+
+  return [
+    {
+      id: "sim-1",
+      title: "Phishing Detection Browser Extension Discussion",
+      type: "meeting",
+      status: "confirmed",
+      date: makeDate(1),
+      time: "4:00 PM - 4:45 PM",
+      location: "Online (Google Meet)",
+      mode: "online",
+      participantName: "Dr. Minal Moharir",
+      participantRole: "Associate Professor, Network Security",
+      agenda: "Review prototype architecture and dataset feature extraction for real-time DNS classification.",
+    },
+    {
+      id: "sim-2",
+      title: "Drone Crowd Anomaly Surveillance Architecture",
+      type: "meeting",
+      status: "confirmed",
+      date: makeDate(3),
+      time: "11:30 AM - 12:15 PM",
+      location: "Vision & Deep Learning Lab, Room 304",
+      mode: "offline",
+      participantName: "Dr. Mohana",
+      participantRole: "Professor, Computer Vision",
+      agenda: "Evaluate spatial-temporal graph neural network approaches on campus surveillance feeds.",
+    },
+    {
+      id: "sim-3",
+      title: "Smart India Hackathon 2026 - Idea Submission Deadline",
+      type: "hackathon",
+      status: "upcoming",
+      date: makeDate(5),
+      time: "11:59 PM",
+      location: "National Portal",
+      mode: "online",
+      participantName: "Ministry of Education",
+      participantRole: "National Hackathon",
+      agenda: "Submit executive 3-page research proposal and architecture diagram.",
+    },
+    {
+      id: "sim-4",
+      title: "Privacy Preserving Medical Records Sync",
+      type: "meeting",
+      status: "proposed",
+      date: makeDate(6),
+      time: "2:00 PM - 2:45 PM",
+      location: "CSE Faculty Wing, 2nd Floor",
+      mode: "offline",
+      participantName: "Dr. Veena Gadad",
+      participantRole: "Assistant Professor, Privacy & Data",
+      agenda: "Differential privacy parameters review for hospital federated learning setup.",
+    },
+  ];
+}
 
 export function ScheduleCalendar({
   role = "student",
@@ -96,17 +104,27 @@ export function ScheduleCalendar({
   role?: "student" | "faculty";
   realEvents?: ScheduleEvent[];
 }) {
+  const [mounted, setMounted] = React.useState(false);
   const [simulationMode, setSimulationMode] = React.useState(true);
   const [viewMode, setViewMode] = React.useState<"month" | "list">("month");
-  const [currentDate, setCurrentDate] = React.useState(new Date());
+  const [currentDate, setCurrentDate] = React.useState(() => new Date());
   const [selectedEvent, setSelectedEvent] = React.useState<ScheduleEvent | null>(null);
   const [filterType, setFilterType] = React.useState<string>("all");
   const [copiedId, setCopiedId] = React.useState<string | null>(null);
 
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const simulatedEvents = React.useMemo(() => {
+    return mounted ? getSimulatedEvents() : [];
+  }, [mounted]);
+
   const allEvents = React.useMemo(() => {
-    if (simulationMode && realEvents.length === 0) return SIMULATED_EVENTS;
-    return simulationMode ? [...realEvents, ...SIMULATED_EVENTS] : realEvents;
-  }, [simulationMode, realEvents]);
+    if (!mounted) return realEvents;
+    if (simulationMode && realEvents.length === 0) return simulatedEvents;
+    return simulationMode ? [...realEvents, ...simulatedEvents] : realEvents;
+  }, [mounted, simulationMode, realEvents, simulatedEvents]);
 
   const filteredEvents = React.useMemo(() => {
     return allEvents.filter((ev) => {
@@ -286,6 +304,7 @@ export function ScheduleCalendar({
               const day = i + 1;
               const events = getEventsForDay(day);
               const isToday =
+                mounted &&
                 new Date().getDate() === day &&
                 new Date().getMonth() === month &&
                 new Date().getFullYear() === year;
