@@ -16,29 +16,29 @@ export function OpportunityList({ items }: { items: Item[] }) {
   return (
     <ul className="mt-6 space-y-3">
       {items.map(({ opportunity, topics, interest }) => (
-        <li key={opportunity.opportunity_id} className="rulebox p-5">
+        <li key={opportunity.opportunity_id} className="rounded-3xl border border-rule/80 bg-white/95 p-6 shadow-sm backdrop-blur-xl transition-all dark:border-dark-border/80 dark:bg-dark-card/95 sm:p-7 overflow-hidden">
           <div className="flex flex-wrap items-start justify-between gap-4">
-            <div className="min-w-0">
-              <h2 className="text-[17px] font-medium text-ink">{opportunity.title}</h2>
-              <p className="mt-1 text-[13px] text-mute">{opportunity.owner_name}</p>
+            <div className="min-w-0 max-w-full flex-1">
+              <h2 className="text-[18px] font-semibold text-ink dark:text-dark-ink break-words [overflow-wrap:anywhere]">{opportunity.title}</h2>
+              <p className="mt-1 text-[13px] text-mute dark:text-dark-mute">{opportunity.owner_name}</p>
             </div>
             {interest ? (
-              <Badge tone={interest.status === "accepted" ? "solid" : "default"}>
+              <Badge tone={interest.status === "accepted" ? "emerald" : "muted"}>
                 {STATUS_COPY.interest[interest.status]}
               </Badge>
             ) : null}
           </div>
 
-          <p className="mt-3 font-read text-[16px] leading-relaxed text-ink">
+          <p className="mt-3 font-read text-[16px] leading-relaxed text-ink dark:text-dark-ink break-words [overflow-wrap:anywhere]">
             {opportunity.summary}
           </p>
 
           {opportunity.requirements.length ? (
             <ul className="mt-4 space-y-1.5">
               {opportunity.requirements.map((requirement) => (
-                <li key={requirement} className="flex gap-2.5 text-[14px] leading-relaxed text-mute">
-                  <span className="mt-2.5 h-px w-3 shrink-0 bg-rule" />
-                  {requirement}
+                <li key={requirement} className="flex gap-2.5 text-[14px] leading-relaxed text-mute dark:text-dark-mute break-words [overflow-wrap:anywhere]">
+                  <span className="mt-2.5 h-px w-3 shrink-0 bg-forest-500/60" />
+                  <span className="break-words [overflow-wrap:anywhere]">{requirement}</span>
                 </li>
               ))}
             </ul>

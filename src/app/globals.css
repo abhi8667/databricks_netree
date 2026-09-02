@@ -72,7 +72,9 @@
   }
 
   .rulebox {
-    @apply rounded-xl border border-rule bg-white shadow-sm transition-colors dark:border-dark-border dark:bg-dark-card;
+    @apply rounded-2xl border border-rule/80 bg-white/95 shadow-sm backdrop-blur-xl transition-colors dark:border-dark-border/80 dark:bg-dark-card/95;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .glass-card {

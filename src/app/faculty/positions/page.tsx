@@ -14,27 +14,29 @@ export default async function PositionsPage() {
   ]);
 
   return (
-    <div className="mx-auto w-full max-w-4xl px-6 py-10 sm:px-10">
-      <PageHeader
-        eyebrow="Positions"
-        title="Projects you are staffing"
-        description="Students apply against what you write here, so state the hours and the commitment plainly."
-        actions={
-          <Button asChild size="sm">
-            <Link href="/faculty/positions/new">
-              <FilePlus2 className="h-4 w-4" />
-              Post a position
-            </Link>
-          </Button>
-        }
-      />
+    <div className="mx-auto w-full max-w-4xl space-y-6 px-4 py-8 sm:px-8">
+      <section className="rounded-3xl border border-rule/80 bg-white/95 p-6 shadow-sm backdrop-blur-xl dark:border-dark-border/80 dark:bg-dark-card/95 sm:p-8">
+        <PageHeader
+          eyebrow="Positions"
+          title="Projects you are staffing"
+          description="Students apply against what you write here, so state the hours and the commitment plainly."
+          actions={
+            <Button asChild variant="emerald" size="sm">
+              <Link href="/faculty/positions/new">
+                <FilePlus2 className="h-4 w-4" />
+                Post a position
+              </Link>
+            </Button>
+          }
+        />
+      </section>
 
       {positions.length === 0 ? (
-        <div className="mt-8">
+        <section className="rounded-3xl border border-rule/80 bg-white/95 p-6 shadow-sm backdrop-blur-xl dark:border-dark-border/80 dark:bg-dark-card/95 sm:p-8">
           <Empty
             title="No positions posted."
             action={
-              <Button asChild size="sm" className="mt-1">
+              <Button asChild variant="emerald" size="sm" className="mt-1">
                 <Link href="/faculty/positions/new">Post the first one</Link>
               </Button>
             }
@@ -42,7 +44,7 @@ export default async function PositionsPage() {
             This is the direct route: instead of waiting for a proposal that fits, describe the work
             you need done and let students come to it.
           </Empty>
-        </div>
+        </section>
       ) : (
         <PositionsBoard positions={positions} interests={interests} />
       )}
