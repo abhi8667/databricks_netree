@@ -4,9 +4,11 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  BadgeCheck,
   Bell,
   Check,
   CheckCheck,
+  ChevronDown,
   Compass,
   FileText,
   Flame,
@@ -41,23 +43,28 @@ export function AppShell({
 }) {
   const pathname = usePathname();
   const [showNotifications, setShowNotifications] = React.useState(false);
+  const [showUserMenu, setShowUserMenu] = React.useState(false);
   const [showHamburger, setShowHamburger] = React.useState(false);
   const [notifications, setNotifications] = React.useState<NotificationItem[]>(DEFAULT_NOTIFICATIONS);
 
   const notifRef = React.useRef<HTMLDivElement>(null);
+  const userMenuRef = React.useRef<HTMLDivElement>(null);
 
-  // Close notifications on outside click
+  // Close notifications or user menu on outside click
   React.useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (notifRef.current && !notifRef.current.contains(e.target as Node)) {
         setShowNotifications(false);
       }
+      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
+        setShowUserMenu(false);
+      }
     };
-    if (showNotifications) {
+    if (showNotifications || showUserMenu) {
       document.addEventListener("mousedown", handleClickOutside);
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [showNotifications]);
+  }, [showNotifications, showUserMenu]);
 
   // Lock scroll when hamburger drawer is open
   React.useEffect(() => {
@@ -256,14 +263,90 @@ export function AppShell({
 
             <ThemeToggle />
 
-            {/* User Chip */}
-            <div className="hidden items-center gap-2 rounded-full border border-rule/80 bg-white/80 py-1 pl-1.5 pr-3 shadow-xs dark:border-dark-border dark:bg-dark-card/80 sm:flex">
-              <Avatar name={user.full_name} className="h-6 w-6 text-[10px]" />
-              <div className="min-w-0">
-                <p className="max-w-[100px] truncate text-xs font-medium text-ink dark:text-dark-ink">
-                  {user.full_name}
-                </p>
-              </div>
+            {/* Interactive User Profile & Sign Out Dropdown */}
+            <div className="relative" ref={userMenuRef}>
+              <button
+                type="button"
+                onClick={() => setShowUserMenu((v) => !v)}
+                aria-expanded={showUserMenu}
+                aria-label="Open user profile menu"
+                className={cn(
+                  "flex items-center gap-2 rounded-full border border-rule/80 bg-white/90 py-1 pl-1.5 pr-2.5 shadow-xs transition-all hover:border-forest-500/60 hover:bg-forest-50/60 dark:border-dark-border dark:bg-dark-card/90 dark:hover:border-forest-500/60 dark:hover:bg-forest-950/40 cursor-pointer",
+                  showUserMenu && "border-forest-600 ring-2 ring-forest-500/20 dark:border-forest-500"
+                )}
+              >
+                <Avatar name={user.full_name} className="h-6 w-6 text-[10px]" />
+                <div className="hidden min-w-0 text-left sm:block">
+                  <p className="max-w-[110px] truncate text-xs font-semibold text-ink dark:text-dark-ink">
+                    {user.full_name}
+                  </p>
+                </div>
+                <ChevronDown
+                  className={cn(
+                    "h-3.5 w-3.5 text-mute transition-transform duration-200 dark:text-dark-mute",
+                    showUserMenu && "rotate-180 text-forest-700 dark:text-forest-400"
+                  )}
+                />
+              </button>
+
+              {/* Profile Dropdown Popover */}
+              {showUserMenu && (
+                <div className="absolute right-0 mt-2 w-64 rounded-2xl border border-rule/80 bg-white/98 p-3 shadow-xl backdrop-blur-xl dark:border-dark-border dark:bg-dark-card/98 animate-in fade-in zoom-in-95 duration-150 z-50">
+                  {/* User Profile Header */}
+                  <div className="flex items-center gap-3 border-b border-rule/70 p-2 pb-3 dark:border-dark-border/70">
+                    <Avatar name={user.full_name} className="h-10 w-10 text-sm" />
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-ink dark:text-dark-ink">
+                        {user.full_name}
+                      </p>
+                      <div className="mt-0.5 flex items-center gap-1.5">
+                        <span className="rounded-md bg-forest-100 px-1.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-forest-800 dark:bg-forest-950 dark:text-forest-300">
+                          {roleLabel}
+                        </span>
+                        <span className="truncate font-mono text-[11px] text-faint dark:text-dark-faint">
+                          {user.college_id}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quick Action Links */}
+                  <div className="mt-2 space-y-1">
+                    <Link
+                      href="/onboarding"
+                      onClick={() => setShowUserMenu(false)}
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-medium text-ink transition-colors hover:bg-forest-50 hover:text-forest-800 dark:text-dark-ink dark:hover:bg-forest-950/60 dark:hover:text-forest-300"
+                    >
+                      <User className="h-4 w-4 text-forest-600 dark:text-forest-400" />
+                      <div>
+                        <p className="font-semibold leading-none">View Profile</p>
+                        <p className="mt-0.5 text-[10px] text-mute dark:text-dark-mute">
+                          Edit academic details & bio
+                        </p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="/onboarding/confirmed"
+                      onClick={() => setShowUserMenu(false)}
+                      className="flex items-center gap-2.5 rounded-xl px-3 py-2 text-xs font-medium text-ink transition-colors hover:bg-forest-50 hover:text-forest-800 dark:text-dark-ink dark:hover:bg-forest-950/60 dark:hover:text-forest-300"
+                    >
+                      <BadgeCheck className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                      <div>
+                        <p className="font-semibold leading-none">Lakehouse Verification</p>
+                        <p className="mt-0.5 text-[10px] text-mute dark:text-dark-mute">
+                          Verified campus credentials
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+
+                  {/* Sign Out Button */}
+                  <div className="mt-2 border-t border-rule/70 pt-2 dark:border-dark-border/70">
+                    <SignOutButton />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
