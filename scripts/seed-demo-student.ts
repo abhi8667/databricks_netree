@@ -18,6 +18,7 @@ async function main() {
     achievements: "Winner of Smart Campus Hackathon 2025",
     resume_name: "aditya_resume.txt",
     resume_text: "Undergraduate researcher in Computer Science at RVCE.",
+    linkedin_url: "https://www.linkedin.com/in/aditya-sharma-rvce",
     scholar_url: "",
     faculty_id: null,
     open_to_collaboration: false,

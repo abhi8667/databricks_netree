@@ -15,6 +15,7 @@ import { Badge, Button, Field, Ident, Input, Meter, Textarea } from "@/component
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/overlays";
 import { OverlapField } from "@/components/overlap-field";
 import { ProjectEventsBlock } from "@/components/project-events-block";
+import { SpeechToText } from "@/components/speech/speech-to-text";
 import {
   generatePitch,
   replyToIdea,
@@ -68,16 +69,20 @@ export function Workspace({
             <li key={label} className="flex items-center gap-2">
               <span
                 className={cn(
-                  "flex h-5 w-5 items-center justify-center rounded-full border font-mono text-[10px]",
-                  index <= stage ? "border-ink bg-ink text-paper" : "border-rule text-faint",
+                  "flex h-5 w-5 items-center justify-center rounded-full border font-mono text-[10px] transition-colors",
+                  index <= stage
+                    ? "border-forest-600 bg-forest-600 text-white shadow-glow-sm dark:bg-forest-500"
+                    : "border-rule text-faint dark:border-dark-border dark:text-dark-faint",
                 )}
               >
                 {index + 1}
               </span>
               <span
                 className={cn(
-                  "font-mono text-[11px] uppercase tracking-[0.12em]",
-                  index <= stage ? "text-ink" : "text-faint",
+                  "font-mono text-[11px] uppercase tracking-[0.12em] transition-colors",
+                  index <= stage
+                    ? "font-semibold text-forest-800 dark:text-forest-300"
+                    : "text-faint dark:text-dark-faint",
                 )}
               >
                 {label}
@@ -154,8 +159,23 @@ function Interview({ project }: { project: Project }) {
       ) : null}
 
       {!done ? (
-        <div className="mt-7 rounded-lg border border-ink bg-white p-5">
-          <p className="font-read text-lg leading-snug text-ink">{lastQuestion}</p>
+        <div className="mt-7 rounded-2xl border border-forest-500/30 bg-white p-6 shadow-soft dark:border-dark-border dark:bg-dark-card">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p className="font-read text-lg leading-snug text-ink dark:text-dark-ink">{lastQuestion}</p>
+            <SpeechToText
+              initialSeed={lastQuestion}
+              initialHistory={project.transcript}
+              onSessionComplete={async (voiceHistory) => {
+                const lastUser = [...voiceHistory].reverse().find((t) => t.role === "user");
+                if (lastUser) {
+                  await replyToIdea(project.project_id, lastUser.content);
+                  router.refresh();
+                }
+              }}
+              onTranscript={(spoken) => setAnswer((prev) => (prev ? `${prev} ${spoken}` : spoken))}
+              buttonLabel="Voice speak"
+            />
+          </div>
           <Textarea
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
@@ -164,19 +184,19 @@ function Interview({ project }: { project: Project }) {
             }}
             rows={3}
             autoFocus
-            placeholder="Answer in your own words."
+            placeholder="Answer in your own words, or click Voice speak to speak naturally..."
             className="mt-4"
           />
           <div className="mt-3 flex items-center justify-between gap-3">
-            <span className="font-mono text-[11px] text-faint">
+            <span className="font-mono text-[11px] text-faint dark:text-dark-faint">
               {answered.length} of about 5 answered
             </span>
-            <Button size="sm" onClick={submit} disabled={pending || !answer.trim()}>
+            <Button size="sm" variant="emerald" onClick={submit} disabled={pending || !answer.trim()}>
               {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-              {pending ? "Thinking" : "Send"}
+              {pending ? "Thinking..." : "Send"}
             </Button>
           </div>
-          {error ? <p className="mt-3 text-[13px] text-ink">{error}</p> : null}
+          {error ? <p className="mt-3 text-[13px] text-red-500">{error}</p> : null}
         </div>
       ) : null}
     </section>
@@ -283,14 +303,32 @@ function BriefEditor({ project, brief }: { project: Project; brief: ProjectBrief
           <div className="space-y-5">
             {brief.problem ? <Para label="Problem">{brief.problem}</Para> : null}
             {brief.approach ? <Para label="Approach">{brief.approach}</Para> : null}
-            {brief.open_questions.length ? (
-              <div>
-                <p className="eyebrow">Still undecided</p>
-                <ul className="mt-2 space-y-1">
-                  {brief.open_questions.map((q) => (
-                    <li key={q} className="flex gap-2 text-[14px] leading-relaxed text-mute">
-                      <span className="mt-2.5 h-px w-3 shrink-0 bg-rule" />
-                      {q}
+            {brief.open_questions && brief.open_questions.length > 0 ? (
+              <div className="rounded-2xl border border-teal-500/30 bg-forest-50/50 p-5 shadow-xs dark:border-teal-500/30 dark:bg-forest-950/40">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-2.5 w-2.5 rounded-full bg-teal-400 shadow-glow-sm animate-pulse" />
+                    <p className="font-mono text-xs font-semibold uppercase tracking-wider text-teal-800 dark:text-teal-300">
+                      Questions LLM Needs for Clarity ({brief.open_questions.length})
+                    </p>
+                  </div>
+                  <span className="font-mono text-[10px] text-mute dark:text-dark-mute">
+                    Resolve for stronger faculty matching
+                  </span>
+                </div>
+                <p className="mt-1 text-xs text-mute dark:text-dark-mute">
+                  The LLM surfaced these key questions to get full clarity on your methodology and research needs:
+                </p>
+                <ul className="mt-3.5 space-y-2">
+                  {brief.open_questions.map((q, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2.5 rounded-xl border border-rule/70 bg-white/95 p-3 text-[14px] leading-relaxed text-ink shadow-xs dark:border-dark-border/80 dark:bg-dark-card/95 dark:text-dark-ink"
+                    >
+                      <span className="font-mono text-xs font-bold text-teal-600 dark:text-teal-400 shrink-0 mt-0.5">
+                        Q{idx + 1}.
+                      </span>
+                      <span>{q}</span>
                     </li>
                   ))}
                 </ul>

@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { Button, Textarea } from "@/components/ui/primitives";
-import { startProject } from "@/app/actions/projects";
+import { startProject, createProjectFromVoiceSession } from "@/app/actions/projects";
 
 const EXAMPLES = [
   "A browser extension that flags phishing pages before the student clicks through.",
@@ -11,7 +12,10 @@ const EXAMPLES = [
   "Anonymising hospital records so they can be shared with researchers safely.",
 ];
 
+import { SpeechToText } from "@/components/speech/speech-to-text";
+
 export function SeedForm() {
+  const router = useRouter();
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState<string | null>(null);
   const [pending, startTransition] = React.useTransition();
@@ -35,18 +39,30 @@ export function SeedForm() {
         rows={6}
         autoFocus
         placeholder="Start anywhere. Rough is fine."
-        className="border-ink font-read text-lg leading-relaxed"
+        className="border-ink font-read text-lg leading-relaxed dark:border-dark-border"
       />
 
       <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-        <span className="font-mono text-[11px] text-faint">
+        <span className="font-mono text-[11px] text-faint dark:text-dark-faint">
           {value.trim().split(/\s+/).filter(Boolean).length} words · Ctrl+Enter to start
         </span>
-        <Button onClick={submit} disabled={pending || value.trim().length < 10}>
-          {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-          {pending ? "Reading it" : "Start the interview"}
-          {pending ? null : <ArrowRight className="h-4 w-4" />}
-        </Button>
+        <div className="flex items-center gap-2">
+          <SpeechToText
+            initialSeed={value}
+            onSessionComplete={async (history) => {
+              const res = await createProjectFromVoiceSession(history);
+              if (res.ok && res.projectId) {
+                router.push(`/student/projects/${res.projectId}`);
+              }
+            }}
+            onTranscript={(text: string) => setValue((prev) => (prev ? `${prev} ${text}` : text))}
+          />
+          <Button onClick={submit} disabled={pending || value.trim().length < 10}>
+            {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+            {pending ? "Reading it" : "Start the interview"}
+            {pending ? null : <ArrowRight className="h-4 w-4" />}
+          </Button>
+        </div>
       </div>
 
       {error ? (

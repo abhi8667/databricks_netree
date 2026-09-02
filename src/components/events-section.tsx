@@ -46,22 +46,22 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
   }, [items, search, modeFilter]);
 
   return (
-    <section className="mt-14 border-t border-rule pt-10">
+    <section className="mt-14 border-t border-rule pt-10 dark:border-dark-border">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-baseline">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="font-read text-2xl text-ink">Happening around you</h2>
-            <Badge tone="default" className="normal-case tracking-normal">
+            <h2 className="font-read text-2xl text-ink dark:text-dark-ink">Happening around you</h2>
+            <Badge tone="emerald" className="normal-case tracking-normal">
               Live Campus Feeds
             </Badge>
           </div>
-          <p className="mt-1 text-[13px] text-mute">
+          <p className="mt-1 text-[13px] text-mute dark:text-dark-mute">
             Live hackathons and Bengaluru tech ecosystem events ranked against your research interests.
           </p>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[11px] text-faint">
+          <span className="font-mono text-[11px] text-faint dark:text-dark-faint">
             {feed.freshness.label}
           </span>
           <Button
@@ -70,7 +70,7 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
             disabled={isRefreshing}
             onClick={() => startRefresh(() => refreshEventsAction())}
             title="Sync latest upstream events"
-            className="h-7 px-2 text-faint hover:text-ink"
+            className="h-7 px-2 text-faint hover:text-ink dark:text-dark-faint dark:hover:text-dark-ink"
           >
             <RefreshCw className={cn("h-3.5 w-3.5", isRefreshing && "animate-spin")} />
           </Button>
@@ -78,33 +78,34 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
       </div>
 
       {/* Tabs & Filters */}
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-rule pb-4">
-        <div className="flex items-center gap-2">
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-rule pb-4 dark:border-dark-border">
+        {/* Clean & Simple Tab Switcher */}
+        <div className="flex items-center gap-1 rounded-xl border border-rule/80 bg-white/80 p-1 shadow-xs dark:border-dark-border/80 dark:bg-dark-card/80">
           <button
             type="button"
             onClick={() => setActiveTab("hackathons")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-lg px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-all",
               activeTab === "hackathons"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-forest-700 text-white font-semibold shadow-xs dark:bg-forest-600"
+                : "text-mute hover:text-ink dark:text-dark-mute dark:hover:text-dark-ink",
             )}
           >
-            <Flame className="h-3.5 w-3.5" />
-            Hackathons ({feed.hackathons.length})
+            <Flame className="h-3.5 w-3.5 text-amber-500" />
+            <span>Hackathons ({feed.hackathons.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("events")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-lg px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-all",
               activeTab === "events"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-forest-700 text-white font-semibold shadow-xs dark:bg-forest-600"
+                : "text-mute hover:text-ink dark:text-dark-mute dark:hover:text-dark-ink",
             )}
           >
-            <Compass className="h-3.5 w-3.5" />
-            Events & Talks ({feed.events.length})
+            <Compass className="h-3.5 w-3.5 text-teal-500" />
+            <span>Events & Talks ({feed.events.length})</span>
           </button>
         </div>
 
@@ -120,15 +121,17 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
             />
           </div>
 
-          <div className="flex items-center gap-1 rounded-md border border-rule bg-white p-0.5 text-xs font-mono">
+          <div className="flex items-center gap-1 rounded-xl border border-rule bg-white p-1 text-xs font-mono dark:border-dark-border dark:bg-dark-card">
             {(["all", "offline", "online", "hybrid"] as const).map((m) => (
               <button
                 key={m}
                 type="button"
                 onClick={() => setModeFilter(m)}
                 className={cn(
-                  "rounded px-2 py-1 uppercase text-[10px] transition-colors",
-                  modeFilter === m ? "bg-ink text-paper" : "text-mute hover:text-ink",
+                  "rounded-lg px-2.5 py-1 text-[10px] uppercase tracking-wider transition-all",
+                  modeFilter === m
+                    ? "bg-forest-600 font-semibold text-white shadow-xs dark:bg-forest-500"
+                    : "text-mute hover:text-forest-800 dark:text-dark-mute dark:hover:text-forest-300",
                 )}
               >
                 {m}

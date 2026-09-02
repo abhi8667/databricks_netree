@@ -15,6 +15,7 @@ async function main() {
     achievements: "Built aerial object detection prototype",
     resume_name: "aditya_resume.txt",
     resume_text: "",
+    linkedin_url: "https://www.linkedin.com/in/aditya-sharma-rvce",
     scholar_url: "",
     faculty_id: null,
     open_to_collaboration: false,

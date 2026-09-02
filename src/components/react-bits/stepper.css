@@ -1,0 +1,154 @@
+.stepper-outer-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.step-circle-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 42rem;
+  border-radius: 1.5rem;
+  box-shadow:
+    0 10px 25px -5px rgba(10, 36, 26, 0.05),
+    0 8px 10px -6px rgba(10, 36, 26, 0.03);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.step-indicator-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 1.75rem 2rem 1rem 2rem;
+}
+
+.step-content-default {
+  position: relative;
+  overflow: hidden;
+}
+
+.step-default {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.footer-container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.footer-nav {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.footer-nav.spread {
+  justify-content: space-between;
+}
+
+.footer-nav.end {
+  justify-content: flex-end;
+}
+
+.back-button {
+  transition: all 250ms;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border-subtle, #e1ece5);
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: rgba(5, 150, 105, 0.08);
+}
+
+.back-button.inactive {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.next-button {
+  transition: all 250ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: #059669;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px -1px rgba(5, 150, 105, 0.35);
+}
+
+.next-button:hover {
+  background-color: #047857;
+  transform: translateY(-1px);
+}
+
+.next-button:active {
+  transform: translateY(0);
+}
+
+.step-indicator {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.step-indicator-inner {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8125rem;
+}
+
+.active-dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+}
+
+.step-number {
+  font-size: 0.8125rem;
+}
+
+.step-connector {
+  position: relative;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  height: 0.125rem;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background-color: var(--border-subtle, #e1ece5);
+}
+
+.step-connector-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.check-icon {
+  height: 1.125rem;
+  width: 1.125rem;
+  color: #ffffff;
+}

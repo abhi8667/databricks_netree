@@ -7,15 +7,7 @@ import { cn } from "@/lib/utils";
 /**
  * The overlap field.
  *
- * A single strong score is not evidence of a match - the dataset's own testing
- * showed an out-of-scope idea scoring higher than a legitimate third-place
- * result. What separates them is how many distinct papers clear the bar. So
- * this plots both axes at once and shades the corner where a candidate looks
- * close but has nothing behind it.
- *
- *   x - how close the single best paper is
- *   y - how many papers clear the relevance floor
- *   ring size - how many distinct topics overlap
+ * Plots faculty relevance across closeness, paper count, and topic breadth.
  */
 
 const W = 640;
@@ -36,7 +28,7 @@ export function OverlapField({
   const bandTop = H - PAD.b - (H - PAD.t - PAD.b) * 0.22;
 
   return (
-    <figure className="rulebox overflow-hidden">
+    <figure className="overflow-hidden rounded-2xl border border-rule bg-white shadow-soft transition-colors dark:border-dark-border dark:bg-dark-card">
       <div className="overflow-x-auto">
         <svg
           viewBox={`0 0 ${W} ${H}`}
@@ -50,33 +42,50 @@ export function OverlapField({
             y={bandTop}
             width={W - PAD.l - PAD.r}
             height={H - PAD.b - bandTop}
-            fill="#0B0B0C"
-            opacity={0.045}
+            fill="#059669"
+            opacity={0.06}
           />
           <text
             x={PAD.l + 8}
             y={H - PAD.b - 7}
-            fill="#A3A39E"
+            fill="#059669"
+            opacity={0.7}
             style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
           >
             THIN OVERLAP
           </text>
 
-          {/* Axes as hairlines only. */}
-          <line x1={PAD.l} y1={PAD.t} x2={PAD.l} y2={H - PAD.b} stroke="#E3E3E1" />
-          <line x1={PAD.l} y1={H - PAD.b} x2={W - PAD.r} y2={H - PAD.b} stroke="#E3E3E1" />
+          {/* Axes as hairlines */}
+          <line
+            x1={PAD.l}
+            y1={PAD.t}
+            x2={PAD.l}
+            y2={H - PAD.b}
+            stroke="currentColor"
+            className="text-rule dark:text-dark-border"
+          />
+          <line
+            x1={PAD.l}
+            y1={H - PAD.b}
+            x2={W - PAD.r}
+            y2={H - PAD.b}
+            stroke="currentColor"
+            className="text-rule dark:text-dark-border"
+          />
 
           <text
             x={PAD.l}
             y={H - 16}
-            fill="#73736F"
+            fill="currentColor"
+            className="text-mute dark:text-dark-mute"
             style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
           >
             CLOSENESS OF BEST PAPER
           </text>
           <text
             transform={`translate(18 ${H - PAD.b}) rotate(-90)`}
-            fill="#73736F"
+            fill="currentColor"
+            className="text-mute dark:text-dark-mute"
             style={{ fontSize: 9, letterSpacing: "0.12em", fontFamily: "var(--font-mono)" }}
           >
             PAPERS MATCHING
@@ -89,26 +98,38 @@ export function OverlapField({
                 key={point.match.faculty_id}
                 onMouseEnter={() => onHover?.(point.match.faculty_id)}
                 onMouseLeave={() => onHover?.(null)}
+                className="cursor-pointer"
               >
-                {/* Elbow to the label column so crowded dots stay readable. */}
+                {/* Elbow to the label column */}
                 <path
                   d={`M ${point.cx + point.r + 3} ${point.cy} H ${W - PAD.r - 16} V ${point.ly} H ${W - PAD.r - 6}`}
                   fill="none"
-                  stroke={active ? "#0B0B0C" : "#E3E3E1"}
+                  stroke={active ? "#059669" : "currentColor"}
+                  className={active ? "dark:stroke-emerald-400" : "text-rule dark:text-dark-border"}
                   strokeDasharray={active ? undefined : "2 3"}
                 />
                 <circle
                   cx={point.cx}
                   cy={point.cy}
                   r={point.r}
-                  fill={active ? "#0B0B0C" : "#FBFBFA"}
-                  stroke="#0B0B0C"
-                  strokeWidth={1.3}
+                  fill={active ? "#059669" : "currentColor"}
+                  className={
+                    active
+                      ? "dark:fill-emerald-400"
+                      : "fill-white text-forest-600 dark:fill-dark-card dark:text-emerald-400"
+                  }
+                  stroke={active ? "#047857" : "#059669"}
+                  strokeWidth={1.4}
                 />
                 <text
                   x={W - PAD.r + 2}
                   y={point.ly + 3.5}
-                  fill={active ? "#0B0B0C" : "#73736F"}
+                  fill={active ? "#047857" : "currentColor"}
+                  className={
+                    active
+                      ? "font-semibold dark:fill-emerald-300"
+                      : "text-mute dark:text-dark-mute"
+                  }
                   style={{ fontSize: 10, fontFamily: "var(--font-mono)" }}
                 >
                   {shortName(point.match.faculty_name)}
@@ -118,8 +139,9 @@ export function OverlapField({
           })}
         </svg>
       </div>
-      <figcaption className="border-t border-rule px-4 py-2.5 font-mono text-[11px] leading-relaxed text-mute">
-        Ring size is how many distinct topics overlap. Up and to the right is a real match.
+      <figcaption className="border-t border-rule px-4 py-2.5 font-mono text-[11px] leading-relaxed text-mute dark:border-dark-border dark:text-dark-mute">
+        Ring size represents topic overlap breadth. Up and to the right indicates the strongest
+        research alignment.
       </figcaption>
     </figure>
   );
@@ -127,7 +149,6 @@ export function OverlapField({
 
 type Point = { match: FacultyMatch; cx: number; cy: number; r: number; ly: number };
 
-/** Places the dots, then pushes labels apart so none of them sit on top of another. */
 function layout(matches: FacultyMatch[]): Point[] {
   const maxDepth = Math.max(4, ...matches.map((m) => m.depth));
   const maxBreadth = Math.max(1, ...matches.map((m) => m.breadth));
@@ -151,7 +172,6 @@ function layout(matches: FacultyMatch[]): Point[] {
     floor = point.ly + LABEL_GAP;
   }
 
-  // If the stack overflowed the plot, lift the whole column back inside.
   const overflow = floor - LABEL_GAP - (H - PAD.b);
   if (overflow > 0) for (const point of ordered) point.ly -= overflow;
 

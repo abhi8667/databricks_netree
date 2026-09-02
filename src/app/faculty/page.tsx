@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, FilePlus2, Inbox, MessageCircleQuestion } from "lucide-react";
+import { ArrowUpRight, FilePlus2, Inbox, MessageCircleQuestion, Sparkles } from "lucide-react";
 import { PageHeader } from "@/components/app-shell";
 import { Badge, Button, Empty, Meter } from "@/components/ui/primitives";
 import { requireUser } from "@/lib/auth";
@@ -31,14 +31,18 @@ export default async function FacultyDashboard() {
     <div className="mx-auto w-full max-w-5xl px-6 py-10 sm:px-10">
       <PageHeader
         eyebrow={`${user.standing} · ${user.department}`}
-        title={`${pending.length ? `${pending.length} proposal${pending.length === 1 ? "" : "s"} waiting` : "Nothing waiting on you"}`}
+        title={
+          pending.length
+            ? `${pending.length} proposal${pending.length === 1 ? "" : "s"} waiting`
+            : "Review & Research Command"
+        }
         description={
           pending.length
-            ? "Each one arrived because its brief overlaps work you have published. The evidence is on the proposal."
-            : "When a student's idea overlaps your published work, their proposal lands here."
+            ? "Each proposal arrived because the student's research thesis algorithmically overlaps your published papers."
+            : "When a student pitches an idea overlapping your publication index, their proposal lands here."
         }
         actions={
-          <Button asChild size="sm">
+          <Button asChild size="sm" variant="emerald">
             <Link href="/faculty/positions/new">
               <FilePlus2 className="h-4 w-4" />
               Post a position
@@ -47,109 +51,132 @@ export default async function FacultyDashboard() {
         }
       />
 
-      <section className="mt-8 grid gap-3 sm:grid-cols-3">
+      {/* Metrics Row */}
+      <section className="mt-8 grid gap-4 sm:grid-cols-3">
         <Tile
           href="/faculty/proposals"
           icon={Inbox}
           value={pending.length}
           label="Proposals to review"
+          color="forest"
         />
         <Tile
           href="/faculty/positions"
           icon={FilePlus2}
           value={waitingApplicants.length}
           label="Applicants to decide"
+          color="emerald"
         />
         <Tile
           href="/faculty/questions"
           icon={MessageCircleQuestion}
           value={openQuestions.length}
           label="Questions unanswered"
+          color="teal"
         />
       </section>
 
-      <section className="mt-14">
-        <div className="flex items-baseline justify-between border-b border-rule pb-3">
-          <h2 className="font-read text-xl text-ink">Proposals</h2>
-          <Link href="/faculty/proposals" className="eyebrow hover:text-ink">
-            All {inbox.length}
+      {/* Proposals Stream */}
+      <section className="mt-12">
+        <div className="flex items-baseline justify-between border-b border-rule pb-3 dark:border-dark-border">
+          <h2 className="font-read text-xl text-ink dark:text-dark-ink">Active Proposals</h2>
+          <Link
+            href="/faculty/proposals"
+            className="font-mono text-xs text-forest-700 transition-colors hover:text-forest-900 dark:text-forest-400 dark:hover:text-forest-300"
+          >
+            All {inbox.length} →
           </Link>
         </div>
 
         {inbox.length === 0 ? (
           <div className="mt-5">
-            <Empty title="No proposals yet.">
+            <Empty title="No proposals waiting.">
               {user.faculty_id
-                ? "Students reach you through the overlap between their idea and your papers."
-                : "Your account is not linked to a publication record yet, so the matcher cannot route students to you. Link it from your profile."}
+                ? "Students reach you through algorithmic overlap between their thesis and your indexed papers."
+                : "Your account is not linked to a publication record yet. Link it from your profile to activate student matching."}
             </Empty>
           </div>
         ) : (
-          <ul className="mt-2 divide-y divide-rule">
+          <div className="mt-4 grid gap-3">
             {inbox.slice(0, 5).map((invitation) => (
-              <li key={invitation.invitation_id}>
-                <Link
-                  href={`/faculty/proposals/${invitation.invitation_id}`}
-                  className="group flex items-start justify-between gap-6 py-4 transition-colors hover:bg-fill"
-                >
-                  <div className="min-w-0">
-                    <p className="truncate text-[15px] text-ink">{invitation.project_title}</p>
-                    <p className="mt-1 text-[13px] text-mute">
-                      {invitation.student_name}
-                      {invitation.redirected_to_faculty_id ? " · redirected to you" : ""}
-                    </p>
+              <Link
+                key={invitation.invitation_id}
+                href={`/faculty/proposals/${invitation.invitation_id}`}
+                className="group flex flex-col justify-between gap-3 rounded-xl border border-rule bg-white p-4 shadow-xs transition-all duration-200 hover:-translate-y-0.5 hover:border-forest-500/60 hover:shadow-soft dark:border-dark-border dark:bg-dark-card sm:flex-row sm:items-center"
+              >
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-[15px] font-medium text-ink transition-colors group-hover:text-forest-700 dark:text-dark-ink dark:group-hover:text-forest-400">
+                    {invitation.project_title}
+                  </p>
+                  <p className="mt-1 text-[13px] text-mute dark:text-dark-mute">
+                    Student: <span className="font-medium text-ink dark:text-dark-ink">{invitation.student_name}</span>
+                    {invitation.redirected_to_faculty_id ? " · redirected by colleague" : ""}
+                  </p>
+                </div>
+                <div className="flex shrink-0 items-center gap-3">
+                  <span className="font-mono text-[11px] text-faint dark:text-dark-faint">
+                    {relativeTime(invitation.created_at)}
+                  </span>
+                  <Badge tone={invitation.status === "pending" ? "solid" : "emerald"}>
+                    {STATUS_COPY.invitation[invitation.status]}
+                  </Badge>
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-rule/60 text-mute transition-all group-hover:border-forest-500/50 group-hover:bg-forest-50 group-hover:text-forest-700 dark:border-dark-border dark:text-dark-mute dark:group-hover:bg-forest-950 dark:group-hover:text-forest-300">
+                    <ArrowUpRight className="h-4 w-4" />
                   </div>
-                  <div className="flex shrink-0 items-center gap-3">
-                    <span className="font-mono text-[11px] text-faint">
-                      {relativeTime(invitation.created_at)}
-                    </span>
-                    <Badge tone={invitation.status === "pending" ? "solid" : "default"}>
-                      {STATUS_COPY.invitation[invitation.status]}
-                    </Badge>
-                    <ArrowUpRight className="h-4 w-4 text-faint transition-colors group-hover:text-ink" />
-                  </div>
-                </Link>
-              </li>
+                </div>
+              </Link>
             ))}
-          </ul>
+          </div>
         )}
       </section>
 
+      {/* Publications & Indexed Topics */}
       {topics.length ? (
-        <section className="mt-14 grid gap-10 border-t border-rule pt-8 sm:grid-cols-2">
+        <section className="mt-12 grid gap-8 rounded-2xl border border-rule bg-white/70 p-6 shadow-xs backdrop-blur-md dark:border-dark-border dark:bg-dark-card/70 sm:grid-cols-2 sm:p-8">
           <div>
-            <p className="eyebrow">What the index says you work on</p>
-            <div className="mt-4 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-forest-500 shadow-glow-sm" />
+              <p className="eyebrow">Publication Index & Topic Weights</p>
+            </div>
+            <div className="mt-5 space-y-3.5">
               {topics.slice(0, 6).map((topic) => (
                 <Meter
                   key={topic.topic}
                   value={topic.n_papers}
                   max={maxTopic}
-                  label={`${topic.topic} · to ${topic.latest_year}`}
+                  label={`${topic.topic} (${topic.latest_year})`}
                 />
               ))}
             </div>
-            <p className="mt-4 text-xs leading-relaxed text-mute">
-              Drawn from your publication record, not from anything you typed. This is what students
-              are matched against.
+            <p className="mt-4 text-xs leading-relaxed text-mute dark:text-dark-mute">
+              Calculated from your verified scholarly papers. Incoming student ideas are vector-matched
+              against these topic clusters.
             </p>
           </div>
           <div>
-            <p className="eyebrow">Most recent publications</p>
-            <ul className="mt-4 space-y-3">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-3.5 w-3.5 text-forest-600 dark:text-forest-400" />
+              <p className="eyebrow">Recent Publications</p>
+            </div>
+            <ul className="mt-5 space-y-3">
               {recent.map((paper) => (
-                <li key={paper.publication_id} className="flex gap-3">
-                  <span className="w-8 shrink-0 font-mono text-[11px] tabular-nums text-faint">
-                    {paper.publication_year}
-                  </span>
-                  <a
-                    href={paper.publication_url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[14px] leading-snug text-ink underline decoration-rule underline-offset-2 hover:decoration-ink"
-                  >
-                    {paper.title}
-                  </a>
+                <li
+                  key={paper.publication_id}
+                  className="rounded-xl border border-rule/60 bg-paper/50 p-3 transition-colors hover:border-forest-500/40 dark:border-dark-border/60 dark:bg-dark-surface/40"
+                >
+                  <div className="flex items-baseline gap-2.5">
+                    <span className="rounded bg-forest-50 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-forest-700 dark:bg-forest-950 dark:text-forest-300">
+                      {paper.publication_year}
+                    </span>
+                    <a
+                      href={paper.publication_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[13px] font-medium leading-snug text-ink transition-colors hover:text-forest-700 dark:text-dark-ink dark:hover:text-forest-400"
+                    >
+                      {paper.title}
+                    </a>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -157,29 +184,35 @@ export default async function FacultyDashboard() {
         </section>
       ) : null}
 
+      {/* Laboratory & Research Positions */}
       {positions.length ? (
-        <section className="mt-14">
-          <h2 className="border-b border-rule pb-3 font-read text-xl text-ink">Your positions</h2>
-          <ul className="mt-2 divide-y divide-rule">
+        <section className="mt-12">
+          <h2 className="border-b border-rule pb-3 font-read text-xl text-ink dark:border-dark-border dark:text-dark-ink">
+            Your open positions
+          </h2>
+          <div className="mt-4 grid gap-3">
             {positions.map((position) => {
               const applicants = interests.filter(
                 (i) => i.opportunity_id === position.opportunity_id,
               );
               return (
-                <li
+                <div
                   key={position.opportunity_id}
-                  className="flex items-center justify-between gap-6 py-4"
+                  className="flex flex-col justify-between gap-3 rounded-xl border border-rule bg-white p-4 shadow-xs dark:border-dark-border dark:bg-dark-card sm:flex-row sm:items-center"
                 >
-                  <Link href="/faculty/positions" className="min-w-0 truncate text-[15px] text-ink">
+                  <Link
+                    href="/faculty/positions"
+                    className="min-w-0 truncate text-[15px] font-medium text-ink transition-colors hover:text-forest-700 dark:text-dark-ink dark:hover:text-forest-400"
+                  >
                     {position.title}
                   </Link>
-                  <span className="shrink-0 font-mono text-[11px] text-faint">
+                  <span className="shrink-0 font-mono text-[11px] text-faint dark:text-dark-faint">
                     {applicants.length} applied · {STATUS_COPY.opportunity[position.status]}
                   </span>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </section>
       ) : null}
     </div>
@@ -191,17 +224,31 @@ function Tile({
   icon: Icon,
   value,
   label,
+  color,
 }: {
   href: string;
   icon: React.ElementType;
   value: number;
   label: string;
+  color?: string;
 }) {
   return (
-    <Link href={href} className="invert-card rounded-lg border border-rule bg-white p-5">
-      <Icon className="h-5 w-5" strokeWidth={1.5} />
-      <p className="mt-8 font-mono text-3xl tabular-nums leading-none">{value}</p>
-      <p className="eyebrow mt-2">{label}</p>
+    <Link
+      href={href}
+      className="group flex flex-col justify-between gap-4 rounded-2xl border border-rule bg-white p-5 shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-forest-500/60 hover:shadow-soft dark:border-dark-border dark:bg-dark-card"
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-forest-50 text-forest-700 transition-colors group-hover:bg-forest-600 group-hover:text-white dark:bg-forest-950/80 dark:text-forest-300 dark:group-hover:bg-forest-500 dark:group-hover:text-white">
+          <Icon className="h-5 w-5" strokeWidth={1.75} />
+        </div>
+        <ArrowUpRight className="h-4 w-4 text-mute opacity-0 transition-all group-hover:opacity-100 group-hover:text-forest-700 dark:group-hover:text-forest-400" />
+      </div>
+      <div>
+        <p className="font-mono text-3xl font-semibold tabular-nums leading-none text-ink dark:text-dark-ink">
+          {value}
+        </p>
+        <p className="eyebrow mt-2">{label}</p>
+      </div>
     </Link>
   );
 }
