@@ -6,6 +6,14 @@ import { referenceData } from "@/lib/store/reference";
 import { runtimeMode } from "@/lib/env";
 import { SignInPanel } from "./sign-in-panel";
 
+/**
+ * Sign-in and onboarding both write through the SQL warehouse, and the first
+ * statement after an idle period waits on it starting up. The platform default
+ * of a few seconds kills that mid-flight, which the browser shows as a button
+ * stuck on "Saving" - the server action is capped by this page's budget.
+ */
+export const maxDuration = 60;
+
 export default async function LoginPage() {
   const user = await currentUser();
   if (user) redirect(homeFor(user));

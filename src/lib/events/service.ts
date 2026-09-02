@@ -1,5 +1,5 @@
 import "server-only";
-import { unstable_rethrow } from "next/navigation";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import type {
   AttendeePersona,
   ConformedEvent,
@@ -235,7 +235,7 @@ export async function getRankedEventsForStudent(
     getConformedEvents(),
     allActiveAttendances(),
     referenceData().catch((err) => {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
       return { faculty: [] };
     }),
   ]);
@@ -304,7 +304,7 @@ export async function getRankedEventsForProject(
     getConformedEvents(),
     allActiveAttendances(),
     referenceData().catch((err) => {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
       return { faculty: [] };
     }),
   ]);

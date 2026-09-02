@@ -11,7 +11,7 @@ import { runEventsIngest } from "../src/lib/events/ingest";
 
 async function main() {
   process.stdout.write("Starting live events and hackathons ingest...\n");
-  const result = await runEventsIngest();
+  const result = await runEventsIngest({ syncToLakehouse: true });
   process.stdout.write(
     `\nIngest completed successfully:\n` +
       `  Total Conformed Events: ${result.count}\n` +

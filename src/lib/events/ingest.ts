@@ -1,5 +1,5 @@
 import "server-only";
-import { unstable_rethrow } from "next/navigation";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import type { ConformedEvent, EventSpeaker, EventsFeedPayload } from "@/lib/event-types";
@@ -12,6 +12,9 @@ const BTW_URL = "https://bengalurutechweek.com/config/events.json";
 const HACKCULTURE_BASE_URL = "https://api.hackculture.io/api/v1/hackathons";
 
 const SNAPSHOT_FILE = "events_snapshot.json";
+
+/** An upstream that stops answering must not hold a page render open. */
+const UPSTREAM_TIMEOUT_MS = 10_000;
 
 type CachedSnapshot = {
   version: number;
@@ -37,6 +40,7 @@ export async function fetchBTW(): Promise<{
   const res = await fetch(BTW_URL, {
     next: { revalidate: 3600 },
     headers: { Accept: "application/json", "User-Agent": "Netree/1.0 (Campus Research)" },
+    signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
   });
 
   if (!res.ok) {
@@ -66,7 +70,7 @@ export async function fetchBTW(): Promise<{
   }
 
   const reference = await referenceData().catch((err) => {
-    unstable_rethrow(err);
+    rethrowFrameworkError(err);
     return null;
   });
   const facultyNames = new Map<string, string>();
@@ -182,6 +186,7 @@ export async function fetchHackCulture(): Promise<{
     const res = await fetch(url, {
       next: { revalidate: 3600 },
       headers: { Accept: "application/json", "User-Agent": "Netree/1.0 (Campus Research)" },
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
 
     if (!res.ok) {
@@ -304,7 +309,7 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
         { name: "hash", value: ev.payload_hash },
       ],
     ).catch((err) => {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
       console.warn("[netree-ingest] Raw table insert skipped:", err);
     });
 
@@ -346,7 +351,7 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
         { name: "updated_at", value: now },
       ],
     ).catch((err) => {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
       console.warn("[netree-ingest] Silver events upsert error:", err);
     });
 
@@ -372,7 +377,7 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
           { name: "featured", value: sp.featured ? "true" : "false" },
         ],
       ).catch((err) => {
-        unstable_rethrow(err);
+        rethrowFrameworkError(err);
         console.warn("[netree-ingest] Silver speaker upsert error:", err);
       });
     }
@@ -422,7 +427,18 @@ export async function writeLocalSnapshot(snapshot: CachedSnapshot): Promise<void
 /*                         Master Ingest & Fallback Load                      */
 /* -------------------------------------------------------------------------- */
 
-export async function runEventsIngest(): Promise<{
+export type IngestOptions = {
+  /**
+   * Mirror the merged events into Delta. This is one MERGE per event plus one
+   * per speaker, run in sequence — minutes of statements for a full feed, which
+   * is fine in the nightly script and fatal inside a page render, where it
+   * would run past the function budget and leave the browser waiting on a
+   * response that never arrives. Off unless a caller has the time to spend.
+   */
+  syncToLakehouse?: boolean;
+};
+
+export async function runEventsIngest(options: IngestOptions = {}): Promise<{
   count: number;
   btwCount: number;
   hackcultureCount: number;
@@ -438,7 +454,7 @@ export async function runEventsIngest(): Promise<{
     btwResult = await fetchBTW();
     console.log(`[netree-ingest] BTW Schema Guard PASSED: ${btwResult.events.length} events`);
   } catch (err) {
-    unstable_rethrow(err);
+    rethrowFrameworkError(err);
     console.error("[netree-ingest] BTW fetch failed / guard rejected:", err);
   }
 
@@ -448,7 +464,7 @@ export async function runEventsIngest(): Promise<{
       `[netree-ingest] HackCulture Schema Guard PASSED: ${hcResult.events.length} hackathons`,
     );
   } catch (err) {
-    unstable_rethrow(err);
+    rethrowFrameworkError(err);
     console.error("[netree-ingest] HackCulture fetch failed / guard rejected:", err);
   }
 
@@ -503,10 +519,13 @@ export async function runEventsIngest(): Promise<{
   };
 
   await writeLocalSnapshot(newSnapshot);
-  await syncEventsToDatabricks(mergedEvents).catch((err) => {
-    unstable_rethrow(err);
-    console.warn("[netree-ingest] Databricks sync error:", err);
-  });
+
+  if (options.syncToLakehouse) {
+    await syncEventsToDatabricks(mergedEvents).catch((err) => {
+      rethrowFrameworkError(err);
+      console.warn("[netree-ingest] Databricks sync error:", err);
+    });
+  }
 
   return {
     count: mergedEvents.length,
@@ -536,7 +555,7 @@ export async function getConformedEvents(): Promise<{
       await inFlightIngest;
       snapshot = await readLocalSnapshot();
     } catch (err) {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
       console.error("[netree-ingest] Initial ingest failed:", err);
     }
   }

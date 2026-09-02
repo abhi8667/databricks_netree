@@ -1,9 +1,9 @@
 import "server-only";
 import { appendFileSync, existsSync, readFileSync } from "node:fs";
-import { unstable_rethrow } from "next/navigation";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import { hasWarehouse, silver } from "@/lib/env";
 import { execute, query } from "@/lib/databricks/sql";
-import { mirrorPath } from "@/lib/store/local-dir";
+import { isEphemeralMirror, mirrorPath } from "@/lib/store/local-dir";
 
 /**
  * Append-only record store.
@@ -105,7 +105,15 @@ export async function putRecord<T extends { [k: string]: unknown }>(
       );
       return row;
     } catch (err) {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
+      // On a serverless host the mirror is not a fallback - it is a hole. Fail
+      // loudly so the caller can tell the person their change was not saved.
+      if (isEphemeralMirror()) {
+        throw new Error(
+          `Could not save to ${table}: the warehouse did not answer and this host has no durable local mirror.`,
+          { cause: err },
+        );
+      }
       console.warn(`[netree] write to ${table} failed, mirroring locally:`, err);
     }
   }
@@ -123,7 +131,15 @@ async function allRows(table: TableName): Promise<RecordRow[]> {
       );
       return rows;
     } catch (err) {
-      unstable_rethrow(err);
+      rethrowFrameworkError(err);
+      // Same reasoning as the write path: an empty ephemeral mirror is not a
+      // degraded read, it is a wrong answer - "no rows" reads as signed out.
+      if (isEphemeralMirror()) {
+        throw new Error(
+          `Could not read ${table}: the warehouse did not answer and this host has no local mirror to fall back to.`,
+          { cause: err },
+        );
+      }
       console.warn(`[netree] read from ${table} failed, using local mirror:`, err);
     }
   }

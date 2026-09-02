@@ -11,6 +11,7 @@ import path from "node:path";
  * every write fails. Resolved once per process and remembered.
  */
 let resolved: string | null = null;
+let ephemeral = false;
 
 export function mirrorDir() {
   if (resolved) return resolved;
@@ -21,8 +22,19 @@ export function mirrorDir() {
   } catch {
     resolved = path.join(os.tmpdir(), "netree-local");
     mkdirSync(resolved, { recursive: true });
+    ephemeral = true;
   }
   return resolved;
+}
+
+/**
+ * True when the mirror landed in the temp directory. There it is private to one
+ * serverless instance and gone with it, so anything written there is invisible
+ * to the very next request — a write that goes only here has not been saved.
+ */
+export function isEphemeralMirror() {
+  mirrorDir();
+  return ephemeral;
 }
 
 export function mirrorPath(file: string) {
