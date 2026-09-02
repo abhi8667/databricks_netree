@@ -26,6 +26,7 @@ export const TABLES = [
   "app_message",
   "app_meeting",
   "app_question",
+  "app_event_attendance",
 ] as const;
 
 export type TableName = (typeof TABLES)[number];

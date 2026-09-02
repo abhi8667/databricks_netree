@@ -86,7 +86,7 @@ export function AppShell({
         </div>
       ) : null}
 
-      {/* Rail */}
+      {/* Left Navigation Rail */}
       <aside className="sticky top-0 hidden h-dvh flex-col border-r border-rule px-4 py-6 lg:flex">
         <Link href="/" className="px-3 text-[17px] font-semibold tracking-[-0.03em]">
           Netree
@@ -109,6 +109,7 @@ export function AppShell({
         </div>
       </aside>
 
+      {/* Main Center Content */}
       <main className="min-w-0">{children}</main>
     </div>
   );

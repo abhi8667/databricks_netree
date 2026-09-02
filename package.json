@@ -11,6 +11,7 @@
     "db:bootstrap": "tsx --conditions=react-server scripts/bootstrap-databricks.ts",
     "db:load": "tsx --conditions=react-server scripts/load-delta.ts",
     "db:embed": "tsx --conditions=react-server scripts/build-embeddings.ts",
+    "db:events:ingest": "tsx --conditions=react-server scripts/ingest-events.ts",
     "eval:match": "tsx --conditions=react-server scripts/eval-match.ts"
   },
   "dependencies": {

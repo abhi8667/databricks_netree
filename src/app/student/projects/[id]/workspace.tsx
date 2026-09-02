@@ -14,6 +14,7 @@ import {
 import { Badge, Button, Field, Ident, Input, Meter, Textarea } from "@/components/ui/primitives";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/overlays";
 import { OverlapField } from "@/components/overlap-field";
+import { ProjectEventsBlock } from "@/components/project-events-block";
 import {
   generatePitch,
   replyToIdea,
@@ -23,6 +24,7 @@ import {
 } from "@/app/actions/projects";
 import { STATUS_COPY } from "@/lib/status";
 import type { FacultyMatch, Invitation, Project, ProjectBrief } from "@/lib/types";
+import type { EventMatch } from "@/lib/event-types";
 import { cn } from "@/lib/utils";
 
 /**
@@ -35,9 +37,11 @@ const STAGES = ["Interview", "Brief", "Faculty"] as const;
 export function Workspace({
   project,
   invitations,
+  events,
 }: {
   project: Project;
   invitations: Invitation[];
+  events?: EventMatch[];
 }) {
   const stage = project.match?.matches.length ? 2 : project.brief ? 1 : 0;
 
@@ -86,6 +90,9 @@ export function Workspace({
       <Interview project={project} />
       {project.brief ? <BriefEditor project={project} brief={project.brief} /> : null}
       {project.brief ? <Matches project={project} invitations={invitations} /> : null}
+      {project.brief && events && events.length > 0 ? (
+        <ProjectEventsBlock events={events} />
+      ) : null}
     </div>
   );
 }

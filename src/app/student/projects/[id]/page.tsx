@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { requireUser } from "@/lib/auth";
 import { getProject, invitationsForProject } from "@/lib/repo";
+import { getRankedEventsForProject } from "@/lib/events/service";
 import { Workspace } from "./workspace";
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
@@ -12,7 +13,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   if (!project) notFound();
   if (project.owner_user_id !== user.user_id) redirect("/student/projects");
 
-  const invitations = await invitationsForProject(id);
+  const [invitations, events] = await Promise.all([
+    invitationsForProject(id),
+    getRankedEventsForProject(project, user),
+  ]);
 
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-10 sm:px-10">
@@ -23,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         <ArrowLeft className="h-3.5 w-3.5" />
         All ideas
       </Link>
-      <Workspace project={project} invitations={invitations} />
+      <Workspace project={project} invitations={invitations} events={events} />
     </div>
   );
 }

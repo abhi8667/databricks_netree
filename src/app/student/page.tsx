@@ -16,14 +16,15 @@ import { STATUS_COPY } from "@/lib/status";
 
 export default async function StudentDashboard() {
   const user = await requireUser();
-  const [projects, invitations, interests, questions, opportunities, reference] = await Promise.all([
-    projectsOf(user.user_id),
-    invitationsFromStudent(user.user_id),
-    interestsFromStudent(user.user_id),
-    questionsFrom(user.user_id),
-    openOpportunities(),
-    referenceData(),
-  ]);
+  const [projects, invitations, interests, questions, opportunities, reference] =
+    await Promise.all([
+      projectsOf(user.user_id),
+      invitationsFromStudent(user.user_id),
+      interestsFromStudent(user.user_id),
+      questionsFrom(user.user_id),
+      openOpportunities(),
+      referenceData(),
+    ]);
 
   const active = projects.filter((p) => p.status !== "archived");
   const answered = questions.filter((q) => q.status === "answered");

@@ -1,6 +1,7 @@
 import "server-only";
 import { getRecord, listRecords, putRecord } from "@/lib/store/records";
 import type {
+  EventAttendance,
   Interest,
   Invitation,
   Meeting,
@@ -158,3 +159,27 @@ export async function questionsFor(userId: string, audience: "alumni" | "teacher
     (q) => q.target_user_id === userId || (q.target_user_id === null && q.audience === audience),
   );
 }
+
+/* --------------------------- Event Attendance -------------------------- */
+
+export const saveEventAttendance = (a: EventAttendance) =>
+  putRecord("app_event_attendance", {
+    id: a.attendance_id,
+    owner_id: a.user_id,
+    ref_id: a.event_id,
+    status: a.status,
+    payload: a as unknown as Record<string, unknown>,
+  });
+
+export const getEventAttendance = (id: string) =>
+  getRecord<EventAttendance>("app_event_attendance", id);
+
+export const eventAttendancesForEvent = (eventId: string) =>
+  listRecords<EventAttendance>("app_event_attendance", { ref_id: eventId });
+
+export const eventAttendancesForUser = (userId: string) =>
+  listRecords<EventAttendance>("app_event_attendance", { owner_id: userId });
+
+export const allActiveAttendances = () =>
+  listRecords<EventAttendance>("app_event_attendance", { status: "going" });
+

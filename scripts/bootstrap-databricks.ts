@@ -83,11 +83,32 @@ const REFERENCE_TABLES = [
    ) USING DELTA
    COMMENT 'Embedding input and vector per publication. 650 rows - brute-force cosine in the application, no index needed.'`,
 
-  `CREATE TABLE IF NOT EXISTS ${GOLD}.qa_attribution_flags (
-     publication_id STRING, title STRING, publication_year INT, venue STRING,
-     author_institutions STRING
+  `CREATE TABLE IF NOT EXISTS ${RAW}.events_raw (
+     source STRING, external_id STRING, fetched_at TIMESTAMP,
+     raw_json STRING, payload_hash STRING
    ) USING DELTA
-   COMMENT 'Publications with attribution_confidence = low, held back for manual review.'`,
+   COMMENT 'Raw upstream JSON feeds from Bengaluru Tech Week and HackCulture.'`,
+
+  `CREATE TABLE IF NOT EXISTS ${SILVER}.events (
+     event_id STRING, source STRING, external_id STRING, kind STRING,
+     title STRING, tagline STRING, description STRING, start_at TIMESTAMP,
+     end_at TIMESTAMP, venue STRING, area STRING, track STRING, mode STRING,
+     registration_open BOOLEAN, registration_url STRING, min_team_size INT,
+     max_team_size INT, eligibility_text STRING, cover_image_url STRING,
+     organizer_name STRING, tags STRING, payload_hash STRING, updated_at TIMESTAMP
+   ) USING DELTA
+   COMMENT 'Conformed events and hackathons across campus feeds.'`,
+
+  `CREATE TABLE IF NOT EXISTS ${SILVER}.event_speakers (
+     id STRING, event_external_id STRING, faculty_id STRING, display_name STRING,
+     designation STRING, company STRING, linkedin_url STRING, square_picture_url STRING,
+     featured BOOLEAN
+   ) USING DELTA
+   COMMENT 'Speakers at tech events, linked to faculty records where verified.'`,
+
+  `CREATE OR REPLACE VIEW ${GOLD}.events_upcoming AS
+   SELECT * FROM ${SILVER}.events
+   WHERE start_at >= CURRENT_TIMESTAMP()`,
 ];
 
 /**
@@ -104,6 +125,7 @@ const APP_TABLES = [
   ["app_message", "Clarification messages inside a proposal thread."],
   ["app_meeting", "Meeting proposals and the slot that was confirmed."],
   ["app_question", "Short questions to alumni or faculty, and their answers."],
+  ["app_event_attendance", "Student and faculty declared attendance at events and hackathons."],
 ].map(
   ([name, comment]) => `CREATE TABLE IF NOT EXISTS ${SILVER}.${name} (
      id STRING COMMENT 'Entity id. The newest row per id is the current state.',
