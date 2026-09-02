@@ -14,7 +14,7 @@ import {
   Sun,
   X,
 } from "lucide-react";
-import { answerFoxbowQuery, DEFAULT_NOTIFICATIONS } from "@/lib/notifications";
+import { answerFoxbowQuery, DEFAULT_NOTIFICATIONS, type NotificationItem } from "@/lib/notifications";
 import { cn } from "@/lib/utils";
 
 interface AnimationDef {
@@ -46,7 +46,8 @@ const BUBBLE_MESSAGES = [
 
 const SUGGESTED_QUESTIONS = [
   "What are my notifications?",
-  "Any faculty replies?",
+  "Any mentor replies?",
+  "Did my post get declined?",
   "Upcoming hackathons?",
   "Go to sleep 💤",
 ];
@@ -69,6 +70,8 @@ export function FoxbowPet() {
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
 
+  const [notifications, setNotifications] = React.useState<NotificationItem[]>(DEFAULT_NOTIFICATIONS);
+
   // Foxbow Interactive Chat State
   const [showChat, setShowChat] = React.useState(false);
   const [userQuery, setUserQuery] = React.useState("");
@@ -77,6 +80,18 @@ export function FoxbowPet() {
     actionHref?: string;
     actionLabel?: string;
   } | null>(null);
+
+  // Listen to real-time notification sync from AppShell
+  React.useEffect(() => {
+    const handleNotifUpdate = (e: Event) => {
+      const custom = e as CustomEvent<NotificationItem[]>;
+      if (custom.detail && Array.isArray(custom.detail)) {
+        setNotifications(custom.detail);
+      }
+    };
+    window.addEventListener("netree:notifications", handleNotifUpdate);
+    return () => window.removeEventListener("netree:notifications", handleNotifUpdate);
+  }, []);
 
   // Load Spritesheet
   React.useEffect(() => {
@@ -230,8 +245,8 @@ export function FoxbowPet() {
     setSpeech(null);
 
     if (!showChat) {
-      // Default initial query answer
-      const res = answerFoxbowQuery("notifications");
+      // Default initial query answer with real live notifications
+      const res = answerFoxbowQuery("notifications", notifications);
       setChatResponse(res);
     }
   };
@@ -243,7 +258,7 @@ export function FoxbowPet() {
       return;
     }
 
-    const res = answerFoxbowQuery(question);
+    const res = answerFoxbowQuery(question, notifications);
     setChatResponse(res);
     setUserQuery("");
 

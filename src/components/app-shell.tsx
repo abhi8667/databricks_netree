@@ -34,18 +34,32 @@ export function AppShell({
   nav,
   user,
   roleLabel,
+  initialNotifications,
   children,
 }: {
   nav: NavItem[];
   user: { full_name: string; college_id: string };
   roleLabel: string;
+  initialNotifications?: NotificationItem[];
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
   const [showNotifications, setShowNotifications] = React.useState(false);
   const [showUserMenu, setShowUserMenu] = React.useState(false);
   const [showHamburger, setShowHamburger] = React.useState(false);
-  const [notifications, setNotifications] = React.useState<NotificationItem[]>(DEFAULT_NOTIFICATIONS);
+  const [notifications, setNotifications] = React.useState<NotificationItem[]>(
+    initialNotifications ?? DEFAULT_NOTIFICATIONS,
+  );
+
+  React.useEffect(() => {
+    if (initialNotifications) {
+      setNotifications(initialNotifications);
+    }
+  }, [initialNotifications]);
+
+  React.useEffect(() => {
+    window.dispatchEvent(new CustomEvent("netree:notifications", { detail: notifications }));
+  }, [notifications]);
 
   const notifRef = React.useRef<HTMLDivElement>(null);
   const userMenuRef = React.useRef<HTMLDivElement>(null);
@@ -222,30 +236,57 @@ export function AppShell({
                     )}
                   </div>
 
-                  <div className="mt-3 divide-y divide-rule/60 overflow-hidden dark:divide-dark-border/60">
-                    {notifications.map((n) => (
-                      <Link
-                        key={n.id}
-                        href={n.href}
-                        onClick={() => setShowNotifications(false)}
-                        className={cn(
-                          "group block py-3 transition-colors hover:bg-forest-50/50 dark:hover:bg-forest-950/40 rounded-xl px-2.5",
-                          !n.read && "bg-forest-50/30 dark:bg-forest-950/20",
-                        )}
-                      >
-                        <div className="flex items-start justify-between gap-2">
-                          <p className="text-xs font-semibold text-ink group-hover:text-forest-700 dark:text-dark-ink dark:group-hover:text-forest-300">
-                            {n.title}
+                  <div className="mt-3 divide-y divide-rule/60 overflow-hidden dark:divide-dark-border/60 max-h-80 overflow-y-auto">
+                    {notifications.length === 0 ? (
+                      <p className="py-6 text-center text-xs text-mute dark:text-dark-mute">
+                        No notifications right now.
+                      </p>
+                    ) : (
+                      notifications.map((n) => (
+                        <Link
+                          key={n.id}
+                          href={n.href}
+                          onClick={() => setShowNotifications(false)}
+                          className={cn(
+                            "group block py-3 transition-colors hover:bg-forest-50/50 dark:hover:bg-forest-950/40 rounded-xl px-2.5",
+                            !n.read && "bg-forest-50/30 dark:bg-forest-950/20",
+                          )}
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <div className="flex items-center gap-2 min-w-0">
+                              <span
+                                className={cn(
+                                  "h-2 w-2 rounded-full shrink-0",
+                                  n.type === "declined"
+                                    ? "bg-red-500 shadow-xs"
+                                    : n.type === "reply"
+                                    ? "bg-emerald-500 shadow-glow-sm"
+                                    : n.type === "event"
+                                    ? "bg-purple-500"
+                                    : "bg-forest-500"
+                                )}
+                              />
+                              <p
+                                className={cn(
+                                  "truncate text-xs font-semibold",
+                                  n.type === "declined"
+                                    ? "text-red-700 dark:text-red-400"
+                                    : "text-ink group-hover:text-forest-700 dark:text-dark-ink dark:group-hover:text-forest-300"
+                                )}
+                              >
+                                {n.title}
+                              </p>
+                            </div>
+                            <span className="shrink-0 font-mono text-[10px] text-faint dark:text-dark-faint">
+                              {n.time}
+                            </span>
+                          </div>
+                          <p className="mt-1 line-clamp-2 text-xs text-mute dark:text-dark-mute pl-4">
+                            {n.description}
                           </p>
-                          <span className="font-mono text-[10px] text-faint dark:text-dark-faint">
-                            {n.time}
-                          </span>
-                        </div>
-                        <p className="mt-1 line-clamp-2 text-xs text-mute dark:text-dark-mute">
-                          {n.description}
-                        </p>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))
+                    )}
                   </div>
 
                   <div className="mt-3 border-t border-rule pt-2.5 text-center dark:border-dark-border">
