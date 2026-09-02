@@ -1,4 +1,5 @@
 import "server-only";
+import { unstable_rethrow } from "next/navigation";
 import { hasGemini, hasGenie } from "@/lib/env";
 import { askGenie, genieRows, type GenieResult } from "@/lib/databricks/genie";
 import { chat } from "@/lib/ai/gemini";
@@ -65,6 +66,7 @@ async function genieShortlist(brief: ProjectBrief): Promise<{
     });
     return { result, names };
   } catch (err) {
+    unstable_rethrow(err);
     console.warn("[netree] Genie shortlist unavailable:", err);
     return { result: null, names };
   }
@@ -281,6 +283,7 @@ async function writeRationales(matches: FacultyMatch[], brief: ProjectBrief) {
     const parsed = JSON.parse(text.slice(start, text.lastIndexOf("}") + 1)) as Record<string, string>;
     matches.forEach((m) => (m.rationale = parsed[m.faculty_id]?.trim() || fallback(m)));
   } catch (err) {
+    unstable_rethrow(err);
     console.warn("[netree] rationale generation failed, using evidence summary:", err);
     matches.forEach((m) => (m.rationale = fallback(m)));
   }

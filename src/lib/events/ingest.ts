@@ -1,17 +1,17 @@
 import "server-only";
+import { unstable_rethrow } from "next/navigation";
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
-import path from "node:path";
 import type { ConformedEvent, EventSpeaker, EventsFeedPayload } from "@/lib/event-types";
 import { execute, query } from "@/lib/databricks/sql";
 import { dbx, hasWarehouse } from "@/lib/env";
+import { mirrorPath } from "@/lib/store/local-dir";
 import { referenceData } from "@/lib/store/reference";
 
 const BTW_URL = "https://bengalurutechweek.com/config/events.json";
 const HACKCULTURE_BASE_URL = "https://api.hackculture.io/api/v1/hackathons";
 
-const LOCAL_DIR = path.join(process.cwd(), ".netree-local");
-const LOCAL_EVENTS_FILE = path.join(LOCAL_DIR, "events_snapshot.json");
+const SNAPSHOT_FILE = "events_snapshot.json";
 
 type CachedSnapshot = {
   version: number;
@@ -65,7 +65,10 @@ export async function fetchBTW(): Promise<{
     }
   }
 
-  const reference = await referenceData().catch(() => null);
+  const reference = await referenceData().catch((err) => {
+    unstable_rethrow(err);
+    return null;
+  });
   const facultyNames = new Map<string, string>();
   if (reference?.faculty) {
     for (const f of reference.faculty) {
@@ -300,7 +303,10 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
         { name: "raw_json", value: JSON.stringify(ev) },
         { name: "hash", value: ev.payload_hash },
       ],
-    ).catch((err) => console.warn("[netree-ingest] Raw table insert skipped:", err));
+    ).catch((err) => {
+      unstable_rethrow(err);
+      console.warn("[netree-ingest] Raw table insert skipped:", err);
+    });
 
     // 2. Silver idempotent upsert
     await execute(
@@ -339,7 +345,10 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
         { name: "hash", value: ev.payload_hash },
         { name: "updated_at", value: now },
       ],
-    ).catch((err) => console.warn("[netree-ingest] Silver events upsert error:", err));
+    ).catch((err) => {
+      unstable_rethrow(err);
+      console.warn("[netree-ingest] Silver events upsert error:", err);
+    });
 
     // 3. Speakers
     for (const sp of ev.speakers) {
@@ -362,7 +371,10 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
           { name: "avatar", value: sp.square_picture_url ?? "" },
           { name: "featured", value: sp.featured ? "true" : "false" },
         ],
-      ).catch((err) => console.warn("[netree-ingest] Silver speaker upsert error:", err));
+      ).catch((err) => {
+        unstable_rethrow(err);
+        console.warn("[netree-ingest] Silver speaker upsert error:", err);
+      });
     }
   }
 }
@@ -371,21 +383,38 @@ export async function syncEventsToDatabricks(events: ConformedEvent[]): Promise<
 /*                               Local Snapshot Cache                         */
 /* -------------------------------------------------------------------------- */
 
+/**
+ * The snapshot lives in memory for the life of the process and on disk for the
+ * life of the machine. On a read-only host the disk half may be unavailable —
+ * `mirrorDir` falls back to the temp directory, and if even that fails the
+ * memory copy still spares every request a full round of upstream fetches.
+ */
+let memorySnapshot: CachedSnapshot | null = null;
+let warnedAboutDisk = false;
+
 export async function readLocalSnapshot(): Promise<CachedSnapshot | null> {
+  if (memorySnapshot) return memorySnapshot;
   try {
-    const raw = await fs.readFile(LOCAL_EVENTS_FILE, "utf-8");
-    return JSON.parse(raw) as CachedSnapshot;
+    const raw = await fs.readFile(mirrorPath(SNAPSHOT_FILE), "utf-8");
+    memorySnapshot = JSON.parse(raw) as CachedSnapshot;
+    return memorySnapshot;
   } catch {
     return null;
   }
 }
 
 export async function writeLocalSnapshot(snapshot: CachedSnapshot): Promise<void> {
+  memorySnapshot = snapshot;
   try {
-    await fs.mkdir(LOCAL_DIR, { recursive: true });
-    await fs.writeFile(LOCAL_EVENTS_FILE, JSON.stringify(snapshot, null, 2), "utf-8");
+    await fs.writeFile(mirrorPath(SNAPSHOT_FILE), JSON.stringify(snapshot, null, 2), "utf-8");
   } catch (err) {
-    console.error("[netree-ingest] Failed to write local events snapshot:", err);
+    if (!warnedAboutDisk) {
+      warnedAboutDisk = true;
+      console.warn(
+        "[netree-ingest] Local events snapshot is memory-only (read-only filesystem):",
+        err,
+      );
+    }
   }
 }
 
@@ -409,6 +438,7 @@ export async function runEventsIngest(): Promise<{
     btwResult = await fetchBTW();
     console.log(`[netree-ingest] BTW Schema Guard PASSED: ${btwResult.events.length} events`);
   } catch (err) {
+    unstable_rethrow(err);
     console.error("[netree-ingest] BTW fetch failed / guard rejected:", err);
   }
 
@@ -418,6 +448,7 @@ export async function runEventsIngest(): Promise<{
       `[netree-ingest] HackCulture Schema Guard PASSED: ${hcResult.events.length} hackathons`,
     );
   } catch (err) {
+    unstable_rethrow(err);
     console.error("[netree-ingest] HackCulture fetch failed / guard rejected:", err);
   }
 
@@ -472,9 +503,10 @@ export async function runEventsIngest(): Promise<{
   };
 
   await writeLocalSnapshot(newSnapshot);
-  await syncEventsToDatabricks(mergedEvents).catch((err) =>
-    console.warn("[netree-ingest] Databricks sync error:", err),
-  );
+  await syncEventsToDatabricks(mergedEvents).catch((err) => {
+    unstable_rethrow(err);
+    console.warn("[netree-ingest] Databricks sync error:", err);
+  });
 
   return {
     count: mergedEvents.length,
@@ -483,6 +515,9 @@ export async function runEventsIngest(): Promise<{
     isStale: !btwResult || !hcResult,
   };
 }
+
+/** Concurrent callers share one auto-ingest instead of each starting their own. */
+let inFlightIngest: Promise<unknown> | null = null;
 
 export async function getConformedEvents(): Promise<{
   events: ConformedEvent[];
@@ -495,9 +530,13 @@ export async function getConformedEvents(): Promise<{
   // If local snapshot is missing, run auto-ingest
   if (!snapshot || !snapshot.events.length) {
     try {
-      await runEventsIngest();
+      inFlightIngest ??= runEventsIngest().finally(() => {
+        inFlightIngest = null;
+      });
+      await inFlightIngest;
       snapshot = await readLocalSnapshot();
     } catch (err) {
+      unstable_rethrow(err);
       console.error("[netree-ingest] Initial ingest failed:", err);
     }
   }

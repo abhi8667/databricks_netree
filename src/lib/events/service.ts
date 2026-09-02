@@ -1,4 +1,5 @@
 import "server-only";
+import { unstable_rethrow } from "next/navigation";
 import type {
   AttendeePersona,
   ConformedEvent,
@@ -233,7 +234,10 @@ export async function getRankedEventsForStudent(
   const [eventsData, attendances, reference] = await Promise.all([
     getConformedEvents(),
     allActiveAttendances(),
-    referenceData().catch(() => ({ faculty: [] })),
+    referenceData().catch((err) => {
+      unstable_rethrow(err);
+      return { faculty: [] };
+    }),
   ]);
 
   const studentQuery = [
@@ -299,7 +303,10 @@ export async function getRankedEventsForProject(
   const [eventsData, attendances, reference] = await Promise.all([
     getConformedEvents(),
     allActiveAttendances(),
-    referenceData().catch(() => ({ faculty: [] })),
+    referenceData().catch((err) => {
+      unstable_rethrow(err);
+      return { faculty: [] };
+    }),
   ]);
 
   const projectQuery = project.brief
