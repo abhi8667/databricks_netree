@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { dbx, hasGenie, hasServing, hasWarehouse, runtimeMode } from "@/lib/env";
+import { dbx, gemini, hasGemini, hasGenie, hasWarehouse, runtimeMode } from "@/lib/env";
 import { warehouseReachable } from "@/lib/databricks/sql";
 import { referenceData } from "@/lib/store/reference";
 import { spaceKind } from "@/lib/search/vectors";
@@ -37,12 +37,11 @@ export async function GET() {
           ? "Matching asks Genie who publishes on the idea's research areas, and keeps its SQL."
           : "No space configured. Matching runs on embeddings alone.",
       },
-      model_serving: {
-        configured: hasServing(),
-        chat_endpoint: hasServing() ? dbx.chatEndpoint : null,
-        embedding_endpoint: hasServing() ? dbx.embeddingEndpoint : null,
-        detail: hasServing()
-          ? "Runs the idea interview, the pitch drafts and the match rationales."
+      gemini: {
+        configured: hasGemini(),
+        model: hasGemini() ? gemini.model : null,
+        detail: hasGemini()
+          ? "Runs the idea interview, pitch drafts and evidence-grounded match rationales."
           : "Not configured. The interview follows a fixed script and drafts come from templates.",
       },
       vector_space: {

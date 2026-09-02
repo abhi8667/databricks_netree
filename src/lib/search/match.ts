@@ -1,7 +1,7 @@
 import "server-only";
-import { hasGenie, hasServing } from "@/lib/env";
+import { hasGemini, hasGenie } from "@/lib/env";
 import { askGenie, genieRows, type GenieResult } from "@/lib/databricks/genie";
-import { chat } from "@/lib/databricks/serving";
+import { chat } from "@/lib/ai/gemini";
 import { referenceData } from "@/lib/store/reference";
 import { searchPublications, spaceKind } from "./vectors";
 import type { FacultyMatch, MatchReport, Project, ProjectBrief } from "@/lib/types";
@@ -246,7 +246,7 @@ async function writeRationales(matches: FacultyMatch[], brief: ProjectBrief) {
     return `${m.depth} publication${m.depth === 1 ? "" : "s"} overlap this idea.`;
   };
 
-  if (!hasServing() || !matches.length) {
+  if (!hasGemini() || !matches.length) {
     matches.forEach((m) => (m.rationale = fallback(m)));
     return;
   }

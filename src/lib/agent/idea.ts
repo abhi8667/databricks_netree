@@ -1,6 +1,6 @@
 import "server-only";
-import { hasServing } from "@/lib/env";
-import { chatJson, type ChatMessage } from "@/lib/databricks/serving";
+import { hasGemini } from "@/lib/env";
+import { chatJson, type ChatMessage } from "@/lib/ai/gemini";
 import type { IdeaTurn, ProjectBrief } from "@/lib/types";
 
 /**
@@ -56,10 +56,10 @@ export type IdeaResponse = {
   ready: boolean;
   brief: ProjectBrief | null;
   /** Which engine produced this turn, surfaced in the UI as provenance. */
-  source: "model-serving" | "guided";
+  source: "gemini" | "guided";
 };
 
-/** Questions the guided path walks through when Model Serving is unavailable. */
+/** Questions the guided path walks through when Gemini is unavailable. */
 const GUIDED = [
   "What problem does this solve, and who feels it today?",
   "How would you build it? Name the techniques or tools you have in mind.",
@@ -71,7 +71,7 @@ const GUIDED = [
 export async function nextIdeaTurn(transcript: IdeaTurn[]): Promise<IdeaResponse> {
   const userTurns = transcript.filter((t) => t.role === "user");
 
-  if (hasServing()) {
+  if (hasGemini()) {
     try {
       const messages: ChatMessage[] = [
         { role: "system", content: SYSTEM },
@@ -84,7 +84,7 @@ export async function nextIdeaTurn(transcript: IdeaTurn[]): Promise<IdeaResponse
         reply: out.reply,
         ready: Boolean(out.ready && out.brief),
         brief: out.ready ? normaliseBrief(out.brief) : null,
-        source: "model-serving",
+        source: "gemini",
       };
     } catch (err) {
       console.warn("[netree] idea agent fell back to the guided script:", err);

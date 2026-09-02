@@ -1,6 +1,6 @@
 import "server-only";
-import { hasServing } from "@/lib/env";
-import { chat } from "@/lib/databricks/serving";
+import { hasGemini } from "@/lib/env";
+import { chat } from "@/lib/ai/gemini";
 import type { FacultyMatch, NetreeUser, ProjectBrief } from "@/lib/types";
 
 /**
@@ -52,7 +52,7 @@ export async function draftPitch(
       .trim();
   };
 
-  if (!hasServing()) return fallback();
+  if (!hasGemini()) return fallback();
 
   try {
     return (
@@ -99,7 +99,7 @@ export async function summariseForFaculty(brief: ProjectBrief): Promise<string> 
   const fallback = () =>
     [brief.one_liner, brief.problem].filter(Boolean).join(" ").slice(0, 320);
 
-  if (!hasServing()) return fallback();
+  if (!hasGemini()) return fallback();
   try {
     return (
       await chat(

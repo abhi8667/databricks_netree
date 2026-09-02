@@ -1,3 +1,9 @@
+import { loadEnvConfig } from "@next/env";
+
+// The Next.js server loads .env.local automatically. Loading it here as well
+// keeps direct maintenance scripts on the same server-only configuration.
+loadEnvConfig(process.cwd());
+
 /**
  * Server-only configuration. The PAT is read here and nowhere else that could
  * be bundled for the browser — every Databricks call goes through an API route.
@@ -15,6 +21,12 @@ export const dbx = {
   embeddingEndpoint: process.env.DATABRICKS_EMBEDDING_ENDPOINT ?? "databricks-gte-large-en",
 };
 
+/** Gemini is used only for conversational generation, never as a data store. */
+export const gemini = {
+  apiKey: process.env.GEMINI_API_KEY ?? "",
+  model: process.env.GEMINI_MODEL ?? "gemini-2.5-flash-lite",
+};
+
 const forcedLocal = process.env.NETREE_FORCE_LOCAL === "1";
 
 /** True when we can run SQL against a warehouse. */
@@ -26,6 +38,9 @@ export const hasGenie = () => !forcedLocal && Boolean(dbx.host && dbx.token && d
 
 /** True when Model Serving can be reached. */
 export const hasServing = () => !forcedLocal && Boolean(dbx.host && dbx.token);
+
+/** True when server-side Gemini calls are available. */
+export const hasGemini = () => !forcedLocal && Boolean(gemini.apiKey);
 
 export type RuntimeMode = "databricks" | "local";
 export const runtimeMode = (): RuntimeMode => (hasWarehouse() ? "databricks" : "local");

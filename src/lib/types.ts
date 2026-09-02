@@ -83,7 +83,7 @@ export type FacultyMatch = {
   collaboration_status: string;
   overlap_topics: { topic: string; n_papers: number; latest_year: number }[];
   evidence: { publication_id: string; title: string; year: number; venue: string; url: string; similarity: number }[];
-  /** Plain-language reason, written by Model Serving over the evidence above. */
+  /** Plain-language reason, written by Gemini over the evidence above. */
   rationale: string;
 };
 

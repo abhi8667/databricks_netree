@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/primitives";
-import { dbx, hasGenie, hasServing, hasWarehouse, runtimeMode } from "@/lib/env";
+import { dbx, gemini, hasGemini, hasGenie, hasWarehouse, runtimeMode } from "@/lib/env";
 import { warehouseReachable } from "@/lib/databricks/sql";
 import { referenceData } from "@/lib/store/reference";
 import { spaceKind } from "@/lib/search/vectors";
@@ -40,11 +40,11 @@ export default async function SystemPage() {
         : "Matching runs on the embedding space alone. Add a space pointed at netree.gold to turn this on.",
     },
     {
-      name: "Model Serving",
-      live: hasServing(),
-      detail: hasServing() ? dbx.chatEndpoint : "Not configured",
-      note: hasServing()
-        ? "Runs the idea interview, drafts pitches, and writes the one-line reason on each match."
+      name: "Gemini API",
+      live: hasGemini(),
+      detail: hasGemini() ? gemini.model : "Not configured",
+      note: hasGemini()
+        ? "Runs the idea interview, drafts pitches, and writes the evidence-grounded reason on each match."
         : "The interview follows a fixed five-question script and drafts come from templates.",
     },
     {
