@@ -2,13 +2,25 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { CalendarClock, Check, Loader2, MapPin, Video, X } from "lucide-react";
+import {
+  Calendar,
+  CalendarClock,
+  Check,
+  Copy,
+  Download,
+  ExternalLink,
+  Loader2,
+  MapPin,
+  Video,
+  X,
+} from "lucide-react";
 import { Badge, Button, Field, Input, Textarea } from "@/components/ui/primitives";
 import { requestMeeting } from "@/app/actions/projects";
 import { respondToMeeting } from "@/app/actions/faculty";
 import { STATUS_COPY } from "@/lib/status";
 import type { Meeting } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { buildGoogleCalendarUrl, buildIcsContent, downloadIcsFile } from "@/lib/calendar";
 
 /**
  * Meetings are proposed as a set of times, not a single one - a student
@@ -20,11 +32,15 @@ export function MeetingPanel({
   meetings,
   canPropose,
   canDecide,
+  projectTitle = "Research Collaboration Meeting",
+  facultyName,
 }: {
   invitationId: string;
   meetings: Meeting[];
   canPropose: boolean;
   canDecide: boolean;
+  projectTitle?: string;
+  facultyName?: string;
 }) {
   return (
     <div className="space-y-5">
@@ -36,6 +52,8 @@ export function MeetingPanel({
               meeting={meeting}
               invitationId={invitationId}
               canDecide={canDecide && meeting.status === "proposed"}
+              projectTitle={projectTitle}
+              facultyName={facultyName}
             />
           ))}
         </ul>
@@ -54,13 +72,18 @@ function MeetingRow({
   meeting,
   invitationId,
   canDecide,
+  projectTitle = "Research Collaboration Meeting",
+  facultyName,
 }: {
   meeting: Meeting;
   invitationId: string;
   canDecide: boolean;
+  projectTitle?: string;
+  facultyName?: string;
 }) {
   const router = useRouter();
   const [error, setError] = React.useState<string | null>(null);
+  const [copied, setCopied] = React.useState(false);
   const [pending, startTransition] = React.useTransition();
 
   const act = (accept: boolean, slot?: string) => {
@@ -72,16 +95,49 @@ function MeetingRow({
     });
   };
 
+  const isConfirmed = meeting.status === "confirmed" && Boolean(meeting.confirmed_slot);
+
+  const calOpts = isConfirmed
+    ? {
+        title: `Netree Meeting: ${projectTitle}`,
+        description: `Academic research discussion for project "${projectTitle}".${
+          facultyName ? ` With ${facultyName}.` : ""
+        }${meeting.agenda ? `\n\nAgenda: ${meeting.agenda}` : ""}`,
+        location: meeting.mode === "online" ? "Google Meet (Online)" : meeting.location || "Campus Lab",
+        slot: meeting.confirmed_slot!,
+        durationMinutes: 45,
+        url: typeof window !== "undefined" ? window.location.href : undefined,
+      }
+    : null;
+
+  const handleDownloadIcs = () => {
+    if (!calOpts) return;
+    const content = buildIcsContent(calOpts);
+    downloadIcsFile(`netree-meeting-${meeting.meeting_id.slice(0, 8)}`, content);
+  };
+
+  const handleCopy = () => {
+    if (!meeting.confirmed_slot) return;
+    const text = `📅 Netree Research Meeting\nProject: ${projectTitle}\nTime: ${
+      meeting.confirmed_slot
+    }\nLocation: ${meeting.mode === "online" ? "Online" : meeting.location || "On Campus"}${
+      meeting.agenda ? `\nAgenda: ${meeting.agenda}` : ""
+    }`;
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <li className="rulebox p-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="inline-flex items-center gap-2 text-[14px] text-ink">
+        <span className="inline-flex items-center gap-2 text-[14px] text-ink font-medium">
           {meeting.mode === "online" ? (
             <Video className="h-4 w-4 text-mute" />
           ) : (
             <MapPin className="h-4 w-4 text-mute" />
           )}
-          {meeting.mode === "online" ? "Online" : meeting.location || "On campus"}
+          {meeting.mode === "online" ? "Online Meeting" : meeting.location || "On campus"}
         </span>
         <Badge tone={meeting.status === "confirmed" ? "solid" : "default"}>
           {STATUS_COPY.meeting[meeting.status]}
@@ -96,27 +152,70 @@ function MeetingRow({
         {meeting.slots.map((slot) => {
           const chosen = meeting.confirmed_slot === slot;
           return (
-            <li key={slot} className="flex items-center justify-between gap-3">
+            <li
+              key={slot}
+              className={cn(
+                "flex items-center justify-between gap-3 rounded-md px-2.5 py-1.5 transition-colors",
+                chosen ? "bg-fill border border-rule" : ""
+              )}
+            >
               <span
                 className={cn(
                   "inline-flex items-center gap-2 text-[14px]",
-                  chosen ? "text-ink" : "text-mute",
+                  chosen ? "font-medium text-ink" : "text-mute",
                 )}
               >
                 <CalendarClock className="h-3.5 w-3.5" />
                 {slot}
-                {chosen ? <Badge tone="solid">Confirmed</Badge> : null}
+                {chosen ? <Badge tone="solid">Confirmed Slot</Badge> : null}
               </span>
               {canDecide ? (
                 <Button size="sm" variant="quiet" disabled={pending} onClick={() => act(true, slot)}>
                   <Check className="h-3.5 w-3.5" />
-                  Take this one
+                  Confirm this slot
                 </Button>
               ) : null}
             </li>
           );
         })}
       </ul>
+
+      {/* Calendar Auto-Sync Actions when Confirmed */}
+      {isConfirmed && calOpts ? (
+        <div className="mt-4 border-t border-rule pt-4">
+          <p className="eyebrow text-micro text-mute mb-2.5">Auto-Sync to Calendar</p>
+          <div className="flex flex-wrap items-center gap-2">
+            <a
+              href={buildGoogleCalendarUrl(calOpts)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink shadow-sm transition hover:bg-ink hover:text-paper"
+            >
+              <Calendar className="h-3.5 w-3.5" />
+              Google Calendar
+              <ExternalLink className="h-3 w-3 opacity-60" />
+            </a>
+
+            <button
+              type="button"
+              onClick={handleDownloadIcs}
+              className="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink shadow-sm transition hover:bg-ink hover:text-paper"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Apple / Outlook (.ics)
+            </button>
+
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="inline-flex items-center gap-1.5 rounded-md border border-rule bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-mute transition hover:text-ink"
+            >
+              <Copy className="h-3.5 w-3.5" />
+              {copied ? "Copied invite!" : "Copy Details"}
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       {canDecide ? (
         <div className="mt-4 flex items-center gap-3 border-t border-rule pt-3">

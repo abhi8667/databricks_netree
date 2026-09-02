@@ -22,6 +22,7 @@ export default async function FacultyLayout({ children }: { children: React.Reac
       user={{ full_name: user.full_name, college_id: user.college_id }}
       nav={[
         { href: "/faculty", label: "Dashboard" },
+        { href: "/faculty/schedule", label: "Schedule" },
         {
           href: "/faculty/proposals",
           label: "Proposals",
