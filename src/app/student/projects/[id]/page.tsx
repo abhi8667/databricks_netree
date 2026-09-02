@@ -6,6 +6,13 @@ import { getProject, invitationsForProject } from "@/lib/repo";
 import { getRankedEventsForProject } from "@/lib/events/service";
 import { Workspace } from "./workspace";
 
+/**
+ * Matching runs Genie, the vector search and a Gemini pass before it writes the
+ * report - tens of seconds on a cold warehouse. The server action is capped by
+ * this page's budget, and the platform default cuts it off mid-run.
+ */
+export const maxDuration = 60;
+
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const user = await requireUser();

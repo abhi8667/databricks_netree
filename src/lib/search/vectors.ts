@@ -88,16 +88,27 @@ function normalise(v: Float32Array) {
 async function loadDenseSpace(): Promise<DenseSpace | null> {
   if (!hasWarehouse()) return null;
   try {
-    const rows = await query<{ publication_id: string; vector: string }>(
-      `SELECT publication_id, to_json(vector) AS vector
-         FROM ${gold("publication_embedding")}
-        WHERE vector IS NOT NULL`,
-    );
+    const [rows, { publications }] = await Promise.all([
+      query<{ publication_id: string; vector: string }>(
+        `SELECT publication_id, to_json(vector) AS vector
+           FROM ${gold("publication_embedding")}
+          WHERE vector IS NOT NULL`,
+      ),
+      referenceData(),
+    ]);
     if (!rows.length) return null;
+
+    // The embedding table is written from the full publication set, including
+    // the low-confidence attribution slice the reader filters out. Retrieving a
+    // paper the app cannot show gives a match with no citation behind it, so
+    // the dense space is held to the same set as the TF-IDF one below.
+    const showable = new Set(publications.map((p) => p.publication_id));
     const docs = new Map<string, Float32Array>();
     for (const row of rows) {
+      if (!showable.has(row.publication_id)) continue;
       docs.set(row.publication_id, normalise(Float32Array.from(JSON.parse(row.vector) as number[])));
     }
+    if (!docs.size) return null;
     return { kind: "dense", docs };
   } catch {
     return null;

@@ -1,6 +1,13 @@
 import { PageHeader } from "@/components/app-shell";
 import { SeedForm } from "./seed-form";
 
+/**
+ * Matching runs Genie, the vector search and a Gemini pass before it writes the
+ * report - tens of seconds on a cold warehouse. The server action is capped by
+ * this page's budget, and the platform default cuts it off mid-run.
+ */
+export const maxDuration = 60;
+
 export default function NewProjectPage() {
   return (
     <div className="mx-auto w-full max-w-3xl px-6 py-10 sm:px-10">
