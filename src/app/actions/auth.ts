@@ -1,6 +1,7 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import { clearSession, currentUser, findByCollegeId, saveUser, setSession } from "@/lib/auth";
 import { referenceData } from "@/lib/store/reference";
 import { homeFor } from "@/lib/routes";
@@ -8,6 +9,20 @@ import { newId } from "@/lib/utils";
 import type { NetreeUser, Role } from "@/lib/types";
 
 export type SignInState = { error?: string };
+
+/**
+ * A save that cannot reach the warehouse has to come back to the form. The
+ * alternative is redirecting on an unsaved profile, which lands on a guard that
+ * sends the person straight back here with the fields blank again.
+ */
+function saveFailed(err: unknown): SignInState {
+  console.error("[netree] profile save failed:", err);
+  return {
+    error:
+      "Could not save your details - the Databricks warehouse did not answer in time. " +
+      "It may still be starting up; wait a moment and try again.",
+  };
+}
 
 export async function signIn(_prev: SignInState, form: FormData): Promise<SignInState> {
   const role = String(form.get("role") ?? "") as Role;
@@ -18,7 +33,13 @@ export async function signIn(_prev: SignInState, form: FormData): Promise<SignIn
   if (collegeId.length < 3) return { error: "Enter your college ID." };
   if (fullName.length < 2) return { error: "Enter your full name." };
 
-  const existing = await findByCollegeId(collegeId, role);
+  let existing: NetreeUser | null;
+  try {
+    existing = await findByCollegeId(collegeId, role);
+  } catch (err) {
+    rethrowFrameworkError(err);
+    return saveFailed(err);
+  }
   if (existing) {
     await setSession(existing.user_id);
     redirect(homeFor(existing));
@@ -46,7 +67,12 @@ export async function signIn(_prev: SignInState, form: FormData): Promise<SignIn
     updated_at: now,
   };
 
-  await saveUser(user);
+  try {
+    await saveUser(user);
+  } catch (err) {
+    rethrowFrameworkError(err);
+    return saveFailed(err);
+  }
   await setSession(user.user_id);
   redirect("/onboarding");
 }
@@ -76,7 +102,13 @@ export async function signOut() {
 }
 
 export async function completeOnboarding(_prev: SignInState, form: FormData): Promise<SignInState> {
-  const user = await currentUser();
+  let user: NetreeUser | null;
+  try {
+    user = await currentUser();
+  } catch (err) {
+    rethrowFrameworkError(err);
+    return saveFailed(err);
+  }
   if (!user) redirect("/login");
 
   const department = String(form.get("department") ?? "").trim();
@@ -106,6 +138,11 @@ export async function completeOnboarding(_prev: SignInState, form: FormData): Pr
     updated_at: new Date().toISOString(),
   };
 
-  await saveUser(updated);
+  try {
+    await saveUser(updated);
+  } catch (err) {
+    rethrowFrameworkError(err);
+    return saveFailed(err);
+  }
   redirect("/onboarding/confirmed");
 }

@@ -26,6 +26,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
       user={{ full_name: user.full_name, college_id: user.college_id }}
       nav={[
         { href: "/student", label: "Dashboard" },
+        { href: "/student/schedule", label: "Schedule" },
         { href: "/student/projects", label: "My ideas", count: projects.length },
         { href: "/student/events", label: "Events & Hacks", count: eventsFeed.hackathons.length },
         { href: "/student/requests", label: "Requests", count: replied },

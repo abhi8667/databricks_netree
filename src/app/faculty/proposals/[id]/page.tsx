@@ -204,6 +204,8 @@ export default async function ProposalPage({ params }: { params: Promise<{ id: s
             meetings={meetings}
             canPropose={false}
             canDecide={invitation.status !== "declined"}
+            projectTitle={invitation.project_title}
+            facultyName={user.full_name}
           />
         </div>
       </section>

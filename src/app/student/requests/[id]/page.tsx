@@ -99,6 +99,8 @@ export default async function RequestThreadPage({
             meetings={meetings}
             canPropose={invitation.status !== "declined"}
             canDecide={false}
+            projectTitle={invitation.project_title}
+            facultyName={invitation.faculty_name}
           />
         </div>
       </section>

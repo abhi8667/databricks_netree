@@ -1,5 +1,6 @@
 import "server-only";
 import path from "node:path";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import { hasWarehouse, gold, silver } from "@/lib/env";
 import { query } from "@/lib/databricks/sql";
 import { readCsv, num, maybeNum, bool } from "./csv";
@@ -127,6 +128,7 @@ export async function referenceData(): Promise<Cache> {
   try {
     cache = hasWarehouse() ? await loadDatabricks() : loadLocal();
   } catch (err) {
+    rethrowFrameworkError(err);
     console.warn("[netree] gold read failed, falling back to local CSVs:", err);
     cache = loadLocal();
   }

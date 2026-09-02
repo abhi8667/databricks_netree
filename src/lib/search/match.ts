@@ -1,4 +1,5 @@
 import "server-only";
+import { rethrowFrameworkError } from "@/lib/framework-error";
 import { hasGemini, hasGenie } from "@/lib/env";
 import { askGenie, genieRows, type GenieResult } from "@/lib/databricks/genie";
 import { chat } from "@/lib/ai/gemini";
@@ -65,6 +66,7 @@ async function genieShortlist(brief: ProjectBrief): Promise<{
     });
     return { result, names };
   } catch (err) {
+    rethrowFrameworkError(err);
     console.warn("[netree] Genie shortlist unavailable:", err);
     return { result: null, names };
   }
@@ -87,7 +89,13 @@ export async function matchFaculty(project: Project): Promise<MatchReport> {
   if (genie.result) method.unshift("Genie SQL over netree.gold");
 
   const pubById = new Map(publications.map((p) => [p.publication_id, p]));
-  const best = hits[0]?.similarity ?? 0;
+
+  // A hit only counts if the paper behind it can be shown. The vector space and
+  // the faculty bridge are both built from the full publication set, so either
+  // can name a paper the reader filtered out - and evidence we cannot render is
+  // not evidence, so these are dropped before they reach scoring.
+  const resolved = hits.filter((h) => pubById.has(h.publication_id));
+  const best = resolved[0]?.similarity ?? 0;
   const floor = Math.max(best * FLOOR_RATIO, MIN_ABS);
 
   const facultyOfPub = new Map<string, string[]>();
@@ -98,7 +106,7 @@ export async function matchFaculty(project: Project): Promise<MatchReport> {
   }
 
   const byFaculty = new Map<string, { publication_id: string; similarity: number }[]>();
-  for (const hit of hits) {
+  for (const hit of resolved) {
     for (const facultyId of facultyOfPub.get(hit.publication_id) ?? []) {
       const list = byFaculty.get(facultyId) ?? [];
       list.push(hit);
@@ -197,16 +205,19 @@ export async function matchFaculty(project: Project): Promise<MatchReport> {
         n_papers: t.n_papers,
         latest_year: t.latest_year,
       })),
-      evidence: relevant.slice(0, 4).map((h) => {
-        const pub = pubById.get(h.publication_id)!;
-        return {
-          publication_id: pub.publication_id,
-          title: pub.title,
-          year: pub.publication_year,
-          venue: pub.venue,
-          url: pub.publication_url,
-          similarity: Number((h.similarity / (best || 1)).toFixed(3)),
-        };
+      evidence: relevant.slice(0, 4).flatMap((h) => {
+        const pub = pubById.get(h.publication_id);
+        if (!pub) return [];
+        return [
+          {
+            publication_id: pub.publication_id,
+            title: pub.title,
+            year: pub.publication_year,
+            venue: pub.venue,
+            url: pub.publication_url,
+            similarity: Number((h.similarity / (best || 1)).toFixed(3)),
+          },
+        ];
       }),
       rationale: "",
     });
@@ -281,6 +292,7 @@ async function writeRationales(matches: FacultyMatch[], brief: ProjectBrief) {
     const parsed = JSON.parse(text.slice(start, text.lastIndexOf("}") + 1)) as Record<string, string>;
     matches.forEach((m) => (m.rationale = parsed[m.faculty_id]?.trim() || fallback(m)));
   } catch (err) {
+    rethrowFrameworkError(err);
     console.warn("[netree] rationale generation failed, using evidence summary:", err);
     matches.forEach((m) => (m.rationale = fallback(m)));
   }
