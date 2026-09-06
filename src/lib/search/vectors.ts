@@ -22,7 +22,7 @@ const STOP = new Set(
     "also more most much many very both each other others any all some one two three there here about").split(" "),
 );
 
-function tokenize(text: string) {
+export function tokenize(text: string) {
   const out: string[] = [];
   for (const raw of text.toLowerCase().split(/[^a-z0-9+#]+/)) {
     if (raw.length < 3 || raw.length > 28) continue;
@@ -85,9 +85,34 @@ function normalise(v: Float32Array) {
   return out;
 }
 
+/**
+ * A partly-filled embedding table is worse than an empty one. Retrieval over a
+ * fraction of the corpus still returns a confident top six - drawn from
+ * whichever rows happened to be embedded before the job stopped - and nothing
+ * in the scores reveals it. Coverage is therefore checked against the table's
+ * own row count, and anything short of MIN_COVERAGE falls back to TF-IDF over
+ * the whole corpus rather than ranking on a sample.
+ */
+const MIN_COVERAGE = 0.8;
+
 async function loadDenseSpace(): Promise<DenseSpace | null> {
   if (!hasWarehouse()) return null;
   try {
+    const [tally] = await query<{ total: string; embedded: string }>(
+      `SELECT count(*) AS total, count(vector) AS embedded FROM ${gold("publication_embedding")}`,
+    );
+    const total = Number(tally?.total ?? 0);
+    const embedded = Number(tally?.embedded ?? 0);
+    if (!total || !embedded) return null;
+    if (embedded / total < MIN_COVERAGE) {
+      console.warn(
+        `[netree] only ${embedded}/${total} publications are embedded, below the ` +
+          `${Math.round(MIN_COVERAGE * 100)}% needed to rank on. Using TF-IDF over the full ` +
+          `corpus instead - run npm run db:embed to finish the vectors.`,
+      );
+      return null;
+    }
+
     const [rows, { publications }] = await Promise.all([
       query<{ publication_id: string; vector: string }>(
         `SELECT publication_id, to_json(vector) AS vector

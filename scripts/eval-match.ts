@@ -94,6 +94,10 @@ async function main() {
     const report = await matchFaculty(project(testCase.brief));
     console.log(`\n${testCase.name}`);
     console.log(`  expected: ${testCase.expect}`);
+    console.log(`  path:     ${report.method.join(" | ")}`);
+    console.log(
+      `  topics:   ${report.topics.map((t) => `${t.topic} (${t.weight})`).join(", ") || "none"}`,
+    );
     console.log(`  weak field: ${report.weak_field}`);
     for (const match of report.matches.slice(0, 3)) {
       console.log(

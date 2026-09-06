@@ -82,6 +82,8 @@ export type FacultyMatch = {
   profile_status: string;
   collaboration_status: string;
   overlap_topics: { topic: string; n_papers: number; latest_year: number }[];
+  /** How much of the idea's topic weight this person's work actually covers, 0-1. */
+  coverage: number;
   evidence: { publication_id: string; title: string; year: number; venue: string; url: string; similarity: number }[];
   /** Plain-language reason, written by Gemini over the evidence above. */
   rationale: string;
@@ -95,6 +97,10 @@ export type MatchReport = {
   /** Genie's own answer to "who on campus works on this", kept verbatim. */
   genie_answer: string | null;
   genie_sql: string | null;
+  /** The controlled-vocabulary topics the idea was grounded in, with weights. */
+  topics: { topic: string; weight: number; dept_papers: number }[];
+  /** How the topics were derived: the conversation model, or the corpus itself. */
+  topic_source: "gemini" | "derived";
   /** True when nothing on campus is a genuine fit — we say so rather than bluff. */
   weak_field: boolean;
   note: string;

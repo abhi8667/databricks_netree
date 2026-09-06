@@ -172,6 +172,68 @@ const GOLD_COMMENTS: [string, string][] = [
   ["vidwan_id", "IRINS/Vidwan profile id. The profile lives at rvce.irins.org/profile/{id}."],
 ];
 
+/**
+ * Genie reads gold only, so anything it must be able to cite has to exist
+ * there. Without these two views it can count a professor's papers but cannot
+ * name one - every answer stops at "14 publications" with no title behind it.
+ * Views rather than copies: one source of truth in silver, and the attribution
+ * quarantine is applied once, here, where Genie cannot skip it.
+ */
+const GOLD_VIEWS = [
+  `CREATE OR REPLACE VIEW ${GOLD}.publication (
+     publication_id COMMENT 'Stable identifier for the paper.',
+     title COMMENT 'Title of the paper.',
+     publication_year COMMENT 'Year it was published.',
+     publication_type COMMENT 'conference-paper, article, book-chapter, preprint or review.',
+     venue COMMENT 'Journal or conference it appeared in. Often empty.',
+     doi COMMENT 'DOI, without the https://doi.org/ prefix.',
+     publication_url COMMENT 'Link to the paper.',
+     cited_by_count COMMENT 'Citations at the snapshot date. Drifts over time.',
+     topics_all COMMENT 'Every research topic this paper belongs to, semicolon separated. Uses the same vocabulary as faculty_topic.topic.',
+     keywords COMMENT 'Author and index keywords, semicolon separated.',
+     abstract COMMENT 'Abstract where one is available. Empty for roughly one paper in six.',
+     is_recent COMMENT 'True when published in 2023 or later.'
+   )
+   COMMENT 'One row per publication that is safe to show. Known misattributions are already removed. Join through faculty_publication to answer which paper a professor wrote.'
+   AS SELECT publication_id, title, publication_year, publication_type,
+             coalesce(venue, venue_name) AS venue, doi, publication_url, cited_by_count,
+             topics_all, keywords, abstract, is_recent
+        FROM ${SILVER}.dim_publication
+       WHERE attribution_confidence <> 'low'`,
+
+  `CREATE OR REPLACE VIEW ${GOLD}.faculty_publication (
+     faculty_id COMMENT 'The professor, as in faculty_expertise.',
+     faculty_name COMMENT 'Their name, repeated so no join is needed to read a result.',
+     publication_id COMMENT 'The paper, as in publication.',
+     match_method COMMENT 'How the paper was attributed: openalex_name_match or crossref_affiliation_anchored.'
+   )
+   COMMENT 'Which professor wrote which paper. A paper co-authored inside the department appears once per author, so counting rows here counts authorships, not distinct papers.'
+   AS SELECT b.faculty_id, b.faculty_name, b.publication_id, b.match_method
+        FROM ${SILVER}.bridge_faculty_publication b
+        JOIN ${SILVER}.dim_publication p ON p.publication_id = b.publication_id
+       WHERE p.attribution_confidence <> 'low'`,
+];
+
+/**
+ * faculty_topic answers "who has the experience for this idea": matching
+ * grounds a student's brief in these topic labels, then asks Genie who
+ * publishes in them. Its comments matter as much as faculty_expertise's.
+ */
+const TOPIC_COMMENTS: [string, string][] = [
+  ["faculty_id", "Stable identifier like RVCE-CSE-012. Join to faculty_expertise for the name."],
+  [
+    "topic",
+    "The research topic, from a fixed vocabulary of 449 labels shared with publication.topics_all. Match on this exactly rather than searching titles for keywords.",
+  ],
+  ["n_papers", "How many of this person's papers are on this topic. The measure of depth in an area."],
+  ["first_year", "Year they first published on this topic."],
+  ["latest_year", "Year they most recently published on this topic."],
+  ["citations", "Citations summed across their papers on this topic."],
+  ["field", "Broad field the topic sits in. Unreliable for a few rows - filter on topic, not field."],
+  ["domain", "Broadest grouping above field."],
+  ["is_active_topic", "True when they have published on this topic in 2023 or later."],
+];
+
 async function main() {
   if (!hasWarehouse()) {
     console.error(
@@ -192,6 +254,17 @@ async function main() {
       `ALTER TABLE ${GOLD}.faculty_expertise ALTER COLUMN ${column} COMMENT '${comment.replace(/'/g, "''")}'`,
     );
   }
+
+  process.stdout.write(`Commenting ${GOLD}.faculty_topic columns\n`);
+  for (const [column, comment] of TOPIC_COMMENTS) {
+    await execute(
+      `ALTER TABLE ${GOLD}.faculty_topic ALTER COLUMN ${column} COMMENT '${comment.replace(/'/g, "''")}'`,
+    );
+  }
+
+  // Last: these read from silver tables that must already exist.
+  process.stdout.write(`Creating ${GOLD} publication views\n`);
+  for (const statement of GOLD_VIEWS) await execute(statement);
 
   process.stdout.write(
     `\nDone. Point a Genie space at ${GOLD} only, then run: npm run db:load\n`,
