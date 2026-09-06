@@ -21,7 +21,7 @@ const ROLES: {
     role: "student",
     title: "Student",
     icon: GraduationCap,
-    blurb: "Shape an idea, find the faculty whose work it touches, ask for a meeting.",
+    blurb: "Brainstorm a thesis, calculate published faculty overlap, and pitch for mentorship.",
     idLabel: "USN",
     idHint: "Your university seat number, e.g. 1RV22CS045.",
   },
@@ -29,15 +29,15 @@ const ROLES: {
     role: "teacher",
     title: "Faculty",
     icon: Presentation,
-    blurb: "Review student proposals, post open positions, decide who joins.",
+    blurb: "Review matched student proposals, post lab positions, and mentor research.",
     idLabel: "Staff ID",
-    idHint: "Your RVCE staff identifier.",
+    idHint: "Your faculty / staff identifier.",
   },
   {
     role: "alumni",
     title: "Alumni",
     icon: Users,
-    blurb: "Answer questions from students working on things you have already built.",
+    blurb: "Answer targeted questions from students building what you have built.",
     idLabel: "Alumni ID or USN",
     idHint: "The seat number you graduated with works fine.",
   },
@@ -51,11 +51,13 @@ export function SignInPanel() {
   return (
     <div className="w-full max-w-md stagger">
       <div>
-        <p className="eyebrow">Sign in</p>
-        <h2 className="mt-2 font-read text-3xl leading-tight text-ink">Who are you here as?</h2>
+        <p className="eyebrow">Academic Sign in</p>
+        <h2 className="mt-2 font-read text-3xl leading-tight text-ink dark:text-dark-ink">
+          Who are you here as?
+        </h2>
       </div>
 
-      <div className="mt-7 space-y-2">
+      <div className="mt-7 space-y-2.5">
         {ROLES.map((option) => {
           const Icon = option.icon;
           const active = role === option.role;
@@ -66,19 +68,28 @@ export function SignInPanel() {
               onClick={() => setRole(option.role)}
               aria-pressed={active}
               className={cn(
-                "group flex w-full items-start gap-4 rounded-lg border p-4 text-left transition-all duration-200",
+                "group flex w-full items-start gap-4 rounded-2xl border p-4 text-left transition-all duration-200",
                 active
-                  ? "border-ink bg-ink text-paper"
-                  : "border-rule bg-white text-ink hover:border-ink",
+                  ? "border-forest-600 bg-forest-800 text-white shadow-soft dark:border-forest-500 dark:bg-forest-600 dark:shadow-glow-sm"
+                  : "border-rule bg-white text-ink hover:-translate-y-0.5 hover:border-forest-500/50 hover:bg-forest-50/50 dark:border-dark-border dark:bg-dark-card dark:text-dark-ink dark:hover:border-forest-500/50 dark:hover:bg-forest-950/40",
               )}
             >
-              <Icon className={cn("mt-0.5 h-5 w-5 shrink-0", active ? "text-paper" : "text-mute")} />
+              <div
+                className={cn(
+                  "mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl transition-colors",
+                  active
+                    ? "bg-white/20 text-white"
+                    : "bg-forest-50 text-forest-700 dark:bg-forest-950 dark:text-forest-400",
+                )}
+              >
+                <Icon className="h-5 w-5" />
+              </div>
               <span className="min-w-0 flex-1">
                 <span className="block text-[15px] font-medium">{option.title}</span>
                 <span
                   className={cn(
                     "mt-1 block text-[13px] leading-relaxed",
-                    active ? "text-white/60" : "text-mute",
+                    active ? "text-white/80" : "text-mute dark:text-dark-mute",
                   )}
                 >
                   {option.blurb}
@@ -86,8 +97,8 @@ export function SignInPanel() {
               </span>
               <ArrowRight
                 className={cn(
-                  "mt-1 h-4 w-4 shrink-0 transition-transform",
-                  active ? "translate-x-0 text-paper" : "-translate-x-1 text-transparent",
+                  "mt-2 h-4 w-4 shrink-0 transition-transform",
+                  active ? "translate-x-0 text-white" : "-translate-x-1 text-transparent group-hover:text-mute",
                 )}
               />
             </button>
@@ -96,30 +107,33 @@ export function SignInPanel() {
       </div>
 
       {selected ? (
-        <form action={action} className="mt-7 space-y-5 border-t border-rule pt-7 animate-rise">
+        <form
+          action={action}
+          className="mt-7 space-y-5 border-t border-rule pt-7 animate-rise dark:border-dark-border"
+        >
           <input type="hidden" name="role" value={selected.role} />
           <Field label="Full name">
-            <Input name="full_name" placeholder="As it appears on college records" required />
+            <Input name="full_name" placeholder="As it appears on university records" required />
           </Field>
           <Field label={selected.idLabel} hint={selected.idHint}>
             <Input name="college_id" placeholder={selected.idLabel} required autoComplete="off" />
           </Field>
 
           {state.error ? (
-            <p className="border-l-2 border-ink bg-fill px-3 py-2 text-[13px] text-ink">
+            <p className="rounded-xl border-l-4 border-red-500 bg-red-50 px-3.5 py-2.5 text-[13px] text-red-800 dark:bg-red-950/40 dark:text-red-300">
               {state.error}
             </p>
           ) : null}
 
           <Submit />
-          <p className="text-xs leading-relaxed text-mute">
-            First time signing in creates your account. Nothing is shared with faculty until you send
-            a request yourself.
+          <p className="text-xs leading-relaxed text-mute dark:text-dark-mute">
+            Signing in registers or loads your profile. Proposals are only dispatched when you confirm
+            matching results.
           </p>
         </form>
       ) : (
-        <p className="mt-7 border-t border-rule pt-7 text-sm text-mute">
-          Pick one to continue. You can only hold one role per college ID.
+        <p className="mt-7 border-t border-rule pt-7 text-sm text-mute dark:border-dark-border dark:text-dark-mute">
+          Select a role to continue.
         </p>
       )}
     </div>
@@ -129,8 +143,8 @@ export function SignInPanel() {
 function Submit() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" size="lg" className="w-full" disabled={pending}>
-      {pending ? "Signing in" : "Continue"}
+    <Button type="submit" size="lg" variant="emerald" className="w-full" disabled={pending}>
+      {pending ? "Signing in..." : "Continue"}
       {pending ? null : <ArrowRight className="h-4 w-4" />}
     </Button>
   );

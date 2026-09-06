@@ -21,6 +21,7 @@ export type NetreeUser = {
   achievements: string;
   resume_name: string;
   resume_text: string;
+  linkedin_url?: string;
   scholar_url: string;
   /** Set when a faculty account is matched to a row in the campus dataset. */
   faculty_id: string | null;

@@ -1,6 +1,16 @@
-import { saveUser } from "../src/lib/auth";
-import { saveProject } from "../src/lib/repo";
-import type { NetreeUser, Project } from "../src/lib/types";
+import { putRecord } from "../src/lib/store/records";
+import { saveProject, saveQuestion } from "../src/lib/repo";
+import type { NetreeUser, Project, Question } from "../src/lib/types";
+
+async function saveUserDirect(user: NetreeUser) {
+  await putRecord("app_user", {
+    id: user.user_id,
+    owner_id: user.user_id,
+    ref_id: user.faculty_id ?? "",
+    status: user.role,
+    payload: user as unknown as Record<string, unknown>,
+  });
+}
 
 async function main() {
   const now = new Date().toISOString();
@@ -18,6 +28,7 @@ async function main() {
     achievements: "Winner of Smart Campus Hackathon 2025",
     resume_name: "aditya_resume.txt",
     resume_text: "Undergraduate researcher in Computer Science at RVCE.",
+    linkedin_url: "https://www.linkedin.com/in/aditya-sharma-rvce",
     scholar_url: "",
     faculty_id: null,
     open_to_collaboration: false,
@@ -25,7 +36,7 @@ async function main() {
     updated_at: now,
   };
 
-  await saveUser(student);
+  await saveUserDirect(student);
 
   const project: Project = {
     project_id: "prj_aerial_vision",
@@ -58,7 +69,48 @@ async function main() {
 
   await saveProject(project);
 
-  process.stdout.write("Seeded demo student user (1RV22CS045) and project prj_aerial_vision successfully.\n");
+  const alumni: NetreeUser = {
+    user_id: "usr_rohit_alumni",
+    role: "alumni",
+    full_name: "Rohit Menon",
+    email: "rohit.menon@alumni.rvce.edu.in",
+    college_id: "1RV18CS088",
+    department: "Computer Science and Engineering",
+    standing: "Class of 2022 · Staff Engineer @ Databricks",
+    bio: "RVCE 2022 alumni. Specializing in distributed real-time systems, streaming architectures, and production ML pipelines.",
+    interests: ["Distributed Systems", "Machine Learning", "Cloud Architecture", "Edge AI"],
+    achievements: "Databricks Spark Contributor, RVCE Best Outgoing Student 2022",
+    resume_name: "",
+    resume_text: "",
+    linkedin_url: "https://www.linkedin.com/in/rohit-menon-rvce",
+    scholar_url: "",
+    faculty_id: null,
+    open_to_collaboration: true,
+    created_at: now,
+    updated_at: now,
+  };
+
+  await saveUserDirect(alumni);
+
+  const question: Question = {
+    question_id: "qst_edge_prod_advice",
+    asker_user_id: "usr_aditya",
+    asker_name: "Aditya Sharma",
+    audience: "alumni",
+    target_user_id: null,
+    target_name: null,
+    topic: "Production deployment for lightweight vision models on edge hardware",
+    body: "Hi alumni mentors! I'm an undergrad working on quantized YOLOv8 models for real-time video surveillance. In industry, how do teams handle edge OTA updates and camera latency bottlenecks without burning power?",
+    status: "open",
+    answer: "",
+    answered_by: null,
+    created_at: now,
+    updated_at: now,
+  };
+
+  await saveQuestion(question);
+
+  process.stdout.write("Seeded student (1RV22CS045), alumni (1RV18CS088 / Rohit Menon), project, and open question successfully.\n");
 }
 
 main().catch((err) => {

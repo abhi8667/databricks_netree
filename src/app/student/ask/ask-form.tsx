@@ -54,8 +54,8 @@ export function AskForm({ mentors }: { mentors: Mentor[] }) {
       <div className="flex gap-2">
         {(
           [
-            { key: "alumni", label: "Alumni" },
-            { key: "teacher", label: "Faculty" },
+            { key: "alumni", label: "Alumni Network" },
+            { key: "teacher", label: "Faculty Mentors" },
           ] as const
         ).map((option) => (
           <button
@@ -66,10 +66,10 @@ export function AskForm({ mentors }: { mentors: Mentor[] }) {
               setTarget("");
             }}
             className={cn(
-              "rounded-full border px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] transition-colors",
+              "rounded-full border px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] transition-all",
               audience === option.key
-                ? "border-ink bg-ink text-paper"
-                : "border-rule text-mute hover:border-ink hover:text-ink",
+                ? "border-forest-600 bg-forest-800 text-white shadow-soft dark:border-forest-500 dark:bg-forest-600 dark:shadow-glow-sm"
+                : "border-rule text-mute hover:border-forest-500 hover:text-forest-700 dark:border-dark-border dark:text-dark-mute dark:hover:text-dark-ink",
             )}
           >
             {option.label}
@@ -88,9 +88,9 @@ export function AskForm({ mentors }: { mentors: Mentor[] }) {
         <select
           value={target}
           onChange={(e) => setTarget(e.target.value)}
-          className="h-10 w-full rounded-md border border-rule bg-white px-3 text-sm text-ink transition-colors hover:border-faint focus:border-ink focus:outline-none"
+          className="h-10 w-full rounded-xl border border-rule bg-white px-3 text-sm text-ink transition-colors hover:border-faint focus:border-forest-500 focus:outline-none dark:border-dark-border dark:bg-dark-card dark:text-dark-ink"
         >
-          <option value="">Anyone in {audience === "alumni" ? "alumni" : "faculty"}</option>
+          <option value="">Anyone in {audience === "alumni" ? "alumni network" : "faculty"}</option>
           {eligible.map((m) => (
             <option key={m.user_id} value={m.user_id}>
               {m.full_name}
@@ -110,7 +110,7 @@ export function AskForm({ mentors }: { mentors: Mentor[] }) {
 
       <Field label="Your question">
         <Textarea
-          rows={6}
+          rows={5}
           value={body}
           onChange={(e) => setBody(e.target.value)}
           placeholder="Give enough context that they can answer without a follow-up."
@@ -118,12 +118,12 @@ export function AskForm({ mentors }: { mentors: Mentor[] }) {
       </Field>
 
       {error ? (
-        <p className="border-l-2 border-ink bg-fill px-3 py-2 text-[13px] text-ink">{error}</p>
+        <p className="rounded-xl border border-red-500/30 bg-red-50/70 p-3 text-xs text-red-600 dark:bg-red-950/30 dark:text-red-400">{error}</p>
       ) : null}
 
-      <Button onClick={submit} disabled={pending || body.trim().length < 15}>
+      <Button variant="emerald" onClick={submit} disabled={pending || body.trim().length < 10}>
         {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-        {pending ? "Sending" : "Send question"}
+        {pending ? "Sending..." : "Send question"}
       </Button>
     </div>
   );

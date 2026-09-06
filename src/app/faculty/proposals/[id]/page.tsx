@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Linkedin } from "lucide-react";
 import { Badge, Ident } from "@/components/ui/primitives";
 import { Thread } from "@/components/thread";
 import { MeetingPanel } from "@/components/meeting-panel";
@@ -105,6 +105,33 @@ export default async function ProposalPage({ params }: { params: Promise<{ id: s
             <p className="mt-3 font-mono text-[11px] text-faint">
               Résumé on file: {student.resume_name}
             </p>
+          ) : null}
+          {student.linkedin_url || student.scholar_url ? (
+            <div className="mt-4 flex flex-wrap items-center gap-2.5">
+              {student.linkedin_url ? (
+                <a
+                  href={student.linkedin_url.startsWith("http") ? student.linkedin_url : `https://${student.linkedin_url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-rule bg-white px-2.5 py-1 text-[12px] font-medium text-ink transition-colors hover:border-forest-500 hover:text-forest-700 hover:bg-forest-50/40"
+                >
+                  <Linkedin className="h-3.5 w-3.5 text-[#0A66C2]" />
+                  <span>LinkedIn</span>
+                  <ExternalLink className="h-3 w-3 text-faint" />
+                </a>
+              ) : null}
+              {student.scholar_url ? (
+                <a
+                  href={student.scholar_url.startsWith("http") ? student.scholar_url : `https://${student.scholar_url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-rule bg-white px-2.5 py-1 text-[12px] font-medium text-ink transition-colors hover:border-forest-500 hover:text-forest-700 hover:bg-forest-50/40"
+                >
+                  <span>Google Scholar</span>
+                  <ExternalLink className="h-3 w-3 text-faint" />
+                </a>
+              ) : null}
+            </div>
           ) : null}
         </section>
       ) : null}

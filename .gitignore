@@ -5,6 +5,8 @@ build/
 .env
 .env.local
 .env*.local
+env
+env.download
 *.tsbuildinfo
 next-env.d.ts
 .vercel
@@ -13,3 +15,5 @@ next-env.d.ts
 Data/works_cache.jsonl
 /.netree-local/*
 !/.netree-local/.gitkeep
+/foxbow/
+/loading_video/

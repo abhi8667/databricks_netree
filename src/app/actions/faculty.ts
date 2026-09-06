@@ -233,7 +233,7 @@ export async function answerQuestion(questionId: string, answer: string) {
   if (user.role === "student") return { error: "Only faculty and alumni answer questions." };
   const question = await getQuestion(questionId);
   if (!question) return { error: "Question not found." };
-  if (answer.trim().length < 20) return { error: "Give the student something to work with." };
+  if (answer.trim().length < 5) return { error: "Please enter an answer." };
 
   await saveQuestion({
     ...question,
@@ -244,6 +244,8 @@ export async function answerQuestion(questionId: string, answer: string) {
   });
   revalidatePath("/faculty/questions");
   revalidatePath("/alumni");
+  revalidatePath("/student");
   revalidatePath("/student/ask");
+  revalidatePath("/student/requests");
   return { ok: true };
 }

@@ -3,6 +3,7 @@ import { currentUser } from "@/lib/auth";
 import { AppShell } from "@/components/app-shell";
 import { invitationsFromStudent, projectsOf, questionsFrom } from "@/lib/repo";
 import { getRankedEventsForStudent } from "@/lib/events/service";
+import { getNotificationsForUser } from "@/lib/notifications-server";
 
 export default async function StudentLayout({ children }: { children: React.ReactNode }) {
   const user = await currentUser();
@@ -10,11 +11,12 @@ export default async function StudentLayout({ children }: { children: React.Reac
   if (user.role !== "student") redirect("/");
   if (!user.department) redirect("/onboarding");
 
-  const [projects, invitations, questions, eventsFeed] = await Promise.all([
+  const [projects, invitations, questions, eventsFeed, notifications] = await Promise.all([
     projectsOf(user.user_id),
     invitationsFromStudent(user.user_id),
     questionsFrom(user.user_id),
     getRankedEventsForStudent(user),
+    getNotificationsForUser(user),
   ]);
 
   const answered = questions.filter((q) => q.status === "answered").length;
@@ -24,6 +26,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
     <AppShell
       roleLabel="Student"
       user={{ full_name: user.full_name, college_id: user.college_id }}
+      initialNotifications={notifications}
       nav={[
         { href: "/student", label: "Dashboard" },
         { href: "/student/schedule", label: "Schedule" },

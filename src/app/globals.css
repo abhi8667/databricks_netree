@@ -6,39 +6,113 @@
   :root {
     color-scheme: light;
     --stagger: 0ms;
+    --bg-page: theme(colors.paper);
+    --text-primary: theme(colors.ink);
+    --border-subtle: theme(colors.rule);
+    --magnet-line-color: rgba(5, 150, 105, 0.4);
   }
-  * { border-color: theme(colors.rule); }
-  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  .dark {
+    color-scheme: dark;
+    --bg-page: theme(colors.dark.paper);
+    --text-primary: theme(colors.dark.ink);
+    --border-subtle: theme(colors.dark.rule);
+    --magnet-line-color: rgba(52, 211, 153, 0.5);
+  }
+
+  * {
+    border-color: theme(colors.rule);
+  }
+  .dark * {
+    border-color: theme(colors.dark.border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
-    background: theme(colors.paper);
-    color: theme(colors.ink);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
     font-feature-settings: "ss01", "cv05";
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
-  ::selection { background: theme(colors.ink); color: theme(colors.paper); }
-  :focus-visible { outline: 2px solid theme(colors.ink); outline-offset: 2px; }
-  input, textarea, select, button { font: inherit; }
+
+  ::selection {
+    background: #059669;
+    color: #ffffff;
+  }
+  .dark ::selection {
+    background: #10b981;
+    color: #022c22;
+  }
+
+  :focus-visible {
+    outline: 2px solid #059669;
+    outline-offset: 2px;
+  }
+  .dark :focus-visible {
+    outline: 2px solid #10b981;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
 }
 
 @layer components {
   /* The eyebrow is the one repeated typographic device: mono, tracked out,
      always naming a real field of the data model rather than a slogan. */
   .eyebrow {
-    @apply font-mono text-micro uppercase text-mute;
+    @apply font-mono text-micro uppercase text-forest-700/90 dark:text-forest-400;
   }
-  .rulebox { @apply border border-rule bg-white rounded-lg; }
-  .hairline { @apply h-px w-full bg-rule; }
+
+  .rulebox {
+    @apply rounded-2xl border border-rule/80 bg-white/95 shadow-sm backdrop-blur-xl transition-colors dark:border-dark-border/80 dark:bg-dark-card/95;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-rule/80 bg-white/80 backdrop-blur-md transition-all dark:border-forest-900/40 dark:bg-dark-card/80;
+  }
+
+  .glass-panel {
+    @apply border border-forest-100/80 bg-gradient-to-br from-white/90 via-forest-50/30 to-white/70 backdrop-blur-md dark:border-forest-900/40 dark:from-dark-card/90 dark:via-dark-surface/50 dark:to-dark-card/70;
+  }
+
+  .glow-forest {
+    box-shadow: 0 0 24px -4px rgba(16, 185, 129, 0.35);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-rule dark:bg-dark-border;
+  }
 
   /* Inversion is the accent. */
   .invert-card {
-    @apply transition-[background-color,color,border-color] duration-200;
+    @apply transition-all duration-200 hover:-translate-y-0.5;
   }
-  .invert-card:hover { @apply bg-ink text-paper border-ink; }
-  .invert-card:hover .eyebrow { @apply text-white/55; }
-  .invert-card:hover .hairline { @apply bg-white/20; }
+  .invert-card:hover {
+    @apply border-forest-500 bg-forest-950 text-white dark:border-forest-400 dark:bg-forest-900;
+  }
+  .invert-card:hover .eyebrow {
+    @apply text-forest-300;
+  }
+  .invert-card:hover .hairline {
+    @apply bg-forest-800;
+  }
 }
 
 @layer utilities {
-  .stagger > * { animation: rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .stagger > * {
+    animation: rise 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
   .stagger > *:nth-child(1) { animation-delay: 0ms; }
   .stagger > *:nth-child(2) { animation-delay: 55ms; }
   .stagger > *:nth-child(3) { animation-delay: 110ms; }
@@ -47,12 +121,21 @@
   .stagger > *:nth-child(6) { animation-delay: 275ms; }
   .stagger > *:nth-child(7) { animation-delay: 330ms; }
   .stagger > *:nth-child(8) { animation-delay: 385ms; }
+
   .grain {
-    background-image: radial-gradient(circle at 1px 1px, rgba(11,11,12,0.035) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, rgba(10, 36, 26, 0.04) 1px, transparent 0);
     background-size: 4px 4px;
   }
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { scrollbar-width: none; }
+  .dark .grain {
+    background-image: radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.05) 1px, transparent 0);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

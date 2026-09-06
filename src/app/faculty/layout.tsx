@@ -3,6 +3,7 @@ import { currentUser } from "@/lib/auth";
 import { AppShell } from "@/components/app-shell";
 import { inboxFor } from "@/lib/faculty-inbox";
 import { interestsForOwner, questionsFor } from "@/lib/repo";
+import { getNotificationsForUser } from "@/lib/notifications-server";
 
 export default async function FacultyLayout({ children }: { children: React.ReactNode }) {
   const user = await currentUser();
@@ -10,16 +11,18 @@ export default async function FacultyLayout({ children }: { children: React.Reac
   if (user.role !== "teacher") redirect("/");
   if (!user.department) redirect("/onboarding");
 
-  const [inbox, interests, questions] = await Promise.all([
+  const [inbox, interests, questions, notifications] = await Promise.all([
     inboxFor(user),
     interestsForOwner(user.user_id),
     questionsFor(user.user_id, "teacher"),
+    getNotificationsForUser(user),
   ]);
 
   return (
     <AppShell
       roleLabel="Faculty"
       user={{ full_name: user.full_name, college_id: user.college_id }}
+      initialNotifications={notifications}
       nav={[
         { href: "/faculty", label: "Dashboard" },
         { href: "/faculty/schedule", label: "Schedule" },

@@ -46,22 +46,32 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
   }, [items, search, modeFilter]);
 
   return (
-    <section className="mt-14 border-t border-rule pt-10">
+    <section className="mt-14 border-t border-rule pt-10 dark:border-dark-border">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-baseline">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="font-read text-2xl text-ink">Happening around you</h2>
-            <Badge tone="default" className="normal-case tracking-normal">
+            <h2 className="font-read text-2xl text-ink dark:text-dark-ink">Happening around you</h2>
+            <Badge tone="emerald" className="normal-case tracking-normal">
               Live Campus Feeds
             </Badge>
           </div>
-          <p className="mt-1 text-[13px] text-mute">
+          <p className="mt-1 text-[13px] text-mute dark:text-dark-mute">
             Live hackathons and Bengaluru tech ecosystem events ranked against your research interests.
           </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-50/80 px-2.5 py-0.5 font-mono text-[11px] font-medium text-purple-700 dark:border-purple-500/40 dark:bg-purple-950/40 dark:text-purple-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-purple-500" />
+              Powered by HackCulture
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50/80 px-2.5 py-0.5 font-mono text-[11px] font-medium text-emerald-700 dark:border-emerald-500/40 dark:bg-emerald-950/40 dark:text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              Powered by Bengaluru Tech Week
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[11px] text-faint">
+          <span className="font-mono text-[11px] text-faint dark:text-dark-faint">
             {feed.freshness.label}
           </span>
           <Button
@@ -70,7 +80,7 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
             disabled={isRefreshing}
             onClick={() => startRefresh(() => refreshEventsAction())}
             title="Sync latest upstream events"
-            className="h-7 px-2 text-faint hover:text-ink"
+            className="h-7 px-2 text-faint hover:text-ink dark:text-dark-faint dark:hover:text-dark-ink"
           >
             <RefreshCw className={cn("h-3.5 w-3.5", isRefreshing && "animate-spin")} />
           </Button>
@@ -78,33 +88,34 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
       </div>
 
       {/* Tabs & Filters */}
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-rule pb-4">
-        <div className="flex items-center gap-2">
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-rule pb-4 dark:border-dark-border">
+        {/* Clean & Simple Tab Switcher */}
+        <div className="flex items-center gap-1 rounded-xl border border-rule/80 bg-white/80 p-1 shadow-xs dark:border-dark-border/80 dark:bg-dark-card/80">
           <button
             type="button"
             onClick={() => setActiveTab("hackathons")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-lg px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-all",
               activeTab === "hackathons"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-forest-700 text-white font-semibold shadow-xs dark:bg-forest-600"
+                : "text-mute hover:text-ink dark:text-dark-mute dark:hover:text-dark-ink",
             )}
           >
-            <Flame className="h-3.5 w-3.5" />
-            Hackathons ({feed.hackathons.length})
+            <Flame className="h-3.5 w-3.5 text-amber-500" />
+            <span>Hackathons ({feed.hackathons.length})</span>
           </button>
           <button
             type="button"
             onClick={() => setActiveTab("events")}
             className={cn(
-              "flex items-center gap-2 rounded-full px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.08em] transition-colors",
+              "flex items-center gap-2 rounded-lg px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider transition-all",
               activeTab === "events"
-                ? "border border-ink bg-ink text-paper"
-                : "border border-rule bg-white text-mute hover:border-ink hover:text-ink",
+                ? "bg-forest-700 text-white font-semibold shadow-xs dark:bg-forest-600"
+                : "text-mute hover:text-ink dark:text-dark-mute dark:hover:text-dark-ink",
             )}
           >
-            <Compass className="h-3.5 w-3.5" />
-            Events & Talks ({feed.events.length})
+            <Compass className="h-3.5 w-3.5 text-teal-500" />
+            <span>Events & Talks ({feed.events.length})</span>
           </button>
         </div>
 
@@ -120,15 +131,17 @@ export function EventsSection({ feed }: { feed: EventsFeedPayload }) {
             />
           </div>
 
-          <div className="flex items-center gap-1 rounded-md border border-rule bg-white p-0.5 text-xs font-mono">
+          <div className="flex items-center gap-1 rounded-xl border border-rule bg-white p-1 text-xs font-mono dark:border-dark-border dark:bg-dark-card">
             {(["all", "offline", "online", "hybrid"] as const).map((m) => (
               <button
                 key={m}
                 type="button"
                 onClick={() => setModeFilter(m)}
                 className={cn(
-                  "rounded px-2 py-1 uppercase text-[10px] transition-colors",
-                  modeFilter === m ? "bg-ink text-paper" : "text-mute hover:text-ink",
+                  "rounded-lg px-2.5 py-1 text-[10px] uppercase tracking-wider transition-all",
+                  modeFilter === m
+                    ? "bg-forest-600 font-semibold text-white shadow-xs dark:bg-forest-500"
+                    : "text-mute hover:text-forest-800 dark:text-dark-mute dark:hover:text-forest-300",
                 )}
               >
                 {m}
@@ -194,13 +207,13 @@ function EventCard({ event }: { event: EventMatch }) {
   });
 
   return (
-    <article className="group flex flex-col justify-between rounded-lg border border-rule bg-white p-5 transition-all hover:border-ink hover:shadow-sm">
+    <article className="group flex flex-col justify-between rounded-2xl border border-rule/80 bg-white/95 p-5 shadow-sm backdrop-blur-xl transition-all hover:border-emerald-500/40 hover:shadow-md dark:border-dark-border/80 dark:bg-dark-card/95">
       <div>
         {/* Match Header */}
-        <div className="flex items-center justify-between gap-2 border-b border-rule/60 pb-3">
-          <div className="flex items-center gap-1.5 text-xs text-mute">
-            <Sparkles className="h-3.5 w-3.5 shrink-0 text-ink" />
-            <span className="line-clamp-1 font-medium text-ink">{event.match_reason}</span>
+        <div className="flex items-center justify-between gap-2 border-b border-rule/60 pb-3 dark:border-dark-border/60">
+          <div className="flex items-center gap-1.5 text-xs text-mute dark:text-dark-mute">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+            <span className="line-clamp-1 font-medium text-ink dark:text-dark-ink">{event.match_reason}</span>
           </div>
           <Badge tone={event.mode === "online" ? "muted" : "default"}>
             {event.mode}
@@ -209,11 +222,21 @@ function EventCard({ event }: { event: EventMatch }) {
 
         {/* Title & Timing */}
         <div className="mt-3.5">
-          <div className="flex items-baseline justify-between gap-3">
-            <span className="font-mono text-[11px] uppercase tracking-wider text-faint">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="font-mono text-[11px] uppercase tracking-wider text-faint dark:text-dark-faint">
               {event.organizer_name} · {event.track}
             </span>
-            <Ident>{event.source === "hackculture" ? "HackCulture" : "BTW"}</Ident>
+            {event.source === "hackculture" ? (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/30 bg-purple-50/90 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-purple-700 shadow-xs dark:border-purple-500/40 dark:bg-purple-950/60 dark:text-purple-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-purple-500 shadow-[0_0_6px_rgba(168,85,247,0.8)]" />
+                Powered by HackCulture
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-50/90 px-2.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-700 shadow-xs dark:border-emerald-500/40 dark:bg-emerald-950/60 dark:text-emerald-300">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+                Powered by Bengaluru Tech Week
+              </span>
+            )}
           </div>
 
           <h3 className="mt-1 font-read text-lg font-medium leading-snug text-ink group-hover:underline decoration-rule underline-offset-4">

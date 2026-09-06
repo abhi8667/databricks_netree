@@ -11,25 +11,31 @@ import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /* -------------------------------------------------------------------------
- * Button. Solid is ink-on-paper inverted; there is no coloured variant,
- * because emphasis in this system is carried by inversion, not by hue.
+ * Button: Modernized with vibrant emerald primary & dark mode accents.
  * ---------------------------------------------------------------------- */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-40 [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl font-medium transition-all duration-200 disabled:pointer-events-none disabled:opacity-40 [&_svg]:size-4 [&_svg]:shrink-0 active:translate-y-px",
   {
     variants: {
       variant: {
-        solid: "bg-ink text-paper hover:bg-black",
-        outline: "border border-ink bg-transparent text-ink hover:bg-ink hover:text-paper",
-        quiet: "border border-rule bg-white text-ink hover:border-ink",
-        ghost: "text-mute hover:bg-fill hover:text-ink",
-        link: "text-ink underline underline-offset-4 decoration-rule hover:decoration-ink",
+        solid:
+          "bg-forest-700 text-white shadow-sm shadow-forest-900/15 hover:bg-forest-800 hover:-translate-y-0.5 dark:bg-forest-600 dark:hover:bg-forest-500 dark:shadow-glow-sm",
+        emerald:
+          "bg-forest-600 text-white shadow-sm shadow-forest-600/25 hover:bg-forest-700 hover:shadow-md hover:shadow-forest-700/30 hover:-translate-y-0.5 dark:bg-forest-500 dark:hover:bg-forest-600 dark:shadow-glow-sm",
+        outline:
+          "border border-forest-600/40 bg-transparent text-forest-800 hover:border-forest-600 hover:bg-forest-50 dark:border-forest-500/50 dark:text-forest-300 dark:hover:bg-forest-950/60 dark:hover:text-forest-100",
+        quiet:
+          "border border-rule bg-white text-ink hover:border-forest-500 hover:bg-forest-50/50 dark:border-dark-border dark:bg-dark-card dark:text-dark-ink dark:hover:border-forest-500 dark:hover:bg-forest-950/40",
+        ghost:
+          "text-mute hover:bg-forest-50 hover:text-forest-800 dark:text-dark-mute dark:hover:bg-forest-950/60 dark:hover:text-forest-200",
+        link:
+          "text-forest-700 underline underline-offset-4 decoration-forest-300 hover:decoration-forest-700 dark:text-forest-400 dark:decoration-forest-600",
       },
       size: {
-        sm: "h-8 px-3 text-[13px]",
-        md: "h-10 px-4 text-sm",
-        lg: "h-12 px-6 text-[15px]",
-        icon: "h-9 w-9",
+        sm: "h-8 px-3 text-[13px] rounded-lg",
+        md: "h-10 px-4 text-sm rounded-xl",
+        lg: "h-12 px-6 text-[15px] rounded-xl",
+        icon: "h-9 w-9 rounded-xl",
       },
     },
     defaultVariants: { variant: "solid", size: "md" },
@@ -57,7 +63,7 @@ export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttribute
     <input
       ref={ref}
       className={cn(
-        "h-10 w-full rounded-md border border-rule bg-white px-3 text-sm text-ink transition-colors placeholder:text-faint hover:border-faint focus:border-ink focus:outline-none focus-visible:outline-none disabled:opacity-50",
+        "h-10 w-full rounded-xl border border-rule bg-white px-3.5 text-sm text-ink transition-all placeholder:text-faint hover:border-forest-500/50 focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 disabled:opacity-50 dark:border-dark-border dark:bg-dark-card dark:text-dark-ink dark:placeholder:text-dark-faint dark:hover:border-forest-500/50 dark:focus:border-forest-500 dark:focus:ring-forest-500/20",
         className,
       )}
       {...props}
@@ -73,7 +79,7 @@ export const Textarea = React.forwardRef<
   <textarea
     ref={ref}
     className={cn(
-      "w-full rounded-md border border-rule bg-white px-3 py-2.5 text-sm leading-relaxed text-ink transition-colors placeholder:text-faint hover:border-faint focus:border-ink focus:outline-none focus-visible:outline-none",
+      "w-full rounded-xl border border-rule bg-white px-3.5 py-2.5 text-sm leading-relaxed text-ink transition-all placeholder:text-faint hover:border-forest-500/50 focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 dark:border-dark-border dark:bg-dark-card dark:text-dark-ink dark:placeholder:text-dark-faint dark:hover:border-forest-500/50 dark:focus:border-forest-500 dark:focus:ring-forest-500/20",
       className,
     )}
     {...props}
@@ -108,7 +114,7 @@ export function Field({
       {React.isValidElement(children)
         ? React.cloneElement(children as React.ReactElement<{ id?: string }>, { id })
         : children}
-      {hint ? <p className="text-xs leading-relaxed text-mute">{hint}</p> : null}
+      {hint ? <p className="text-xs leading-relaxed text-mute dark:text-dark-mute">{hint}</p> : null}
     </div>
   );
 }
@@ -128,7 +134,7 @@ export function Separator({
     <SeparatorPrimitive.Root
       orientation={orientation}
       className={cn(
-        "bg-rule shrink-0",
+        "bg-rule shrink-0 dark:bg-dark-border",
         orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
         className,
       )}
@@ -138,14 +144,20 @@ export function Separator({
 }
 
 const badgeVariants = cva(
-  "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-[0.1em]",
+  "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-[0.1em] transition-colors",
   {
     variants: {
       tone: {
-        default: "border-rule bg-white text-mute",
-        solid: "border-ink bg-ink text-paper",
-        outline: "border-ink bg-transparent text-ink",
-        muted: "border-transparent bg-fill text-mute",
+        default:
+          "border-rule bg-white text-mute dark:border-dark-border dark:bg-dark-card dark:text-dark-mute",
+        solid:
+          "border-forest-700 bg-forest-700 text-white dark:border-forest-600 dark:bg-forest-600",
+        emerald:
+          "border-forest-500/30 bg-forest-50 text-forest-800 dark:border-forest-500/40 dark:bg-forest-950/60 dark:text-forest-200",
+        outline:
+          "border-forest-600/50 bg-transparent text-forest-800 dark:border-forest-500/50 dark:text-forest-300",
+        muted:
+          "border-transparent bg-fill text-mute dark:bg-dark-surface dark:text-dark-mute",
       },
     },
     defaultVariants: { tone: "default" },
@@ -163,7 +175,9 @@ export function Badge({
 /** Monospace identifier chip - used for real ids like RVCE-CSE-012. */
 export function Ident({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <span className={cn("font-mono text-[11px] tracking-tight text-faint", className)}>{children}</span>
+    <span className={cn("font-mono text-[11px] tracking-tight text-faint dark:text-dark-faint", className)}>
+      {children}
+    </span>
   );
 }
 
@@ -177,7 +191,7 @@ export function Avatar({ name, className }: { name: string; className?: string }
   return (
     <span
       className={cn(
-        "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink bg-white font-mono text-[11px] font-medium text-ink",
+        "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-forest-600/30 bg-forest-50 font-mono text-[11px] font-semibold text-forest-800 shadow-xs dark:border-forest-500/40 dark:bg-forest-950 dark:text-forest-200",
         className,
       )}
     >
@@ -195,12 +209,12 @@ export const Switch = React.forwardRef<
   <SwitchPrimitive.Root
     ref={ref}
     className={cn(
-      "peer inline-flex h-5 w-9 shrink-0 items-center rounded-full border border-ink transition-colors data-[state=checked]:bg-ink data-[state=unchecked]:bg-white",
+      "peer inline-flex h-5 w-9 shrink-0 items-center rounded-full border border-forest-600 transition-colors data-[state=checked]:bg-forest-600 data-[state=unchecked]:bg-white dark:border-forest-500 dark:data-[state=checked]:bg-forest-500 dark:data-[state=unchecked]:bg-dark-card",
       className,
     )}
     {...props}
   >
-    <SwitchPrimitive.Thumb className="pointer-events-none block h-3.5 w-3.5 rounded-full bg-ink transition-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-paper data-[state=unchecked]:translate-x-0.5" />
+    <SwitchPrimitive.Thumb className="pointer-events-none block h-3.5 w-3.5 rounded-full bg-forest-700 transition-transform data-[state=checked]:translate-x-[18px] data-[state=checked]:bg-white data-[state=unchecked]:translate-x-0.5 dark:bg-forest-300 dark:data-[state=checked]:bg-dark-paper" />
   </SwitchPrimitive.Root>
 ));
 Switch.displayName = "Switch";
@@ -212,7 +226,7 @@ export const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "h-4 w-4 shrink-0 rounded-[4px] border border-ink data-[state=checked]:bg-ink data-[state=checked]:text-paper",
+      "h-4 w-4 shrink-0 rounded-[5px] border border-forest-600 data-[state=checked]:bg-forest-600 data-[state=checked]:text-white dark:border-forest-500 dark:data-[state=checked]:bg-forest-500 dark:data-[state=checked]:text-dark-paper",
       className,
     )}
     {...props}
@@ -227,8 +241,7 @@ Checkbox.displayName = "Checkbox";
 /* ------------------------------- Meters -------------------------------- */
 
 /**
- * A measure bar. Every one of these is bound to a real count from the dataset -
- * papers on a topic, matching publications - never to a decorative percentage.
+ * A measure bar with an emerald gradient fill.
  */
 export function Meter({
   value,
@@ -243,16 +256,16 @@ export function Meter({
 }) {
   const pct = max > 0 ? Math.min(100, Math.round((value / max) * 100)) : 0;
   return (
-    <div className={cn("space-y-1", className)}>
+    <div className={cn("space-y-1.5", className)}>
       {label ? (
         <div className="flex items-baseline justify-between">
           <span className="eyebrow">{label}</span>
-          <span className="font-mono text-[11px] text-ink">{value}</span>
+          <span className="font-mono text-[11px] text-ink dark:text-dark-ink">{value}</span>
         </div>
       ) : null}
-      <div className="h-[3px] w-full bg-rule">
+      <div className="h-1.5 w-full overflow-hidden rounded-full bg-forest-100 dark:bg-dark-surface">
         <div
-          className="h-full origin-left bg-ink animate-sweep"
+          className="h-full origin-left rounded-full bg-gradient-to-r from-forest-600 to-emerald-400 animate-sweep"
           style={{ width: `${pct}%` }}
           role="presentation"
         />
@@ -272,8 +285,12 @@ export function Empty({
 }) {
   return (
     <div className="rulebox grain flex flex-col items-center gap-3 px-6 py-14 text-center">
-      <p className="font-read text-lg text-ink">{title}</p>
-      {children ? <p className="max-w-sm text-sm leading-relaxed text-mute">{children}</p> : null}
+      <p className="font-read text-lg text-ink dark:text-dark-ink">{title}</p>
+      {children ? (
+        <p className="max-w-sm text-sm leading-relaxed text-mute dark:text-dark-mute">
+          {children}
+        </p>
+      ) : null}
       {action}
     </div>
   );

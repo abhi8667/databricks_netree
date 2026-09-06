@@ -19,6 +19,51 @@ import {
 import { newId } from "@/lib/utils";
 import type { IdeaTurn, Invitation, Meeting, Project, ProjectBrief } from "@/lib/types";
 
+/* ---------------------------- Conversational Voice Mode ----------------------- */
+
+/** Live conversational voice turn for Gemini/ChatGPT Voice Mode */
+export async function talkToResearchAgent(history: IdeaTurn[]) {
+  try {
+    const turn = await nextIdeaTurn(history);
+    return { ok: true, turn };
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Failed to get AI response";
+    return { ok: false, error: message };
+  }
+}
+
+/** Directly creates and saves a project from a completed conversational voice ideation session */
+export async function createProjectFromVoiceSession(transcript: IdeaTurn[]) {
+  const user = await requireUser();
+  const userTurns = transcript.filter((t) => t.role === "user");
+  if (userTurns.length === 0) return { error: "No user speech recorded in voice session." };
+
+  const opening = userTurns[0]!.content;
+  const turn = await nextIdeaTurn(transcript);
+
+  const fullTranscript = [...transcript];
+  if (fullTranscript[fullTranscript.length - 1]?.role === "user") {
+    fullTranscript.push({ role: "assistant", content: turn.reply });
+  }
+
+  const now = new Date().toISOString();
+  const project: Project = {
+    project_id: newId("prj"),
+    owner_user_id: user.user_id,
+    owner_name: user.full_name,
+    title: turn.brief?.title || opening.slice(0, 70),
+    status: turn.ready ? "structured" : "drafting",
+    brief: turn.brief,
+    transcript: fullTranscript,
+    match: null,
+    created_at: now,
+    updated_at: now,
+  };
+
+  await saveProject(project);
+  return { ok: true, projectId: project.project_id };
+}
+
 /* ---------------------------- The idea interview ----------------------- */
 
 /** Creates the project from the student's opening sentence and asks question one. */

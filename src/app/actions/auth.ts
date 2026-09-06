@@ -59,6 +59,7 @@ export async function signIn(_prev: SignInState, form: FormData): Promise<SignIn
     achievements: "",
     resume_name: "",
     resume_text: "",
+    linkedin_url: "",
     scholar_url: "",
     faculty_id: role === "teacher" ? await guessFacultyId(fullName) : null,
     open_to_collaboration: false,
@@ -130,6 +131,7 @@ export async function completeOnboarding(_prev: SignInState, form: FormData): Pr
     achievements: String(form.get("achievements") ?? "").trim(),
     resume_name: String(form.get("resume_name") ?? "").trim(),
     resume_text: String(form.get("resume_text") ?? "").trim(),
+    linkedin_url: String(form.get("linkedin_url") ?? "").trim(),
     scholar_url: String(form.get("scholar_url") ?? "").trim(),
     faculty_id: user.role === "teacher" ? facultyIdRaw || null : null,
     open_to_collaboration: form.get("open_to_collaboration") === "on",
@@ -142,5 +144,5 @@ export async function completeOnboarding(_prev: SignInState, form: FormData): Pr
     rethrowFrameworkError(err);
     return saveFailed(err);
   }
-  redirect(homeFor(updated));
+  redirect("/onboarding/confirmed");
 }
